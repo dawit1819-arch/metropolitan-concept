@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Metropolitan School of Real Estate</title>
+<meta name="description" content="The 40-hour Massachusetts real estate salesperson class, live on Zoom with broker Michael Albano. Six days, $350.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --page:#faf9f6;--surface:#fff;--ink:#202a30;--soft:#59636a;--rule:#d9dedc;--line:#7d888e;
+  --cyan:#42d0f8;--sel:#edf9fd;--focus:#00647c;--ok:#285a46;--bad:#9b3434;--deep:#1c2529;
+  --serif:Newsreader,Georgia,serif;--sans:Inter,system-ui,sans-serif;
+  --g:clamp(20px,4vw,48px);--max:1200px;--ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+.concept{background:#16203a;color:#e9edf2;font-size:14px;text-align:center;padding:8px 16px}
+.concept a{color:#42d0f8}
+body{background:var(--page);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:3px}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.wrap{max-width:calc(var(--max) + 2*var(--g));margin:0 auto;padding:0 var(--g)}
+section{scroll-margin-top:96px}
+h1,h2{font-family:var(--serif);font-weight:400;letter-spacing:-.03em;font-optical-sizing:auto}
+h1{font-size:clamp(46px,3rem + 3.4vw,92px);line-height:1}
+h2{font-size:clamp(34px,1.6rem + 1.9vw,56px);line-height:1.05}
+h3{font-size:20px;font-weight:500;line-height:1.4;letter-spacing:-.01em}
+.lead{font-size:clamp(18px,1rem + .3vw,20px);line-height:1.6}
+.soft{color:var(--soft)}
+.small{font-size:14px;line-height:1.5}
+.num{font-variant-numeric:tabular-nums}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:4px;background:var(--cyan);color:#0d1d26;text-decoration:none;font-weight:500;font-size:16px;border:0;cursor:pointer;transition:transform .1s ease-out,background .2s}
+.btn:hover{background:#2cc4f0}
+.btn.dark{background:var(--ink);color:#fff}.btn.dark:hover{background:#0f171b}
+.btn:active{transform:scale(.98)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.link{font-weight:500;text-decoration:underline;text-decoration-color:var(--cyan);text-decoration-thickness:2px;text-underline-offset:5px}
+.sec{padding:clamp(72px,9vw,128px) 0;border-top:1px solid var(--rule)}
+.head{display:grid;grid-template-columns:5fr 7fr;gap:24px;align-items:end;margin-bottom:clamp(32px,4vw,56px)}
+.head p{max-width:46ch;color:var(--ink)}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(250,249,246,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.wm{text-decoration:none;display:flex;align-items:baseline;gap:10px}
+.wm b{font-family:var(--serif);font-weight:500;font-size:26px;letter-spacing:-.03em}
+.wm i{width:8px;height:8px;border-radius:50%;background:var(--cyan);display:inline-block;transform:translateY(-2px)}
+.wm span{font-size:13px;color:var(--soft)}
+.nav{display:flex;align-items:center;gap:28px;font-size:15px}
+.nav a:not(.btn){text-decoration:none;color:var(--soft);transition:color .2s}
+.nav a:not(.btn):hover{color:var(--ink)}
+.nav .btn{min-height:44px;padding:0 20px;font-size:15px}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:4px;height:42px;padding:0 16px;cursor:pointer;font-size:15px}
+
+/* hero */
+.hero{padding:clamp(48px,7vw,96px) 0 clamp(48px,6vw,80px)}
+.hero .grid{display:grid;grid-template-columns:4.5fr 7.5fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{max-width:9ch}
+.hero .lead{margin-top:28px;max-width:34ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:24px;font-weight:500}
+.facts span+span::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--cyan);margin:0 20px 3px 0;vertical-align:middle}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:36px}
+.next{margin-top:20px}
+.hero figure{position:relative}
+.hero figure img{width:100%;aspect-ratio:1.8;object-fit:cover}
+.proof{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--cyan);margin-top:clamp(48px,6vw,80px);padding-top:24px}
+.proof div{padding-right:24px}
+.proof b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(30px,1.4rem + 1.2vw,44px);line-height:1.1;letter-spacing:-.02em}
+.proof span{font-size:14px;color:var(--soft)}
+
+/* schedule */
+#dates{background:#eaf9fe;border-top:0}
+#dates .plan{background:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.chips button{min-height:40px;padding:0 16px;border-radius:999px;border:1px solid #9fdcef;background:transparent;cursor:pointer;font-size:15px;transition:background .2s,transform .1s}
+.chips button:active{transform:scale(.97)}
+.chips button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.plan[hidden]{display:none}
+.ret{margin-top:14px;font-size:15px}
+.ret-open{background:none;border:0;padding:4px 0;font-weight:500;font-size:15px;line-height:1.4;font-family:inherit;color:var(--ink);cursor:pointer;text-decoration:underline;text-decoration-color:var(--cyan);text-decoration-thickness:2px;text-underline-offset:4px}
+.ret form{display:none;margin-top:10px;gap:8px;grid-template-columns:1fr auto}
+.ret.open form{display:grid;animation:fade .3s ease-out both}
+.ret input{min-width:0;min-height:44px;padding:0 12px;border:1px solid var(--line);border-radius:4px;font:inherit;font-size:16px}
+.ret form .btn{min-height:44px;margin:0;width:auto}
+.ret small{grid-column:1/-1;font-size:13px;color:var(--soft)}
+.ret .ok{display:none;margin-top:8px;background:#eaf9fe;border-left:3px solid var(--cyan);padding:10px 14px}
+.ret.done form,.ret.done .ret-open{display:none}.ret.done .ok{display:block;animation:fade .3s ease-out both}
+.also{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(32px,4vw,48px)}
+.also-card{display:grid;grid-template-columns:160px 1fr;gap:18px;align-items:center;padding:12px;background:#fff;border-radius:4px;text-decoration:none;color:var(--soft);font-size:15px;transition:transform .25s,box-shadow .25s}
+.also-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(32,42,48,.08)}
+.also-card img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:2px}
+.also-card b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;color:var(--ink);margin-bottom:4px}
+@media (max-width:760px){.also{grid-template-columns:1fr}.also-card{grid-template-columns:100px 1fr}}
+.promo{display:none;margin-top:20px;background:#eaf9fe;border-left:3px solid var(--cyan);padding:14px 16px;font-size:15px}
+.promo.on{display:block;animation:fade .3s ease-out both}
+.promo b{display:block;font-weight:600}
+.promo label{display:flex;gap:10px;align-items:center;margin-top:10px;cursor:pointer;font-weight:500}
+.promo input{width:18px;height:18px;accent-color:var(--ink)}
+.amt s{font-size:24px;color:var(--soft);margin-left:10px;font-weight:400}
+.sched{display:grid;grid-template-columns:7fr 5fr;gap:24px;align-items:start}
+.plans{display:grid;gap:8px}
+.plan{display:flex;align-items:center;gap:16px;min-height:76px;padding:16px 20px;background:var(--surface);border:0;border-left:3px solid transparent;border-radius:6px;cursor:pointer;text-align:left;width:100%;transition:background .2s,transform .2s var(--ease)}
+.plan:hover{background:#f3f6f6}
+.plan .dot{flex:none;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center}
+.plan .dot::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--ink);opacity:0;transition:opacity .12s ease-out}
+.plan b{display:block;font-weight:500;font-size:16px}
+.plan small{display:block;font-size:14px;color:var(--soft)}
+.plan em{margin-left:auto;font-style:normal;font-size:13px;font-weight:500;opacity:0}
+.plan[aria-checked=true]{background:var(--sel);border-left-color:var(--cyan)}
+.plan[aria-checked=true] .dot{border-color:var(--ink)}
+.plan[aria-checked=true] .dot::after,.plan[aria-checked=true] em{opacity:1}
+.panel{background:var(--surface);border:0;border-radius:6px;padding:clamp(24px,3vw,36px);position:sticky;top:100px}
+.panel h3{margin-bottom:16px}
+.days{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.days div{background:#f2f3f1;border-radius:4px;padding:10px 12px;animation:fade .16s ease-out both}
+.days small{display:block;font-size:13px;color:var(--soft)}
+.days b{display:block;font-weight:500;font-size:17px}
+.panel .note{margin-top:14px}
+.price{border-top:1px solid var(--rule);margin-top:24px;padding-top:24px}
+.price .amt{font-size:48px;font-weight:500;letter-spacing:-.03em;line-height:1}
+.inc{list-style:none;margin:18px 0 0;display:grid;gap:8px;font-size:15px}
+.inc li{display:flex;gap:12px}
+.inc li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--cyan);margin-top:9px}
+details.terms{margin-top:14px;font-size:15px;border-top:1px solid var(--rule)}
+details.terms summary{cursor:pointer;padding:12px 0 0;font-weight:500;list-style:none}
+details.terms summary::after{content:" +";color:var(--soft)}
+details.terms[open] summary::after{content:" –"}
+details.terms p{color:var(--soft);padding-top:6px}
+.panel .btn{width:100%;margin-top:22px}
+
+/* michael */
+.mi{display:grid;grid-template-columns:7fr 5fr;gap:clamp(32px,5vw,72px);align-items:center}
+.video{position:relative;aspect-ratio:16/9;background:#111;cursor:pointer;border:0;width:100%;padding:0;overflow:hidden}
+.video img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.video:hover img{transform:scale(1.02)}
+.video .play{position:absolute;left:24px;bottom:24px;display:flex;align-items:center;gap:14px;color:#fff;font-weight:500;font-size:15px}
+.video .play i{width:56px;height:56px;border-radius:50%;background:var(--page);display:grid;place-items:center;transition:transform .2s var(--ease)}
+.video:hover .play i{transform:scale(1.06)}
+.video .play i::after{content:"";border-left:14px solid var(--ink);border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mi .bio p+p{margin-top:16px}
+.mi .bio h2{margin-bottom:24px}
+.strip{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px;margin-top:clamp(48px,6vw,80px)}
+.strip img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.strip figcaption{font-size:14px;color:var(--soft);margin-top:10px}
+
+/* reviews */
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.rv blockquote{padding:0 32px;border-left:1px solid var(--rule)}
+.rv blockquote:first-child{padding-left:0;border-left:0}
+.rv p{font-family:var(--serif);font-size:clamp(23px,1.1rem + .6vw,28px);line-height:1.3;letter-spacing:-.015em}
+.rv cite{display:block;font-style:normal;font-size:14px;color:var(--soft);margin-top:20px}
+.rv-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid var(--rule)}
+
+/* path */
+.path{display:grid;grid-template-columns:7fr 5fr;gap:clamp(32px,5vw,72px);align-items:start}
+.steps{list-style:none;position:relative}
+.steps li{display:grid;grid-template-columns:56px 1fr;gap:8px;padding:24px 0;border-top:1px solid var(--rule)}
+.steps li:last-child{border-bottom:1px solid var(--rule)}
+.steps .n{font-family:var(--serif);font-size:28px;line-height:1.1;color:#0b9ccc}
+.steps p{color:var(--soft);font-size:16px;margin-top:2px}
+.path figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.path .after{margin-top:24px;max-width:56ch}
+
+/* quiz */
+.split{display:grid;grid-template-columns:5fr 7fr;gap:24px;align-items:start}
+.split .head{display:block;margin:0;position:sticky;top:120px}
+.split .head p{margin-top:20px}
+.quiz{background:var(--surface);border-radius:6px;padding:clamp(24px,3.5vw,48px)}
+.qz-n{font-size:14px;color:var(--soft)}
+.qz-q{font-size:22px;line-height:1.4;font-weight:500;margin-top:6px}
+.qz-a{display:grid;gap:8px;margin-top:20px}
+.qz-a button{min-height:56px;padding:14px 20px;text-align:left;background:#f2f3f1;border:1px solid transparent;border-radius:4px;cursor:pointer;font-size:17px;transition:border-color .2s,transform .1s}
+.qz-a button:hover:not(:disabled){border-color:var(--line)}
+.qz-a button:active:not(:disabled){transform:scale(.99)}
+.qz-a button.ok{border-color:var(--ok);color:var(--ok);font-weight:500}
+.qz-a button.no{border-color:var(--bad);color:var(--bad)}
+.qz-a button:disabled{cursor:default}
+.qz-why{margin-top:16px;animation:fade .18s ease-out both}
+.qz-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+
+/* faq */
+.faq{min-width:0}
+.search{position:relative}
+.search input{width:100%;height:56px;padding:0 20px;border:1px solid var(--line);border-radius:4px;background:var(--surface);font-size:17px}
+.search input::placeholder{color:#8a949a}
+.count{font-size:14px;color:var(--soft);margin:12px 0 8px;min-height:21px}
+.faq details{border-top:1px solid var(--rule)}
+.faq details:last-child{border-bottom:1px solid var(--rule)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;padding:14px 0;font-weight:500;font-size:18px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:20px;height:20px;position:relative;transition:transform .16s ease-out}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:3px;right:3px;top:9px;height:1.5px;background:var(--ink)}
+.faq summary i::after{transform:rotate(90deg)}
+.faq details[open] summary i{transform:rotate(45deg)}
+.faq details p{padding:0 0 20px;color:var(--soft);max-width:60ch;animation:fade .16s ease-out both}
+
+/* ce */
+.ce{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.ce figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.ce label{display:block;font-weight:500;margin:28px 0 8px}
+.ce .row{display:flex;gap:8px;flex-wrap:wrap}
+.ce input{height:52px;padding:0 16px;border:1px solid var(--line);border-radius:4px;background:var(--surface);min-width:220px}
+.ce-out{margin-top:24px;min-height:84px}
+.ce-out b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(44px,2rem + 2vw,64px);line-height:1;letter-spacing:-.03em}
+
+/* closing band */
+.band{position:relative;min-height:min(78vh,720px);display:grid;align-items:end;color:#fff;overflow:hidden}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.6s var(--ease)}
+.band.on img{transform:scale(1)}
+.band::after{content:"";position:absolute;inset:0;background:rgba(18,25,29,.42)}
+.band .wrap{position:relative;z-index:1;width:100%;padding-bottom:clamp(48px,7vw,96px)}
+.band h2{font-size:clamp(40px,2rem + 3vw,80px);max-width:12ch}
+.band p{margin-top:16px;font-size:18px}
+.band .btn{margin-top:28px}
+
+
+footer{padding:64px 0 40px;background:#16203a;color:#e9edf2}
+footer p,footer .legal{color:#aab4c4!important}
+footer .legal{border-top-color:#2a3757!important}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;font-size:15px}
+footer .wm b{font-size:30px}
+footer p{color:var(--soft);margin-top:10px}
+footer ul{list-style:none;display:grid;gap:6px}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline}
+.legal{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;margin-top:16px;font-size:13px;color:var(--soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+/* mobile bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--page);border-top:1px solid var(--rule);padding:12px 20px calc(12px + env(safe-area-inset-bottom));display:none;align-items:center;justify-content:space-between;opacity:0;transform:translateY(12px);transition:opacity .18s ease-out,transform .18s ease-out;pointer-events:none}
+.bar.on{opacity:1;transform:none;pointer-events:auto}
+.bar b{font-size:22px;font-weight:500}
+.bar .btn{min-height:48px}
+
+/* motion */
+@keyframes fade{from{opacity:0;transform:translateY(4px)}}
+.rise{opacity:0;transform:translateY(16px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.rise.on{opacity:1;transform:none}
+.hero .rise{transition-duration:.7s}
+.no-js .rise{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .nav a:not(.btn){display:none}
+  .hero .grid,.head,.sched,.mi,.path,.ce,.split{grid-template-columns:1fr}
+  .split .head{position:static;margin-bottom:32px}
+  .plan em{display:none}
+  .hero h1{max-width:none}
+  .panel{position:static}
+  .rv{grid-template-columns:1fr}
+  .rv blockquote{padding:28px 0;border-left:0;border-top:1px solid var(--rule)}
+  .rv blockquote:first-child{padding-top:0;border-top:0}
+  .strip{grid-template-columns:1fr 1fr}
+  .strip figure:first-child{grid-column:1/-1}
+  .path figure{order:-1}
+  .path figure img{aspect-ratio:3/2}
+  footer .wrap{grid-template-columns:1fr 1fr}
+  footer .wrap>div:first-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .top .wrap{height:64px}
+  .wm span{display:none}
+  .nav .btn{display:none}
+  .menu-btn{display:block}
+  .nav.open{position:absolute;top:64px;left:0;right:0;background:var(--page);border-bottom:1px solid var(--rule);display:grid;padding:8px 20px 20px;gap:0}
+  .nav.open a{display:flex!important;align-items:center;min-height:48px;border-bottom:1px solid var(--rule);color:var(--ink)!important}
+  .nav.open .btn{display:flex;margin-top:12px;border:0}
+  .proof{grid-template-columns:1fr;gap:16px}
+  .days{grid-template-columns:1fr 1fr}
+  .bar{display:flex}
+  body{padding-bottom:76px}
+  .strip{grid-template-columns:1fr}
+  .cta .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rise{opacity:1;transform:none}
+  .band img{transform:none}
+  html{scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body class="no-js">
+<div class="concept" role="note">Unofficial design concept by Dawit Sellassie, a current student. Enroll buttons open <a href="https://www.metropolitanreschool.com/get-licensed">the live site</a>.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="wm" href="#"><b>Metropolitan</b><i></i><span>School of Real Estate</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="#dates">Class dates</a>
+      <a href="#michael">Michael</a>
+      <a href="#questions">Questions</a>
+      <a href="#continuing-ed">Continuing ed</a>
+      <a href="https://www.metropolitanreschool.com/login">Student login</a>
+      <a class="btn" href="#dates">Choose dates</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <h1 class="rise">Start in real estate.</h1>
+      <p class="lead rise">The 40-hour Massachusetts salesperson class, taught live on Zoom by working broker Michael Albano.</p>
+      <p class="facts rise num"><span>6 days</span><span>10am–6pm ET</span><span>$350</span></p>
+      <div class="cta rise">
+        <a class="btn" href="#dates" id="heroCta">Choose class dates</a>
+        <a class="link" href="#michael">Meet Michael · 1:26</a>
+      </div>
+      <p class="next small soft rise">Next class starts Saturday, November 14.</p>
+    </div>
+    <figure class="rise"><img src="img/michael-desk.jpg" width="2000" height="1110" alt="Michael Albano at his desk in the Metropolitan studio" fetchpriority="high"></figure>
+  </div>
+  <div class="wrap">
+    <div class="proof">
+      <div class="rise"><b>5.0</b><span>From 197 Google reviews</span></div>
+      <div class="rise"><b>Since 2008</b><span>Teaching Massachusetts agents</span></div>
+      <div class="rise"><b>#1214</b><span>State-approved school license</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="dates">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="rise">Choose your class dates.</h2>
+      <p class="soft rise">Every class is six days. Pick straight through, weekends only, weekdays only, or one weekend a month. Some plans spread your six days across two or three monthly classes.</p>
+    </div>
+    <div class="sched">
+      <div class="rise"><div class="chips" id="chips" aria-label="Filter plans"></div><div class="plans" role="radiogroup" aria-label="Class plans" id="plans"></div></div>
+      <aside class="panel rise" aria-live="polite">
+        <h3 id="planName">Your six class dates</h3>
+        <div class="days num" id="days"></div>
+        <p class="note small soft" id="planNote">Live on Zoom, 10am–6pm Eastern each day, with breaks.</p>
+        <div class="price">
+          <div class="amt num" id="amt">$350</div>
+          <p class="small soft">Tuition, everything below included</p>
+          <ul class="inc">
+            <li>All 40 hours live with Michael</li>
+            <li>Textbook and Michael's class slides</li>
+            <li>A recording of your class for 2 years</li>
+            <li>Continuing-ed video library as a bonus</li>
+            <li>Your education certificate when you finish</li>
+          </ul>
+          <div class="promo" id="promo"></div>
+          <details class="terms"><summary>Pass guarantee</summary><p>A tuition refund if you do not pass your exam. Specific conditions apply; Eden will walk you through them before you sign up.</p></details>
+          <div class="ret" id="ret">
+            <button class="ret-open" type="button" id="retOpen" aria-expanded="false">Took the class before? Log in for half price</button>
+            <form id="retForm"><input type="email" id="retEmail" required placeholder="The email you signed up with" aria-label="Email you used for your last class" autocomplete="email"><button class="btn dark" type="submit">Log in</button><small>Demo: nothing is sent. On the live site this uses your Kajabi student login.</small></form>
+            <p class="ok" role="status"><b>Welcome back.</b> Your repeat price is applied: $175.</p>
+          </div>
+          <details class="terms"><summary>Half-price repeat</summary><p>Haven't tested within two years? Take the class again at half price.</p></details>
+        </div>
+        <a class="btn" id="saveSeat" href="https://www.metropolitanreschool.com/get-licensed">Save my seat · $350</a>
+      </aside>
+    </div>
+    <div class="also rise">
+      <a class="also-card" href="https://www.metropolitanreschool.com/resource_redirect/offers/Sr2y3Eof"><img src="img/michael-studio-2.jpg" width="1280" height="720" loading="lazy" alt="Michael at his desk with his camera and microphone"><span><b>The broker class</b>For agents with 3 years working under a Massachusetts broker. 40 hours over 5 days: Dec 7, 9, 11, 14 and 16, 9 am to 6:30 pm on Zoom. $395.</span></a>
+      <a class="also-card" href="https://www.metropolitanreschool.com/resource_redirect/offers/Sx9s2LU6"><img src="img/michael-talking.jpg" width="1280" height="720" loading="lazy" alt="Michael talking to the camera"><span><b>Fast Q&amp;A and The Plan</b>Hundreds of exam-type questions on video, plus Michael's plan to pass on the first try. $50.</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="michael">
+  <div class="wrap">
+    <div class="mi">
+      <button class="video rise" id="video" aria-label="Play Michael's introduction, 1 minute 26 seconds">
+        <img src="img/michael-talking-hd.jpg" width="2000" height="1125" alt="" loading="lazy">
+        <span class="play"><i></i>Watch Michael's introduction · 1:26</span>
+      </button>
+      <div class="bio">
+        <h2 class="rise">Meet Michael Albano.</h2>
+        <p class="lead rise">Michael owns Metropolitan and teaches every class himself. He is a broker and owner with nearly twenty years of teaching and training agents.</p>
+        <p class="rise">He teaches the license class the way he trains new agents: real deals, real mistakes, and exactly how the state exam asks its questions. Eden runs the school side and answers your questions before, during and after class.</p>
+      </div>
+    </div>
+    <div class="strip">
+      <figure class="rise"><img src="img/classroom-hd.jpg" width="2000" height="1125" alt="Michael pointing at a slide in front of a full classroom" loading="lazy"><figcaption>Michael teaching a full classroom, before classes moved to Zoom.</figcaption></figure>
+      <figure class="rise"><img src="img/zoom-hd.jpg" width="2000" height="1125" alt="A live Zoom class slide on brokerage and agency" loading="lazy" style="object-position:30% 50%"><figcaption>A live Zoom class: the slides are yours to keep.</figcaption></figure>
+      <figure class="rise"><img src="img/studio-hd.jpg" width="2000" height="1125" alt="Michael recording a lesson in the studio" loading="lazy"><figcaption>Recording bonus lessons in the studio.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="rise">From past students.</h2>
+      <p class="soft rise">Most reviews mention the same two things: Michael's stories, and Eden.</p>
+    </div>
+    <div class="rv">
+      <blockquote class="rise"><p>"He not only covers the material but relates it to real life experiences."</p><cite>Tiffany F., weekend class</cite></blockquote>
+      <blockquote class="rise"><p>"I had gone through a course that was very boring. I'm glad I was able to be a part of an interactive class this time."</p><cite>Sara F.</cite></blockquote>
+      <blockquote class="rise"><p>"I definitely feel exam ready! Michael is a wealth of knowledge and held my interest throughout the class."</p><cite>Sylvie S.</cite></blockquote>
+    </div>
+    <div class="rv-foot">
+      <span class="small soft">Excerpts from student testimonials on the school's site.</span>
+      <a class="link" href="https://www.google.com/search?q=Metropolitan+School+of+Real+Estate+Somerville+reviews">Read all 197 Google reviews</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap path">
+    <div>
+      <div class="head" style="grid-template-columns:1fr">
+        <h2 class="rise">From class to keys.</h2>
+      </div>
+      <ol class="steps">
+        <li class="rise"><span class="n">01</span><div><h3>Finish the class</h3><p id="step1">Complete all six days of the 40-hour class.</p></div></li>
+        <li class="rise"><span class="n">02</span><div><h3>Get your certificate</h3><p>Your stamped education certificate lets you sit the state exam.</p></div></li>
+        <li class="rise"><span class="n">03</span><div><h3>Apply on eLIPSE</h3><p>Submit your application to the state board. We help you through it.</p></div></li>
+        <li class="rise"><span class="n">04</span><div><h3>Take the PSI exam</h3><p>Book your exam once the board approves your application.</p></div></li>
+        <li class="rise"><span class="n">05</span><div><h3>Join a brokerage</h3><p>Pay the license fee, hang your license with a broker and start.</p></div></li>
+      </ol>
+      <p class="after small soft rise">You need to be 18 with a Social Security number to be licensed. <a href="https://www.mass.gov/how-to/prepare-for-and-schedule-your-real-estate-license-exam">See the state's requirements</a>.</p>
+    </div>
+    <figure class="rise"><img src="img/door.jpg" width="1536" height="1024" alt="" loading="lazy" style="object-position:62% 50%"></figure>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <div class="head">
+      <h2 class="rise">Try three exam questions.</h2>
+      <p class="rise">Real estate math is on the state exam. See how you do in about a minute. No sign-up.</p>
+    </div>
+    <div class="quiz rise" id="quiz"></div>
+  </div>
+</section>
+
+<section class="sec" id="questions">
+  <div class="wrap split">
+    <div class="head">
+      <h2 class="rise">Questions, answered.</h2>
+      <p class="rise">Search, or open any question. Still stuck? Call Eden at <a href="tel:+16172010402">617-201-0402</a>.</p>
+    </div>
+    <div class="faq rise">
+      <div class="search"><input id="q" type="search" placeholder='Try "recording" or "missed a day"' aria-label="Search questions"></div>
+      <p class="count" id="count" aria-live="polite"></p>
+      <div id="faqList"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="continuing-ed">
+  <div class="wrap ce">
+    <div>
+      <h2 class="rise">Already licensed?</h2>
+      <p class="lead rise" style="margin-top:20px;max-width:40ch">Massachusetts agents renew every two years with 12 hours of continuing education. See how long you have.</p>
+      <label for="exp" class="rise">Your license expiration date</label>
+      <div class="row rise"><input id="exp" type="date"><a class="btn ghost" href="https://www.metropolitanreschool.com/continuing-ed">See CE classes</a></div>
+      <div class="ce-out" id="ceOut" aria-live="polite"></div>
+      <p class="small soft">This only counts days. It does not check your license or your completed hours.</p>
+    </div>
+    <figure class="rise"><img src="img/keys.jpg" width="1536" height="1024" alt="" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="band" id="band">
+  <img src="img/street.jpg" width="1536" height="1024" alt="" loading="lazy">
+  <div class="wrap">
+    <h2 class="rise">Your first listing starts here.</h2>
+    <p class="rise">Next class: Saturday, November 14. Six days, $350.</p>
+    <a class="btn rise" href="#dates">Choose class dates</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="wm" href="#"><b>Metropolitan</b><i></i></a>
+      <p>School of Real Estate · 490 Broadway, Suite 1, Somerville MA<br>State-approved school #1214 · since 2008</p>
+    </div>
+    <ul>
+      <li><a href="tel:+16172010402">617-201-0402</a></li>
+      <li><a href="mailto:school@metropolitanbre.com">school@metropolitanbre.com</a></li>
+    </ul>
+    <ul>
+      <li><a href="#dates">Class dates</a></li>
+      <li><a href="#continuing-ed">Continuing ed</a></li>
+      <li><a href="https://www.metropolitanreschool.com/login">Student login</a></li>
+    </ul>
+    <div class="legal"><span>© 2026 Metropolitan School of Real Estate</span><span>Unofficial design concept by Dawit, not the live school site</span></div>
+  </div>
+</footer>
+
+<div class="bar" id="bar"><b class="num">$350</b><a class="btn" href="#dates">Choose dates</a></div>
+
+<script>
+document.body.classList.remove('no-js');
+// ---- real plans from metropolitanreschool.com/get-licensed (Nov 2026 – Mar 2027)
+const D=(m,d)=>new Date(m<6?2027:2026,m-1,d);
+const PLANS=[
+ {type:'straight',name:'November, straight through',sub:'Weekends plus Tue & Thu',days:[D(11,14),D(11,15),D(11,17),D(11,19),D(11,21),D(11,22)]},
+ {type:'weekend',name:'Nov – Dec, weekends only',sub:'Days 3–4 in the December class',days:[D(11,14),D(11,15),D(11,21),D(11,22),D(12,12),D(12,13)],split:1},
+ {type:'weekend',name:'Nov – Jan, slow and steady',sub:'One weekend a month',days:[D(11,14),D(11,15),D(12,12),D(12,13),D(1,16),D(1,17)],split:1},
+ {type:'weekend',name:'Dec – Jan, weekends only',sub:'Start in December, finish in January',days:[D(12,12),D(12,13),D(1,9),D(1,10),D(1,16),D(1,17)],split:1},
+ {type:'straight',name:'January, straight through',sub:'Weekends plus Tue & Thu',days:[D(1,9),D(1,10),D(1,12),D(1,14),D(1,16),D(1,17)]},
+ {type:'weekend',name:'Jan – Feb, weekends only',sub:'Days 3–4 in the February class',days:[D(1,9),D(1,10),D(1,16),D(1,17),D(2,27),D(2,28)],split:1},
+ {type:'weekday',name:'Jan – Mar, weekdays only',sub:'Tuesdays and Thursdays',days:[D(1,12),D(1,14),D(2,23),D(2,25),D(3,2),D(3,4)],split:1},
+ {type:'straight',name:'Feb – Mar, straight through',sub:'Weekends plus Tue & Thu',days:[D(2,23),D(2,25),D(2,27),D(2,28),D(3,2),D(3,4)]}
+];
+const f=(d,o)=>d.toLocaleDateString('en-US',o);
+const plansEl=document.getElementById('plans'),daysEl=document.getElementById('days');
+const OFFERS=["https://www.metropolitanreschool.com/resource_redirect/offers/HmgJLsVU", "https://www.metropolitanreschool.com/resource_redirect/offers/2LFszkZf", "https://www.metropolitanreschool.com/resource_redirect/offers/cvSRoQBw", "https://www.metropolitanreschool.com/resource_redirect/offers/z5K9S2hi", "https://www.metropolitanreschool.com/resource_redirect/offers/n2VeRyav", "https://www.metropolitanreschool.com/resource_redirect/offers/aEuEvexx", "https://www.metropolitanreschool.com/resource_redirect/offers/K6DEydMU", "https://www.metropolitanreschool.com/resource_redirect/offers/8PgCQj7o"],NOTES=["All six days inside November: two weekends plus a Tuesday and Thursday.", "Weekends only. Days 1, 2, 5 and 6 in the November class, then days 3 and 4 in December.", "Slow and steady: one weekend a month, six days over three months.", "Weekends only. Get a jump start with days 3 and 4 in December, then days 1, 2, 5 and 6 in January.", "All six days inside January: two weekends plus a Tuesday and Thursday.", "Weekends only. Days 1, 2, 5 and 6 in the January class, then days 3 and 4 in February.", "Tuesdays and Thursdays only. Days 3 and 4 in January, then days 1, 2, 5 and 6 in the February to March class.", "All six days from Feb 23 to Mar 4: Tuesdays, Thursdays and one weekend."];
+PLANS.forEach((p,i)=>{
+  const b=document.createElement('button');b.className='plan';b.setAttribute('role','radio');b.setAttribute('aria-checked','false');
+  const a=p.days[0],z=p.days[5];
+  b.innerHTML=`<span class="dot"></span><span><b>${p.name}</b><small>${f(a,{month:'short',day:'numeric'})} – ${f(z,{month:'short',day:'numeric',year:'numeric'})} · ${p.sub}</small></span><em>Selected</em>`;
+  b.onclick=()=>pick(i);plansEl.appendChild(b);
+});
+function pick(i){
+  const p=PLANS[i];
+  [...plansEl.children].forEach((b,j)=>{b.setAttribute('aria-checked',j===i);b.tabIndex=j===i?0:-1});
+  document.getElementById('planName').textContent=p.name;
+  daysEl.innerHTML=p.days.map((d,k)=>`<div style="animation-delay:${k*30}ms"><small>Session ${k+1} · ${f(d,{weekday:'short'})}</small><b>${f(d,{month:'short',day:'numeric'})}</b></div>`).join('');
+  document.getElementById('planNote').textContent=NOTES[i]+' Live on Zoom, 10am–6pm Eastern, with breaks.';
+  document.getElementById('saveSeat').href=OFFERS[i];
+  document.getElementById('step1').textContent=`Your last day is ${f(p.days[5],{weekday:'long',month:'long',day:'numeric'})}.`;
+}
+plansEl.addEventListener('keydown',e=>{const cur=[...plansEl.children].findIndex(b=>b.getAttribute('aria-checked')==='true');
+  if(['ArrowDown','ArrowRight','ArrowUp','ArrowLeft'].includes(e.key)){e.preventDefault();const vis=[...plansEl.children].filter(b=>!b.hidden),at=vis.indexOf(plansEl.children[cur]);const next=vis[(at+(e.key==='ArrowDown'||e.key==='ArrowRight'?1:-1)+vis.length)%vis.length];const n=[...plansEl.children].indexOf(next);pick(n);next.focus()}});
+pick(0);
+// filters
+const chips=document.getElementById('chips');
+[['all','All 8 plans'],['weekend','Weekends only'],['weekday','Weekdays only'],['straight','Straight through']].forEach(([k,t])=>{
+  const b=document.createElement('button');b.textContent=t;b.setAttribute('aria-pressed',k==='all');
+  b.onclick=()=>{[...chips.children].forEach(c=>c.setAttribute('aria-pressed',c===b));
+    let first=-1;PLANS.forEach((p,i)=>{const show=k==='all'||p.type===k;plansEl.children[i].hidden=!show;if(show&&first<0)first=i});
+    const cur=[...plansEl.children].findIndex(x=>x.getAttribute('aria-checked')==='true');if(plansEl.children[cur].hidden)pick(first)};
+  chips.appendChild(b)});
+
+// ---- seasonal deals switch on and off by date (Astra's plan). Preview a day with ?date=2026-11-28
+const DEALS=[
+  {start:'2026-11-27',end:'2026-11-30',title:'Black Friday: $50 off',text:'$300 instead of $350 for any class that starts before March. Ends Monday 11:59 pm. New students only. State fees separate.',off:50},
+  {start:'2027-01-01',end:'2027-01-08',title:'New year early bird: $25 off',text:'$325 for the Jan 9 class. Enroll by Jan 8. Cannot combine with other offers.',off:25},
+  {start:'2027-04-12',end:'2027-04-18',title:'Seven days only: $25 off',text:'$325 for any spring class. Ends Sunday night. State fees separate.',off:25},
+  {start:'2027-06-01',end:'2027-06-20',title:'Summer early bird: $25 off',text:'$325 for the July class. Enroll by June 20.',off:25},
+  {start:'2027-08-16',end:'2027-08-31',title:'Back to school: $25 off',text:'$325 for the September class. Ends Aug 31.',off:25},
+];
+(function(){const q=new URLSearchParams(location.search).get('date');
+ const t=/^\d{4}-\d\d-\d\d$/.test(q||'')?q:new Date().toLocaleDateString('en-CA');
+ const deal=q&&DEALS.find(p=>t>=p.start&&t<=p.end),el=document.getElementById('promo'),amt=document.getElementById('amt'),seat=document.getElementById('saveSeat');
+ const set=(off)=>{amt.innerHTML=off?`$${350-off}<s>$350</s>`:'$350';seat.textContent=`Save my seat · $${350-off}`;document.querySelector('#bar b').textContent='$'+(350-off)};
+ if(deal){el.innerHTML=`<small style="display:block;font-weight:600;color:#0b7a9a">Preview, not a live offer</small><b>${deal.title}</b>${deal.text}`;el.classList.add('on');set(deal.off)}
+ const r=document.getElementById('ret'),f=document.getElementById('retForm');
+ document.getElementById('retOpen').onclick=()=>{const o=r.classList.toggle('open');document.getElementById('retOpen').setAttribute('aria-expanded',o);if(o)document.getElementById('retEmail').focus()};
+ f.onsubmit=e=>{e.preventDefault();r.classList.add('done');el.classList.remove('on');set(175)};})();
+
+// ---- Wistia video, loads only when pressed
+document.getElementById('video').addEventListener('click',function(){
+  if(this.querySelector('iframe'))return;
+  const f=document.createElement('iframe');f.src='https://fast.wistia.net/embed/iframe/1gm1yvrutm?autoPlay=true';f.allow='autoplay; fullscreen';f.title="Michael Albano's introduction";
+  this.appendChild(f);
+});
+
+// ---- quiz: real estate math
+const QZ=[
+ {q:'A home sells for $400,000 with a 5% total commission. What is the commission?',a:['$2,000','$20,000','$40,000'],c:1,why:'$400,000 × 0.05 = $20,000.'},
+ {q:'A room measures 12 by 15 feet. What is its area?',a:['27 square feet','54 square feet','180 square feet'],c:2,why:'Area is length × width: 12 × 15 = 180 square feet.'},
+ {q:'A $240,000 loan on a $300,000 home. What is the loan-to-value ratio?',a:['60%','80%','125%'],c:1,why:'$240,000 ÷ $300,000 = 0.8, so 80%.'}
+];
+(function(){const el=document.getElementById('quiz');let i=0,s=0;
+ function start(){el.innerHTML=`<p class="qz-q">Three short questions, about a minute.</p><div class="qz-row"><button class="btn dark" id="go">Start practice</button></div>`;el.querySelector('#go').onclick=()=>{i=0;s=0;q()}}
+ function q(){if(i===QZ.length){el.innerHTML=`<p class="qz-q">You answered ${s} of 3 correctly.</p><p class="qz-why soft">A short practice sample, not a prediction of your exam result. Class covers every topic on the state exam.</p><div class="qz-row"><button class="btn ghost" id="again">Try again</button><a class="btn" href="#dates">Choose class dates</a></div>`;el.querySelector('#again').onclick=()=>{i=0;s=0;q()};return}
+  const x=QZ[i];el.innerHTML=`<p class="qz-n">Question ${i+1} of 3</p><p class="qz-q">${x.q}</p><div class="qz-a">${x.a.map((t,j)=>`<button data-j="${j}">${t}</button>`).join('')}</div>`;
+  el.querySelectorAll('.qz-a button').forEach(b=>b.onclick=()=>{const j=+b.dataset.j;el.querySelectorAll('.qz-a button').forEach(o=>{o.disabled=true;if(+o.dataset.j===x.c)o.classList.add('ok')});
+   if(j===x.c)s++;else b.classList.add('no');
+   el.insertAdjacentHTML('beforeend',`<p class="qz-why">${j===x.c?'Correct.':'Not quite.'} ${x.why}</p><div class="qz-row"><button class="btn dark" id="nx">${i<2?'Next question':'See my result'}</button></div>`);
+   el.querySelector('#nx').onclick=()=>{i++;q()};el.querySelector('#nx').focus()})}
+ q()})();
+
+// ---- FAQ search (answers from the school's own pages)
+const FAQ=[
+ ['What does the $350 include?','All 40 hours live with Michael, the textbook, his class slides, a recording of your class for two years, the continuing-ed video library as a bonus, and your education certificate when you finish.','cost price fee tuition pay'],
+ ['How do the six days work?','Class runs 10am to 6pm Eastern each day, with breaks, live on Zoom. You attend all six days. Weekend-only and weekday-only plans combine sessions from two or three monthly classes.','schedule time hours weekend weekday zoom'],
+ ['What if I miss a day?','The state requires you to attend every session. Make up the matching day in a later class. Rebooking costs $25 for 1–2 days or $100 for 3 or more. Eden will set it up.','missed absence absent sick make up makeup'],
+ ['Can I watch the recording?','Yes. You get a recording of your whole class and keep access for two years. It is great for review before the exam.','recording replay video watch rewatch'],
+ ['How does the pass guarantee work?','If you do not pass your exam you can get a tuition refund. Specific conditions apply, so ask Eden before you sign up.','guarantee refund fail pass'],
+ ['What if I need to take it again?','If you do not test within two years, you can repeat the class at half price.','repeat again retake half discount'],
+ ['What happens after the class?','You get your stamped education certificate. Then you apply to the state on eLIPSE, take the PSI exam, and join a brokerage. We go through every step in class.','after next exam psi elipse certificate license'],
+ ['Who can take the class?','Anyone is welcome. To get licensed in Massachusetts you need to be 18 with a Social Security number.','age requirements eligible ssn'],
+ ['Is the school licensed?','Yes. Metropolitan is approved by the Massachusetts Board of Real Estate Brokers and Salespersons, school license #1214, since 2008.','licensed approved state board legit'],
+ ['Do you teach continuing education?','Yes. Licensed agents need 12 hours every two years to renew. Our CE classes and video library cover it.','ce continuing renew renewal 12'],
+ ['Do you offer the broker class?','Yes. A 40-hour broker class runs live on Zoom over five days. You need three years as a salesperson to sit the broker exam.','broker upgrade']
+];
+(function(){const list=document.getElementById('faqList'),inp=document.getElementById('q'),cnt=document.getElementById('count');
+ function draw(){const t=inp.value.toLowerCase().trim(),ws=t.split(/\W+/).filter(w=>w.length>2);
+  const hits=FAQ.filter(([q,a,k])=>!ws.length||ws.some(w=>(q+' '+a+' '+k).toLowerCase().includes(w)));
+  cnt.textContent=t?(hits.length?`${hits.length} matching ${hits.length===1?'answer':'answers'}`:''):'';
+  list.innerHTML=hits.length?hits.map(([q,a])=>`<details${t?' open':''}><summary>${q}<i></i></summary><p>${a}</p></details>`).join('')
+   :`<p class="soft" style="padding:16px 0">No matching answer. Call <a href="tel:+16172010402">617-201-0402</a> or email <a href="mailto:school@metropolitanbre.com">school@metropolitanbre.com</a>.</p>`}
+ inp.addEventListener('input',draw);draw()})();
+
+// ---- CE countdown
+(function(){const inp=document.getElementById('exp'),out=document.getElementById('ceOut');
+ function draw(){if(!inp.value){out.innerHTML='<span class="soft">Enter the date on your license.</span>';return}
+  const d=new Date(inp.value+'T00:00'),t=new Date();t.setHours(0,0,0,0);const n=Math.round((d-t)/864e5);
+  const nice=d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+  out.innerHTML=n>0?`<b class="num">${n} days</b><span>until ${nice}. Finish your 12 hours before then.</span>`
+   :n===0?`<b>Today</b><span>Your license expires today. Call us at 617-201-0402.</span>`
+   :`<b class="num">${-n} days ago</b><span>That date has passed. Call us at 617-201-0402 and we'll help.</span>`}
+ inp.addEventListener('input',draw);draw()})();
+
+// ---- mobile menu
+(function(){const b=document.getElementById('menuBtn'),n=document.getElementById('nav');
+ b.onclick=()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'Close':'Menu'};
+ n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='Menu'}))})();
+
+// ---- entrances + mobile bar
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rise').forEach(el=>{const sib=[...el.parentElement.children].filter(c=>c.classList.contains('rise'));el.style.transitionDelay=Math.min(sib.indexOf(el),4)*70+'ms';io.observe(el)});
+io.observe(document.getElementById('band'));
+(function(){const bar=document.getElementById('bar'),hero=document.getElementById('heroCta'),dates=document.getElementById('dates');let h=true,d=false,k=false;
+ const set=()=>{const v=!h&&!d&&!k;bar.classList.toggle('on',v);bar.inert=!v};
+ new IntersectionObserver(([e])=>{k=e.isIntersecting;set()}).observe(document.getElementById('band'));
+ new IntersectionObserver(([e])=>{h=e.isIntersecting;set()}).observe(hero);
+ new IntersectionObserver(([e])=>{d=e.isIntersecting;set()},{threshold:.1}).observe(dates)})();
+</script>
+</body>
+</html>

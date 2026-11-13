@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Metropolitan School of Real Estate</title>
+<meta name="description" content="The 40-hour Massachusetts real estate license class, live on Zoom with broker Michael Albano. State license #1214.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#16203a;      /* navy field */
+  --ground-2:#1d2a4a;    /* one tone step up */
+  --paper:#ebebe8;       /* the stationery */
+  --paper-2:#dedcd7;
+  --ink:#16203a;         /* ink on paper */
+  --ink-soft:#4a5370;
+  --on-ground:#ebebe8;
+  --on-ground-soft:#b8bfd3;
+  --accent:#42d0f8;      /* the cyan of their own logo */
+  --accent-ink:#0d1529;
+  --step-small:clamp(.875rem,.84rem + .12vw,.9375rem);
+  --step-body:clamp(1.0625rem,1rem + .25vw,1.1875rem);
+  --step-lead:clamp(1.25rem,1.1rem + .7vw,1.625rem);
+  --step-head:clamp(2.75rem,1.4rem + 5.6vw,6.25rem);
+  --step-giant:clamp(4.25rem,1rem + 12vw,12.5rem);
+  --m:clamp(16px,3vw,32px);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--ground);color:var(--on-ground);font-family:Archivo,system-ui,sans-serif;font-size:var(--step-body);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+::selection{background:var(--accent);color:var(--accent-ink)}
+.display{font-family:Archivo;font-weight:800;font-stretch:62%;text-transform:uppercase;letter-spacing:-.01em;line-height:.86}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:52px;padding:0 28px;background:var(--accent);color:var(--accent-ink);font:500 var(--step-body)/1 Archivo;text-decoration:none;border:0;border-radius:0;clip-path:polygon(10px 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%,0 10px);cursor:pointer;transition:transform .18s var(--ease),background-color .18s}
+.btn:hover{transform:translateY(-2px);background:#7ddffb}
+.btn:active{transform:translateY(1px)}
+.link{font-weight:500;text-underline-offset:4px;text-decoration-thickness:2px}
+.wrap{padding-inline:var(--m)}
+.preview{position:relative;background:var(--accent);color:var(--accent-ink);font-size:var(--step-small);padding:8px var(--m);display:flex;justify-content:space-between;gap:16px}
+.preview a{font-weight:500}
+
+/* ---------- top row ---------- */
+.top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:22px var(--m)}
+.top .phone{justify-self:start;font-size:15px;text-decoration:none;color:var(--on-ground-soft)}
+.top .phone:hover{color:var(--on-ground)}
+.wordmark{font-weight:800;font-stretch:100%;font-size:22px;letter-spacing:-.02em;color:var(--accent);text-decoration:none;line-height:1}
+.wordmark span{display:block;font-weight:400;font-size:13px;letter-spacing:.01em;color:var(--on-ground-soft);margin-top:3px}
+.top .left{justify-self:start;display:flex;gap:24px}
+.top .login{font-size:15px;color:var(--on-ground-soft);text-decoration:none}
+.top-btn{justify-self:end;min-height:44px;padding:0 20px;font-size:16px}
+.top .login:hover{color:var(--on-ground)}
+
+/* ---------- hero: folder stack ---------- */
+.hero{min-height:100svh;display:flex;flex-direction:column;overflow:hidden}
+.hero-head{text-align:center;padding:clamp(16px,3.5vh,48px) var(--m) 0}
+.hero h1{font-size:clamp(3.75rem,1rem + 8.6vw,9.5rem);color:var(--paper)}
+.hero .sub{max-width:46ch;margin:18px auto 0;font-size:var(--step-lead);line-height:1.35;color:var(--on-ground)}
+.folders{position:relative;margin-top:auto;padding-top:clamp(36px,5vh,64px);width:86%;margin-inline:auto}
+.folder{position:relative;display:block;text-decoration:none;color:var(--ink);height:44px}
+.folder .tab{position:absolute;bottom:100%;height:40px;padding:0 30px;display:flex;align-items:center;font-size:18px;font-weight:500;clip-path:polygon(14px 0,calc(100% - 14px) 0,100% 100%,0 100%);white-space:nowrap}
+.folder .band{position:absolute;inset:0;}
+.f1 .tab,.f1 .band{background:#2f3d63;color:var(--on-ground)} .f1 .tab{left:4%}
+.f2 .tab,.f2 .band{background:#3d4e7a;color:var(--on-ground)} .f2 .tab{left:24%}
+.f3 .tab,.f3 .band{background:#c9c5bb} .f3 .tab{left:44%}
+.f4 .tab,.f4 .band{background:var(--paper-2)} .f4 .tab{left:64%}
+.folder:hover .tab{transform:translateY(-6px)}
+.folder .tab{transition:transform .2s var(--ease)}
+.front{position:relative;background:var(--paper);color:var(--ink);min-height:44svh;margin-top:0}
+.front .tab{position:absolute;bottom:100%;left:0;height:40px;padding:0 30px;display:flex;align-items:center;font-size:18px;font-weight:500;background:var(--paper);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 100%,0 100%)}
+.front-inner{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,56px);padding:32px}
+.front .next{font-size:var(--step-lead);font-weight:500;line-height:1.3}
+.front .next strong{display:block;font-size:var(--step-head);font-weight:800;font-stretch:62%;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;margin:6px 0 14px}
+.front p{color:var(--ink);max-width:44ch;margin-bottom:24px}
+.front .btn{margin-right:18px}
+.front figure{align-self:start;aspect-ratio:16/10;overflow:hidden;background:var(--paper-2)}
+.front figure img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+
+.vid{position:relative}
+.play{position:absolute;left:16px;bottom:16px;min-height:48px;padding:0 20px;border:0;background:var(--ink);color:var(--paper);font:500 16px/1 Archivo;cursor:pointer;transition:transform .18s var(--ease)}
+.play:hover{transform:translateY(-2px)}
+.vid iframe{width:100%;height:100%;border:0;display:block}
+
+/* ---------- student hub ---------- */
+.hub{background:var(--ground-2);padding:clamp(96px,11vw,160px) var(--m)}
+.hub-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,5vw,80px);align-items:start}
+.hub h2{font-size:var(--step-head);color:var(--paper)}
+.hub .lede{margin-top:22px;color:var(--on-ground);max-width:40ch}
+.hub .meter{margin-top:36px;font-size:var(--step-lead);color:var(--paper)}
+.hub .meter b{color:var(--accent);font-weight:700}
+.board{background:var(--paper);color:var(--ink);padding:36px}
+.board h3{font-size:20px;font-weight:700;margin-top:30px}
+.board h3:first-child{margin-top:0}
+.board label{display:flex;gap:14px;align-items:flex-start;padding:10px 0;cursor:pointer;font-size:17px}
+.board input{width:22px;height:22px;flex:0 0 22px;margin-top:2px;accent-color:var(--ink)}
+.board input:checked+span{text-decoration:line-through;color:var(--ink-soft)}
+.board .note{margin-top:26px;font-size:var(--step-small);color:var(--ink-soft)}
+
+/* ---------- intro / facts ---------- */
+section{position:relative}
+.intro{background:var(--paper);color:var(--ink);padding:clamp(80px,10vw,140px) var(--m) clamp(80px,9vw,120px)}
+.intro-row{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end}
+.intro h2{grid-column:1/8;font-size:var(--step-head)}
+.intro .note{grid-column:9/13;color:var(--ink)}
+.facts{display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px;margin-top:clamp(64px,8vw,120px)}
+.fact b{display:block;font-weight:300;font-size:clamp(2rem,1.2rem + 2.6vw,3.5rem);line-height:1;letter-spacing:-.02em}
+.fact span{display:block;margin-top:10px;font-size:var(--step-small);color:var(--ink-soft);max-width:22ch}
+.forty{margin-top:clamp(56px,7vw,96px)}
+.dstrip{list-style:none;display:grid;grid-template-columns:repeat(6,1fr) 1.4fr;gap:6px}
+.dt{position:relative;overflow:hidden;background:var(--paper-2);padding:clamp(18px,2vw,28px) clamp(14px,1.4vw,20px) 30px;min-height:clamp(150px,13vw,190px);display:flex;flex-direction:column;justify-content:space-between}
+.dt b{font-weight:800;font-stretch:62%;text-transform:uppercase;font-size:clamp(1.8rem,1rem + 1.8vw,3rem);line-height:.95}
+.dt span{font-size:var(--step-small);color:var(--ink-soft)}
+.dt i{position:absolute;left:0;bottom:0;height:8px;width:100%;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease) calc(var(--k,0) * 140ms)}
+.dt.cert{background:var(--ground);color:var(--on-ground)}
+.dt.cert b{color:var(--accent)}.dt.cert span{color:var(--on-ground-soft)}
+.dt.cert i{background:var(--accent)}
+.forty.go .dt i{transform:scaleX(1)}
+.fopts{display:flex;flex-wrap:wrap;gap:14px 28px;margin-bottom:16px}
+.fgrp{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.fgrp>span{width:100%;font-size:var(--step-small);font-weight:700;color:var(--ink)}
+.fgrp button{min-height:44px;padding:0 16px;border:2px solid var(--ink);background:transparent;color:var(--ink);font:600 var(--step-small) Archivo;cursor:pointer;transition:transform .2s var(--ease),background-color .2s}
+.fgrp button:hover{transform:translateY(-2px)}
+.fgrp button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.fgo{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.fnote p{max-width:60ch;font-size:var(--step-body);color:var(--ink)}
+.fnote{align-items:center}
+.also{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(48px,6vw,80px)}
+.also-card{display:grid;grid-template-columns:180px 1fr;gap:18px;align-items:center;padding:12px;background:var(--paper-2);text-decoration:none;color:var(--ink);transition:transform .25s var(--ease),background-color .25s}
+.also-card:hover{transform:translateY(-4px);background:#d4e9f0}
+.also-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.also-card span{font-size:var(--step-small);color:var(--ink-soft)}
+.also-card b{display:block;font-size:var(--step-body);color:var(--ink);margin-bottom:4px}
+.ftabs{display:none}
+.ftabs button{min-height:44px;padding:0 18px;border:2px solid var(--ink);background:transparent;color:var(--ink);font:600 var(--step-small) Archivo;cursor:pointer;transition:transform .2s var(--ease),background-color .2s}
+.ftabs button:hover{transform:translateY(-2px)}
+.ftabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.dt small{display:block;font-size:var(--step-small);font-weight:600;color:var(--ink-soft);margin-bottom:6px}
+.dt.cert small{color:var(--on-ground-soft)}
+.fnote{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:14px;font-size:var(--step-small);color:var(--ink-soft)}
+.fnote .link{color:var(--ink);font-weight:600}
+.hours{display:flex;justify-content:space-between;margin-top:12px;font-size:var(--step-small);color:var(--ink-soft);max-width:calc(100% * 6 / 7.4)}
+.hours span:last-child{color:var(--ink);font-weight:700}
+.mini{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:clamp(40px,5vw,64px)}
+.mini li{font-size:var(--step-small);color:var(--ink-soft)}
+.mini b{display:block;font-weight:300;font-size:clamp(1.8rem,1.1rem + 2vw,3rem);line-height:1;letter-spacing:-.02em;color:var(--ink);margin-bottom:8px}
+.intro-photos{display:grid;grid-template-columns:7fr 5fr;gap:24px;margin-top:clamp(56px,7vw,96px)}
+.intro-photos img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+
+/* ---------- schedule ticket (the live thing) ---------- */
+.days{background:var(--ground);padding:clamp(96px,12vw,180px) var(--m)}
+.days-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,5vw,80px);align-items:start}
+.days h2{font-size:var(--step-head);color:var(--paper)}
+.days .lede{margin-top:22px;color:var(--on-ground);max-width:40ch}
+.plans{margin-top:36px;display:grid;gap:10px}
+.plan{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:center;text-align:left;width:100%;padding:16px 20px;background:var(--ground-2);color:var(--on-ground);border:0;cursor:pointer;font:inherit;transition:background-color .18s,transform .18s var(--ease)}
+.plan:hover{background:#26355c;transform:translateX(4px)}
+.plan[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.plan .dot{grid-row:1/3;width:18px;height:18px;border-radius:50%;background:transparent;border:2px solid currentColor}
+.plan[aria-pressed="true"] .dot{background:currentColor}
+.plan b{font-weight:600}
+.plan small{font-size:var(--step-small);opacity:.85}
+.ticket{position:sticky;top:24px;background:var(--paper);color:var(--ink);clip-path:polygon(0 0,100% 0,100% calc(50% - 18px),calc(100% - 18px) 50%,100% calc(50% + 18px),100% 100%,0 100%,0 calc(50% + 18px),18px 50%,0 calc(50% - 18px))}
+.ticket-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:28px 36px 0}
+.ticket-head .wordmark{color:var(--ink);font-size:20px}
+.ticket-head .wordmark span{color:var(--ink-soft)}
+.ticket-head .price{font-weight:800;font-stretch:62%;font-size:44px;line-height:1}
+.ticket h3{padding:18px 36px 0;font-size:clamp(2rem,1.3rem + 2.4vw,3.25rem)}
+.ticket .t-note{padding:8px 36px 0;color:var(--ink-soft);font-size:var(--step-small);max-width:60ch}
+.ticket ol{list-style:none;padding:22px 36px 24px;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.ticket li{display:flex;justify-content:space-between;gap:12px;font-variant-numeric:tabular-nums;padding:8px 0}
+.ticket li span{color:var(--ink-soft)}
+.ticket li b{font-weight:600}
+.perf{height:0;margin:0 36px;border-top:5px dotted #aaa59a}
+.stub{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:22px 36px 30px}
+.stub b{display:block;font-weight:700;font-size:var(--step-lead);line-height:1.15}
+.stub span{display:block;font-size:var(--step-small);color:var(--ink-soft);margin-top:4px}
+.ticket .go{padding:0 36px 34px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.ticket .go .btn{background:var(--ink);color:var(--paper)}
+.ticket .go .btn:hover{background:#2a3963}
+.ticket .go small{color:var(--ink-soft);font-size:var(--step-small)}
+
+/* ---------- path to a license (drag row) ---------- */
+.journey{background:var(--ground);color:var(--on-ground);position:relative}
+.j-pin{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;padding:clamp(28px,4vh,48px) 0 clamp(24px,4vh,40px)}
+.j-top{display:flex;justify-content:space-between;align-items:end;gap:24px;padding:0 var(--m)}
+.j-top h2{font-size:var(--step-head);color:var(--paper)}
+.j-top p{max-width:34ch;color:var(--on-ground-soft)}
+.j-count{font-weight:300;font-size:clamp(2rem,1.2rem + 2vw,3.25rem);line-height:1;font-variant-numeric:tabular-nums;color:var(--accent);white-space:nowrap}
+.j-line{position:relative;height:2px;background:var(--ground-2);margin:clamp(20px,3vh,32px) var(--m) 0}
+.j-line i{position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--accent);transform-origin:left;transform:scaleX(0)}
+.j-line b{position:absolute;top:50%;left:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--accent)}
+.j-track{flex:1;display:flex;gap:clamp(20px,2.5vw,40px);padding:clamp(20px,3vh,36px) var(--m) 0;will-change:transform;min-height:0}
+.j-step{flex:0 0 min(72vw,1040px);display:grid;grid-template-columns:3fr 2fr;gap:clamp(20px,2.5vw,40px);min-height:0;align-items:center}
+.j-step figure{position:relative;overflow:hidden;aspect-ratio:3/2;max-height:100%;background:var(--ground-2)}
+.j-step .ill{position:absolute;left:10px;bottom:10px;padding:2px 8px;background:rgba(13,21,41,.7);color:#dfe4ee;font-size:13px;letter-spacing:.02em}
+.j-step figure img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.4s var(--ease)}
+.j-step.on figure img{transform:scale(1)}
+.j-step .txt{display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:8px}
+.j-step .n{font-weight:800;font-stretch:62%;font-size:clamp(5rem,3rem + 6vw,10rem);line-height:.8;color:var(--ground-2);transition:color .6s var(--ease)}
+.j-step.on .n{color:var(--accent)}
+.j-step h3{font-family:Archivo;font-weight:800;font-stretch:62%;text-transform:uppercase;font-size:clamp(2rem,1.2rem + 2vw,3.25rem);line-height:.92;margin-top:20px;color:var(--paper)}
+.j-step p{margin-top:14px;color:var(--on-ground-soft);max-width:34ch}
+.j-step .btn{margin-top:24px;align-self:flex-start}
+.j-step.last h3{color:var(--accent)}
+
+/* ---------- reviews on paper slips ---------- */
+.reviews{background:var(--ground);padding:clamp(96px,11vw,170px) var(--m) 0;overflow:hidden}
+.reviews-top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.reviews h2{font-size:var(--step-head);color:var(--paper);max-width:12ch}
+.score{text-align:right}
+.score b{display:block;font-weight:300;font-size:clamp(3rem,2rem + 3vw,5rem);line-height:1;color:var(--accent)}
+.score span{color:var(--on-ground-soft);font-size:var(--step-small)}
+.slips{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.5vw,36px);margin-top:64px;padding-bottom:clamp(96px,10vw,160px);align-items:start}
+.slip{background:var(--paper);color:var(--ink);padding:52px 34px 60px;min-height:clamp(420px,27vw,480px);transition:transform .45s var(--ease);clip-path:polygon(0 8px,5% 0,10% 8px,15% 0,20% 8px,25% 0,30% 8px,35% 0,40% 8px,45% 0,50% 8px,55% 0,60% 8px,65% 0,70% 8px,75% 0,80% 8px,85% 0,90% 8px,95% 0,100% 8px,100% calc(100% - 8px),95% 100%,90% calc(100% - 8px),85% 100%,80% calc(100% - 8px),75% 100%,70% calc(100% - 8px),65% 100%,60% calc(100% - 8px),55% 100%,50% calc(100% - 8px),45% 100%,40% calc(100% - 8px),35% 100%,30% calc(100% - 8px),25% 100%,20% calc(100% - 8px),15% 100%,10% calc(100% - 8px),5% 100%,0 calc(100% - 8px))}
+.slip:nth-child(1){transform:rotate(-2deg)}
+.slip:nth-child(2){transform:rotate(1.5deg);margin-top:48px}
+.slip:nth-child(3){transform:rotate(-1deg);margin-top:16px}
+.slip:hover{transform:rotate(0) translateY(-10px)}
+.slip .stars{display:block;text-align:center;color:var(--ink);letter-spacing:4px;font-size:15px;margin-bottom:6px}
+html.js .slips.dealt .slip{animation:deal .8s var(--ease) both}
+html.js .slips:not(.dealt) .slip{opacity:0}
+html.js .slips.dealt .slip:nth-child(2){animation-delay:.16s}
+html.js .slips.dealt .slip:nth-child(3){animation-delay:.32s}
+@keyframes deal{from{opacity:0;transform:translateY(-120px) rotate(var(--deal,-14deg)) scale(1.04)}60%{opacity:1}}
+.slip:nth-child(1){--deal:-16deg}.slip:nth-child(2){--deal:12deg}.slip:nth-child(3){--deal:-9deg}
+.reviews .src{margin-top:-40px;padding-bottom:clamp(64px,8vw,120px);font-size:var(--step-small);color:var(--on-ground-soft)}
+.slip .who{text-align:center;font-weight:700;font-size:18px}
+.slip .role{text-align:center;font-size:var(--step-small);color:var(--ink-soft);margin-bottom:22px}
+.slip blockquote{font-size:clamp(17px,.55vw + 11px,21px);line-height:1.55}
+
+/* ---------- receipt ---------- */
+.price-sec{background:var(--paper-2);color:var(--ink);padding:clamp(28px,5vh,64px) var(--m);min-height:100svh;display:flex;align-items:center;scroll-margin-top:0}
+.price-sec>.price-grid{width:100%}
+.price-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:center}
+.price-copy{grid-column:1/7}
+.price-copy h2{font-size:min(var(--step-head),12vh)}
+.price-copy p{margin-top:16px;font-size:var(--step-lead);line-height:1.4;max-width:30ch}
+.addons{margin-top:24px;display:grid;gap:10px;max-width:460px}
+.addon{display:flex;gap:14px;align-items:center;padding:14px 18px;background:var(--paper);cursor:pointer;transition:transform .18s var(--ease)}
+.addon:hover{transform:translateX(4px)}
+.addon input{width:22px;height:22px;accent-color:var(--ink)}
+.addon span{flex:1}
+.addon em{font-style:normal;font-variant-numeric:tabular-nums;font-weight:600}
+.price-copy .btn{margin-top:22px;background:var(--ink);color:var(--paper)}
+.receipt{grid-column:8/12;background:var(--paper);padding:clamp(28px,4.5vh,48px) 30px clamp(36px,5vh,56px);align-self:center;clip-path:polygon(0 0,100% 0,100% calc(100% - 12px),96% 100%,92% calc(100% - 12px),88% 100%,84% calc(100% - 12px),80% 100%,76% calc(100% - 12px),72% 100%,68% calc(100% - 12px),64% 100%,60% calc(100% - 12px),56% 100%,52% calc(100% - 12px),48% 100%,44% calc(100% - 12px),40% 100%,36% calc(100% - 12px),32% 100%,28% calc(100% - 12px),24% 100%,20% calc(100% - 12px),16% 100%,12% calc(100% - 12px),8% 100%,4% calc(100% - 12px),0 100%)}
+.receipt h3{text-align:center;font-size:20px;font-weight:700}
+.receipt .r-sub{text-align:center;font-size:var(--step-small);color:var(--ink-soft);margin:4px 0 clamp(14px,2.4vh,24px)}
+.receipt ul{list-style:none;display:grid;gap:clamp(6px,1.3vh,12px)}
+.receipt li{display:flex;justify-content:space-between;gap:16px;font-size:16px;font-variant-numeric:tabular-nums}
+.receipt li span:last-child{white-space:nowrap}
+.receipt li.added{color:var(--ink)}
+.receipt .thick{height:4px;background:var(--ink);margin:clamp(12px,2vh,20px) 0 10px}
+.receipt .total{display:flex;justify-content:space-between;align-items:baseline}
+.receipt .total b{font-weight:800;font-stretch:62%;font-size:44px;font-variant-numeric:tabular-nums}
+.promo{display:none;margin-top:22px;max-width:460px;background:var(--ground);color:var(--on-ground);padding:18px 20px;position:relative}
+.promo.on{display:block;animation:deal .6s var(--ease) both;--deal:-3deg}
+.promo b{display:block;color:var(--accent);font-weight:800;font-stretch:62%;text-transform:uppercase;font-size:26px;line-height:1}
+.promo span{display:block;margin-top:6px;font-size:var(--step-small);color:var(--on-ground-soft)}
+.promo-tag{position:absolute;top:-12px;right:16px;background:var(--accent);color:var(--accent-ink)!important;font-size:13px!important;font-weight:600;padding:3px 10px;margin:0!important}
+.addon.deal em{color:#0b7a9a}
+.receipt li.minus span:last-child{color:#0b7a9a}
+/* returning student login */
+.ret{margin-top:16px;max-width:460px}
+.ret-open{background:none;border:0;padding:6px 0;font:600 var(--step-body)/1.3 Archivo;color:var(--ink);cursor:pointer;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:5px}
+.ret-open:hover{text-decoration-color:var(--ink)}
+.ret form{display:none;margin-top:10px;background:var(--paper);padding:14px;gap:8px;grid-template-columns:1fr auto}
+.ret.open form{display:grid;animation:deal .45s var(--ease) both;--deal:-2deg}
+.ret input{min-width:0;min-height:46px;padding:0 12px;border:1px solid #b9b6ad;background:#fff;font:inherit;font-size:16px;color:var(--ink)}
+.ret form .btn{min-height:46px;padding:0 18px;margin:0;background:var(--ink);color:var(--paper)}
+.ret small{grid-column:1/-1;font-size:13px;color:var(--ink-soft)}
+.ret .ok{display:none;margin-top:10px;padding:12px 14px;background:var(--ground);color:var(--on-ground);font-size:var(--step-small)}
+.ret .ok b{color:var(--accent)}
+.ret.done form{display:none}.ret.done .ok{display:block;animation:deal .45s var(--ease) both;--deal:2deg}
+/* always-there enroll button */
+.dock{position:fixed;z-index:50;right:clamp(12px,2vw,28px);bottom:clamp(12px,2vw,28px);display:flex;align-items:center;gap:14px;padding:8px 8px 8px 20px;background:var(--ground);color:var(--on-ground);box-shadow:0 10px 30px rgba(10,16,32,.35);outline:1px solid #34446e;transform:translateY(140%);transition:transform .45s var(--ease)}
+.dock.on{transform:none}
+.dock span{font-size:var(--step-small);line-height:1.25}
+.dock span b{display:block;color:var(--paper);font-size:16px}
+.dock .btn{min-height:46px;padding:0 20px}
+.dock .btn span{font:inherit;color:inherit}
+.addon[hidden]{display:none}
+@media (min-width:821px) and (max-height:880px){.price-copy p{display:none}.addon{padding:11px 16px}.promo{padding:14px 18px}}
+.receipt .fine{margin-top:12px;font-size:var(--step-small);color:var(--ink-soft)}
+
+/* ---------- letter ---------- */
+.letter-sec{background:var(--ground);padding:clamp(120px,12vw,180px) var(--m)}
+.letter{max-width:640px;margin:0 auto;background:var(--paper);color:var(--ink);padding:60px}
+.letter .face{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 25%}
+.letter p{margin-top:22px;font-size:17px;line-height:1.6}
+.letter mark{background:var(--accent);color:var(--accent-ink);padding:0 3px}
+.letter .sign{margin-top:30px;font-style:italic;font-size:22px}
+.letter .sign small{display:block;font-style:normal;font-size:var(--step-small);color:var(--ink-soft);margin-top:2px}
+.tear{max-width:640px;margin:0 auto;background:var(--paper);color:var(--ink);border-top:5px dotted #aaa59a;padding:22px 60px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+
+/* ---------- questions ---------- */
+.faq{background:var(--paper);color:var(--ink);padding:0 var(--m)}
+.faq-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,5vw,80px)}
+.faq-copy{padding:clamp(96px,10vw,150px) 0}
+.faq h2{font-size:clamp(2.25rem,1.6rem + 2.4vw,3.5rem)}
+.faq .facts-list{margin:22px 0 36px;display:grid;gap:6px;font-size:18px}
+.faq .facts-list a{text-decoration:none;font-weight:600}
+details{padding:14px 0}
+details+details{margin-top:14px}
+summary{list-style:none;cursor:pointer;font-size:20px;font-weight:600;display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary i{flex:0 0 14px;height:14px;position:relative;transition:transform .2s var(--ease)}
+summary i::before,summary i::after{content:"";position:absolute;top:6px;width:9px;height:2px;background:currentColor}
+summary i::before{left:0;transform:rotate(45deg)} summary i::after{right:0;transform:rotate(-45deg)}
+details[open] summary i{transform:rotate(180deg)}
+details p{margin-top:10px;font-size:17px;color:var(--ink);max-width:52ch}
+.faq-copy .btn{margin-top:36px;background:var(--ink);color:var(--paper)}
+.faq-copy .link{margin-left:20px}
+.faq-pics{position:relative}
+.faq-pics .tall{width:100%;aspect-ratio:3/4;object-fit:cover;margin-top:-1px;height:auto}
+.faq-pics .sq{position:absolute;width:38%;aspect-ratio:1;object-fit:cover;left:-40px;bottom:40px;border:10px solid var(--paper)}
+
+/* ---------- renewing (CE) ---------- */
+.ce{background:var(--accent);color:var(--accent-ink);padding:clamp(80px,9vw,130px) var(--m)}
+.ce-grid{display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:end}
+.ce h2{font-size:var(--step-head)}
+.ce p{font-size:var(--step-lead);line-height:1.4}
+.ce .link{display:inline-block;margin-top:18px;font-size:var(--step-body)}
+
+/* ---------- footer: the back of the card ---------- */
+footer{background:var(--ground);padding:clamp(80px,8vw,120px) var(--m) 90px}
+.foot-name{font-size:var(--step-giant);color:var(--accent);line-height:.82}
+.foot-row{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-top:40px;color:var(--on-ground-soft)}
+.foot-row a{text-decoration:none;color:var(--on-ground)}
+.foot-row .seal{width:120px}
+.foot-row address{font-style:normal;line-height:1.7}
+
+/* ---------- phone ---------- */
+@media (max-width:820px){
+  .top{grid-template-columns:1fr auto}
+  .top .left{display:none}
+  .top-btn{padding:0 14px;font-size:15px}
+  .wordmark{justify-self:start}
+  .hero h1{font-size:clamp(3.6rem,17vw,8rem)}
+  .folders{width:100%}
+  .folder{height:40px}
+  .folder .tab{height:32px;font-size:15px;padding:0 18px}
+  .f1 .tab{left:2%}.f2 .tab{left:30%}.f3 .tab{left:56%}.f4 .tab{left:62%}
+  .front-inner{grid-template-columns:1fr;padding:24px 20px 32px}
+  .front .btn{width:100%;margin:0 0 14px}
+  .front figure{order:-1}
+  .intro h2,.intro .note{grid-column:1/-1}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:32px 20px}
+  .intro-photos{grid-template-columns:1fr}
+  .dstrip{grid-template-columns:repeat(3,1fr)}
+  .dt{min-height:110px}
+  .dt.cert{grid-column:1/-1;min-height:90px}
+  .hours{display:none}
+  .also{grid-template-columns:1fr}
+  .also-card{grid-template-columns:110px 1fr}
+  .fgo .btn{width:100%}
+  .days-grid,.faq-grid,.ce-grid,.hub-grid{grid-template-columns:1fr}
+  .board{padding:24px 20px}
+  .ticket{position:relative;top:0}
+  .ticket-head,.ticket h3,.ticket .t-note,.ticket ol,.stub,.ticket .go{padding-left:22px;padding-right:22px}
+  .perf{margin:0 22px}
+  .ticket ol{grid-template-columns:1fr;gap:0}
+  .stub{grid-template-columns:1fr 1fr}
+  .slips{grid-template-columns:1fr;gap:20px;padding-bottom:80px}
+  .slip:nth-child(n){margin-top:0}
+  .journey{height:auto!important}
+  .j-pin{position:static;height:auto;padding:80px 0}
+  .j-line{display:none}
+  .j-track{flex-direction:column;transform:none!important;gap:56px}
+  .j-step{flex:none;grid-template-columns:1fr}
+  .j-step figure{aspect-ratio:4/3}
+  .j-step .n{color:var(--accent)}
+  .j-step figure img{transform:none}
+  .j-count{display:none}
+  .j-top{flex-direction:column;align-items:flex-start}
+  .price-sec{padding:20px var(--m) 84px}
+  .price-copy h2{font-size:clamp(2.4rem,11vw,3.2rem)}
+  .price-copy p{display:none}
+  .price-grid{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+  .price-copy{display:contents}
+  .addons{order:3;margin:0;gap:6px;max-width:none}
+  .addon{padding:9px 12px;font-size:15px;gap:10px}
+  .ret{order:4;margin:0}.promo{order:2;margin:4px 0 0;padding:10px 14px}.promo b{font-size:20px}.promo span:not(.promo-tag){display:none}
+  .receipt{order:2;margin:0;width:100%;padding:20px 18px 30px}
+  .receipt h3{font-size:16px}.receipt .r-sub{margin:2px 0 10px}
+  .receipt ul{gap:4px}.receipt li{font-size:14.5px}
+  .receipt .total b{font-size:34px}.receipt .fine{font-size:13px;margin-top:8px}
+  .price-copy .btn{display:none}
+  .dock{left:0;right:0;bottom:0;padding:10px var(--m) calc(10px + env(safe-area-inset-bottom))}
+  .dock span{flex:1}
+  .ret form{grid-template-columns:1fr}
+  .letter{padding:32px 24px}
+  .tear{padding:20px 24px}
+  .faq-pics{order:-1;margin:0 calc(var(--m) * -1)}
+  .faq-pics .tall{aspect-ratio:4/5}
+  .faq-pics .sq{left:auto;right:16px;bottom:-30px;width:38%}
+  .faq-copy{padding-top:72px}
+  .faq-copy .btn{width:100%}
+  .faq-copy .link{display:inline-block;margin:18px 0 0}
+}
+/* ---------- motion: progressive enhancement, transform / opacity only ---------- */
+.btn,.play,.folder .tab,.plan,.addon,summary i{transition:transform 300ms var(--ease)}
+.hero-line{display:inline-block}
+html.js .will-reveal:not(.is-revealed){opacity:0}
+html.js .will-reveal.is-revealed{
+  animation:motion-rise 600ms var(--ease) var(--motion-delay,0ms) backwards;
+}
+@keyframes motion-rise{
+  from{opacity:0;transform:translate(var(--motion-x,0px),calc(var(--motion-y,24px) + var(--parallax-y,0px))) rotate(var(--motion-rotate,0deg))}
+  to{opacity:1;transform:translate(var(--motion-x,0px),var(--parallax-y,0px)) rotate(var(--motion-rotate,0deg))}
+}
+html.js .ticket.printed li,html.js .ticket.printed .stub>div{
+  animation:ticket-print 360ms var(--ease) var(--print-delay,0ms) backwards;
+}
+@keyframes ticket-print{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+html.js .vid img{animation:picture-drift 20s var(--ease) infinite alternate}
+@keyframes picture-drift{from{transform:scale(1)}to{transform:scale(1.06)}}
+html.js .motion-parallax{transform:translateY(var(--parallax-y,0px))}
+#hub-done{display:inline-block}
+.number-pop{animation:number-pop 360ms var(--ease)}
+@keyframes number-pop{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.board label{transition:transform 300ms var(--ease)}
+html.js .board label:has(input:checked){--motion-x:4px;transform:translateX(4px)}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+  .journey{height:auto!important}.j-pin{position:static;height:auto;overflow:visible}.j-track{flex-direction:column;transform:none!important}.j-step{flex:none}.j-line,.j-count{display:none}
+  html.js .will-reveal{opacity:1!important}
+  html.js .motion-parallax,html.js .board label:has(input:checked){transform:none!important}
+}
+</style>
+</head>
+<body>
+<div class="preview" role="note"><span>Unofficial design concept by Dawit Sellassie. Draft wording and some illustrations; enroll buttons open the live site.</span><a href="https://www.metropolitanreschool.com/">Live site</a></div>
+
+<header class="hero" id="top">
+  <div class="top">
+    <span class="left"><a class="phone" href="tel:+16172010402">617-201-0402</a><a class="login" href="https://www.metropolitanreschool.com/login">Student login</a></span>
+    <a class="wordmark" href="#top" aria-label="Metropolitan School of Real Estate, home">metropolitan<span>school of real estate</span></a>
+    <a class="btn top-btn" href="#days">Pick your 6 days</a>
+  </div>
+  <div class="hero-head">
+    <h1 class="display">Get licensed.<br>Stay awake.</h1>
+    <p class="sub">The 40-hour Massachusetts real estate class, live on Zoom with working broker Michael Albano. The least boring-est 40 hours you'll spend.</p>
+  </div>
+  <nav class="folders" aria-label="Sections">
+    <a class="folder f1" href="#students"><span class="tab">Students</span><span class="band"></span></a>
+    <a class="folder f2" href="#michael"><span class="tab">Meet Michael</span><span class="band"></span></a>
+    <a class="folder f3" href="#price"><span class="tab">What it costs</span><span class="band"></span></a>
+    <a class="folder f4" href="#questions"><span class="tab">Questions</span><span class="band"></span></a>
+    <div class="front">
+      <span class="tab">Next class</span>
+      <div class="front-inner">
+        <div>
+          <p class="next">Starts Saturday, live on Zoom<strong>November 14</strong></p>
+          <p>Six days, 10 to 6. Weekends, weekdays, or spread over two months. Pick the days that fit your life.</p>
+          <a class="btn" href="#days">Pick your 6 days</a>
+          <a class="link" href="#price">40 hours · live on Zoom · $350</a>
+        </div>
+        <figure class="vid" id="vid"><img src="img/michael-talking.jpg" width="1280" height="720" alt="Michael Albano talking to the camera"><button class="play" type="button" aria-label="Play Michael's 1 minute 26 second intro">Watch Michael · 1:26</button></figure>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="dock" id="dock" aria-label="Enroll"><span>Next class <b id="dockPlan">Starts Sat, Nov 14</b></span><a class="btn" href="#days">Enroll · <span id="dockTotal">$350</span></a></div>
+<main>
+<section class="intro" aria-labelledby="intro-h">
+  <div class="intro-row">
+    <h2 id="intro-h" class="display">Forty hours.<br>One license.</h2>
+    <p class="note">Massachusetts says you need 40 hours of class before the salesperson exam. We say they shouldn't feel like 400. Michael runs a real brokerage, so every rule comes with the story of the deal it saved.</p>
+  </div>
+  <div class="forty">
+    <ul class="mini">
+      <li><b>6 days</b>10 am to 6 pm, live on Zoom, with breaks</li>
+      <li><b>$350</b>Everything to pass, included</li>
+      <li><b>#1214</b>State-licensed school since 2008</li>
+    </ul>
+    <div class="also">
+      <a class="also-card" href="https://www.metropolitanreschool.com/resource_redirect/offers/Sr2y3Eof"><img src="img/michael-studio-2.jpg" width="1280" height="720" loading="lazy" alt="Michael at his desk with his camera and microphone"><span><b>Ready for your broker license? The broker class.</b>For agents with 3 years working under a Massachusetts broker. 40 hours over 5 days: Dec 7, 9, 11, 14 and 16, 9 am to 6:30 pm on Zoom. $395.</span></a>
+      <a class="also-card" href="https://www.metropolitanreschool.com/resource_redirect/offers/Sx9s2LU6"><img src="img/michael-talking.jpg" width="1280" height="720" loading="lazy" alt="Michael talking to the camera"><span><b>Fast Q&amp;A and The Plan.</b>Michael asks hundreds of exam-type questions on video, plus his plan to pass on the first try. $50.</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="days" id="days" aria-labelledby="days-h">
+  <div class="days-grid">
+    <div>
+      <h2 id="days-h" class="display">Pick your<br>six days.</h2>
+      <p class="lede">Work weekdays? Busy weekends? Mix days from two classes and still finish all 40 hours. Choose a plan and your ticket fills in.</p>
+      <div class="plans" role="group" aria-label="Class plans">
+        <button class="plan" data-plan="nov" aria-pressed="true"><span class="dot"></span><b>November, straight through</b><small>Two weekends and a Tue/Thu</small></button>
+        <button class="plan" data-plan="novdec"><span class="dot"></span><b>Weekends only, Nov to Dec</b><small>Days 3 and 4 in the December class</small></button>
+        <button class="plan" data-plan="slow"><span class="dot"></span><b>Slow and steady, Nov to Jan</b><small>One weekend a month</small></button>
+        <button class="plan" data-plan="decjan"><span class="dot"></span><b>Weekends only, Dec to Jan</b><small>Start in December, finish in January</small></button>
+        <button class="plan" data-plan="jan"><span class="dot"></span><b>January, straight through</b><small>Two weekends and a Tue/Thu</small></button>
+        <button class="plan" data-plan="janfeb"><span class="dot"></span><b>Weekends only, Jan to Feb</b><small>Days 3 and 4 in the February class</small></button>
+        <button class="plan" data-plan="weekday"><span class="dot"></span><b>Weekdays only, Jan to Mar</b><small>Tuesdays and Thursdays</small></button>
+        <button class="plan" data-plan="febmar"><span class="dot"></span><b>Feb to Mar, straight through</b><small>Two Tue/Thu weeks and a weekend</small></button>
+      </div>
+    </div>
+    <article class="ticket" aria-live="polite">
+      <div class="ticket-head">
+        <span class="wordmark">metropolitan</span>
+        <span class="price">$350</span>
+      </div>
+      <h3 class="display" id="t-title">November, straight through</h3>
+      <p class="t-note" id="t-note"></p>
+      <ol id="t-days">
+        <li><span>Day one</span><b>Sat, Nov 14</b></li>
+        <li><span>Day two</span><b>Sun, Nov 15</b></li>
+        <li><span>Day three</span><b>Tue, Nov 17</b></li>
+        <li><span>Day four</span><b>Thu, Nov 19</b></li>
+        <li><span>Day five</span><b>Sat, Nov 21</b></li>
+        <li><span>Day six</span><b>Sun, Nov 22</b></li>
+      </ol>
+      <div class="perf" aria-hidden="true"></div>
+      <div class="stub">
+        <div><b id="t-last">Sun, Nov 22</b><span>Last class</span></div>
+        <div><b id="t-cert">Mon, Nov 23</b><span>Certificate by email</span></div>
+        <div><b>eLIPSE</b><span>Then apply to the state to sit the exam</span></div>
+      </div>
+      <div class="go">
+        <a class="btn" id="t-book" href="https://www.metropolitanreschool.com/get-licensed">Save my seat</a>
+        <small>Every day is 10 am to 6 pm Eastern, on Zoom, with breaks.</small>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="journey" id="journey" aria-labelledby="path-h">
+  <div class="j-pin">
+    <div class="j-top">
+      <div><h2 id="path-h" class="display">Class to keys.</h2></div>
+      <p>Six days with Michael are the start. Here is the whole road, all the way to the day you hand someone the keys.</p>
+      <span class="j-count" aria-hidden="true"><span id="jNow">01</span> / 06</span>
+    </div>
+    <div class="j-line" aria-hidden="true"><i id="jFill"></i><b id="jDot"></b></div>
+    <div class="j-track" id="jTrack">
+      <article class="j-step on"><figure><img src="img/michael-talking-hd.jpg" width="2000" height="1125" alt="Michael Albano teaching to camera" style="object-position:50% 30%"></figure><div class="txt"><span class="n">01</span><h3>Six days with Michael</h3><p>Live on Zoom, camera on. Twenty years of real deals, and the test tricks the textbook leaves out.</p></div></article>
+      <article class="j-step"><figure><img src="img/j-certificate.jpg" width="1536" height="1024" loading="lazy" alt="A phone showing the email with the 40-hour certificate attached"><figcaption class="ill">Illustration</figcaption></figure><div class="txt"><span class="n">02</span><h3>Your certificate</h3><p>Finish the 40 hours and your stamped education certificate arrives by email. It is your ticket to the exam.</p></div></article>
+      <article class="j-step"><figure><img src="img/j-apply.jpg" width="1536" height="1024" loading="lazy" alt="A student filling in the state license application on a laptop at home"><figcaption class="ill">Illustration</figcaption></figure><div class="txt"><span class="n">03</span><h3>Apply on eLIPSE</h3><p>Send your application to the state board. Michael walks you through the paperwork in class.</p></div></article>
+      <article class="j-step"><figure><img src="img/j-exam.jpg" width="1536" height="1024" loading="lazy" alt="A computer testing room with cubicles, like the PSI exam centers"><figcaption class="ill">Illustration</figcaption></figure><div class="txt"><span class="n">04</span><h3>Pass the PSI exam</h3><p>Book your exam once you are approved. Rewatch your class recording while you wait.</p></div></article>
+      <article class="j-step"><figure><img src="img/j-broker.jpg" width="1536" height="1024" loading="lazy" alt="Illustration: a bright real estate office desk with blank business cards"><figcaption class="ill">Illustration</figcaption></figure><div class="txt"><span class="n">05</span><h3>Join a brokerage</h3><p>Hang your license with a broker. The optional career seminar covers how to get hired.</p></div></article>
+      <article class="j-step last"><figure><img src="img/j-keys.jpg" width="1536" height="1024" loading="lazy" alt="Illustration: one hand passing house keys to another at a brownstone door"><figcaption class="ill">Illustration</figcaption></figure><div class="txt"><span class="n">06</span><h3>Your first keys</h3><p>The day you hand a buyer the keys to their first home. That is what the 40 hours are for.</p><a class="btn" href="#days">Start with day one</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews" aria-labelledby="rev-h">
+  <div class="reviews-top">
+    <h2 id="rev-h" class="display">They didn't fall asleep.</h2>
+    <div class="score"><b>5.0</b><span>197 Google reviews, Nov 2026</span></div>
+  </div>
+  <div class="slips" id="slips">
+    <figure class="slip"><figcaption><p class="who">Hannah S.</p><p class="role">40-hour class</p></figcaption><blockquote>The best real estate class ever! If you were thinking about getting your 40 hours in, you definitely should come to Michael! The classes are so engaging, fun, and you truly do learn so much. I feel so confident already just with the value and knowledge I gained from these classes.</blockquote></figure>
+    <figure class="slip"><figcaption><p class="who">Betsy H.</p><p class="role">Continuing ed, licensed 40 years</p></figcaption><blockquote>Believe me when I say this is the most enjoyable CE class on the market today. I've had my license for 40 years, I've sat in many classes. This was like a friend sitting with you, chatting about the real estate business. I was so engaged, I went back and reviewed when I was finished.</blockquote></figure>
+    <figure class="slip"><figcaption><p class="who">Helen S.</p><p class="role">40-hour class, 75 students on Zoom</p></figcaption><blockquote>Michael is a fabulous instructor. We had 75 students in our online class. Each day was organized and executed seamlessly on Zoom, as we know is not an easy task. Michael delivered his own experience with the subject matter in a way that kept us all engaged and interested.</blockquote></figure>
+  </div>
+  <p class="src">Student reviews from <a href="https://www.metropolitanreschool.com/get-licensed">Metropolitan's website</a>, shortened.</p>
+</section>
+
+<section class="price-sec" id="price" aria-labelledby="price-h">
+  <div class="price-grid">
+    <div class="price-copy">
+      <h2 id="price-h" class="display">One price.<br>No surprises.</h2>
+      <p>Your tuition covers everything on the receipt. Add the video pack if you want more practice.</p>
+      <div class="addons">
+        <label class="addon"><input type="checkbox" data-name="Fast Q&amp;A and The Plan videos" data-cost="50"><span>Fast Q&amp;A and The Plan: hundreds of exam-style questions on video</span><em>$50</em></label>
+        
+      </div>
+      <div class="promo" id="promo" aria-live="polite"><span class="promo-tag">On now</span><b id="promoTitle"></b><span id="promoText"></span></div>
+      <div class="ret" id="ret">
+        <button class="ret-open" type="button" id="retOpen" aria-expanded="false">Took the class before? Log in for half price</button>
+        <form id="retForm">
+          <input type="email" id="retEmail" required placeholder="The email you signed up with" aria-label="Email you used for your last class" autocomplete="email">
+          <button class="btn" type="submit">Log in</button>
+          <small>Demo: nothing is sent. On the live site this uses your Kajabi student login.</small>
+        </form>
+        <p class="ok" role="status"><b>Welcome back.</b> Your repeat price is on the receipt: half off, $175.</p>
+      </div>
+      <a class="btn" href="#days">Choose my days</a>
+    </div>
+    <div class="receipt" aria-live="polite" data-ui>
+      <h3>Metropolitan School of Real Estate</h3>
+      <p class="r-sub">40-hour pre-license class</p>
+      <ul id="r-items">
+        <li><span>Six live days with Michael</span><span>$350</span></li>
+        <li><span>The blue book PDF and Michael's slides</span><span>included</span></li>
+        <li><span>Recording of your class, 2 years</span><span>included</span></li>
+        <li><span>Bonus continuing-ed video library</span><span>included</span></li>
+        <li><span>Pass guarantee*</span><span>included</span></li>
+      </ul>
+      <div class="thick"></div>
+      <div class="total"><span>Total</span><b id="r-total">$350</b></div>
+      <p class="fine">*Tuition refund if you don't pass the exam. Specific conditions apply; ask Eden for the details. Repeat the class at half price if you don't test within 2 years.</p>
+    </div>
+  </div>
+</section>
+
+<section class="letter-sec" id="michael" aria-label="About Michael">
+  <div class="letter">
+    <img class="face" src="img/michael-portrait.jpg" width="640" height="429" loading="lazy" alt="Michael Albano">
+    <p>Michael Albano founded Metropolitan after finding out he loved teaching, back when he was training the agents at his own brokerage.</p>
+    <p>He still works as a broker, so his classes run on <mark>real deals and practical examples</mark>, not just the textbook.</p>
+    <p>His wife Eden runs everything behind the scenes. If you need anything before, during or after class, she's the one who answers.</p>
+    <p class="sign">Michael Albano<small>Founder and instructor, licensed Massachusetts broker</small></p>
+  </div>
+  <div class="tear"><span>Questions for Eden?</span><a class="link" href="mailto:school@metropolitanbre.com">school@metropolitanbre.com</a></div>
+</section>
+
+<section class="faq" id="questions" aria-labelledby="faq-h">
+  <div class="faq-grid">
+    <div class="faq-copy">
+      <h2 id="faq-h" class="display">Fair questions.</h2>
+      <div class="facts-list">
+        <a href="tel:+16172010402">617-201-0402</a>
+        <a href="mailto:school@metropolitanbre.com">school@metropolitanbre.com</a>
+        <span>Every class is live on Zoom, from anywhere.</span>
+      </div>
+      <details open><summary>What do I need to take the exam?<i></i></summary><p>You need to be 18, have a Social Security number, and hold the 40-hour certificate from a licensed school like ours.</p></details>
+      <details><summary>What if I miss a day?<i></i></summary><p>Make up the matching day in a later class. Rebooking costs $25 for 1–2 days or $100 for 3 or more. Eden will set it up.</p></details>
+      <details><summary>Do I really keep my camera on?<i></i></summary><p>Yes. The state needs proof you attended all 40 hours, so stay visible with your full name under your video.</p></details>
+      <details><summary>How fast can I get licensed?<i></i></summary><p>Your certificate comes within 24 hours of class. Then you apply on eLIPSE; once approved, you book your PSI exam. We help with the application in class.</p></details>
+      <details><summary>Can I cancel?<i></i></summary><p>Email Eden before you enroll for the current cancellation and transfer policy.</p></details>
+      <a class="btn" href="#days">Pick your 6 days</a><a class="link" href="tel:+16172010402">Or call Eden</a>
+    </div>
+    <div class="faq-pics">
+      <img class="tall" src="img/classroom-close-hd.jpg" width="800" height="1200" loading="lazy" alt="Michael teaching in a classroom">
+      <img class="sq" src="img/studio.jpg" width="1280" height="720" loading="lazy" alt="Michael recording a lesson in the studio">
+    </div>
+  </div>
+</section>
+
+<section class="hub" id="students" aria-labelledby="hub-h">
+  <div class="hub-grid">
+    <div>
+      <h2 id="hub-h" class="display">Signed up?<br>Start here.</h2>
+      <p class="lede">Everything from the welcome emails, as one list. Tick things off as you go; it remembers on this device.</p>
+      <p class="meter" aria-live="polite"><b id="hub-done">0</b> of <span id="hub-all">9</span> done</p>
+    </div>
+    <div class="board" id="board">
+      <h3>Before class</h3>
+      <label><input type="checkbox" data-k="zoom"><span>Install Zoom and set your display name to your full legal name</span></label>
+      <label><input type="checkbox" data-k="cam"><span>Test your camera on a laptop, not a phone. It stays on for all 40 hours.</span></label>
+      <label><input type="checkbox" data-k="form"><span>Sign the student information form</span></label>
+      <label><input type="checkbox" data-k="spam"><span>Find the Resources email (search your inbox for "metropolitan")</span></label>
+      <h3>During class</h3>
+      <label><input type="checkbox" data-k="book"><span>Download the blue book PDF from the publisher on day one</span></label>
+      <label><input type="checkbox" data-k="slides"><span>Open Michael's slides and the class Google Doc</span></label>
+      <label><input type="checkbox" data-k="app"><span>Start your eLIPSE application paperwork</span></label>
+      <h3>After class</h3>
+      <label><input type="checkbox" data-k="cert"><span>Save your certificate email (within 24 hours)</span></label>
+      <label><input type="checkbox" data-k="send"><span>Submit your application, then book your PSI exam once approved</span></label>
+      <p class="note">A personal reminder list, not an attendance record. In the real version, each line links straight to the file or form.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ce" aria-labelledby="ce-h">
+  <div class="ce-grid">
+    <h2 id="ce-h" class="display">Already licensed?</h2>
+    <div>
+      <p>Get your 12 hours of continuing ed on video, any time, in 20-minute pieces. Agents with 40 years in say it's the one class they actually enjoy.</p>
+      <a class="link" href="https://www.metropolitanreschool.com/continuing-ed">See the CE courses</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p class="foot-name display">Metropolitan</p>
+  <div class="foot-row">
+    <address>490 Broadway, Suite 1<br>Somerville, MA 02145<br><a href="tel:+16172010402">617-201-0402</a> · <a href="mailto:school@metropolitanbre.com">school@metropolitanbre.com</a></address>
+    <span>Massachusetts real estate school license #1214</span>
+    <img class="seal" src="img/seal-1214.png" width="400" height="363" loading="lazy" alt="Massachusetts real estate education accreditation seal 1214">
+  </div>
+</footer>
+
+
+
+<script>
+(()=>{
+  const motionPreference=window.matchMedia('(prefers-reduced-motion: reduce)');
+  const pop=(node)=>{
+    node.classList.remove('number-pop');
+    if(motionPreference.matches)return;
+    void node.offsetWidth;node.classList.add('number-pop');
+  };
+  const setNumber=(node,value)=>{
+    const next=String(value);
+    if(node.textContent!==next){node.textContent=next;pop(node);}
+  };
+  const plans={
+    nov:{t:'November, straight through',d:[['Sat','Nov 14'],['Sun','Nov 15'],['Tue','Nov 17'],['Thu','Nov 19'],['Sat','Nov 21'],['Sun','Nov 22']],last:[2026,10,22]},
+    novdec:{t:'Weekends only, Nov to Dec',d:[['Sat','Nov 14'],['Sun','Nov 15'],['Sat','Nov 21'],['Sun','Nov 22'],['Sat','Dec 12'],['Sun','Dec 13']],last:[2026,11,13]},
+    slow:{t:'Slow and steady, Nov to Jan',d:[['Sat','Nov 14'],['Sun','Nov 15'],['Sat','Dec 12'],['Sun','Dec 13'],['Sat','Jan 16'],['Sun','Jan 17']],last:[2027,0,17]},
+    jan:{t:'January, straight through',d:[['Sat','Jan 9'],['Sun','Jan 10'],['Tue','Jan 12'],['Thu','Jan 14'],['Sat','Jan 16'],['Sun','Jan 17']],last:[2027,0,17]},
+    weekday:{t:'Weekdays only, Jan to Mar',d:[['Tue','Jan 12'],['Thu','Jan 14'],['Tue','Feb 23'],['Thu','Feb 25'],['Tue','Mar 2'],['Thu','Mar 4']],last:[2027,2,4]},
+    decjan:{t:'Weekends only, Dec to Jan',d:[['Sat','Dec 12'],['Sun','Dec 13'],['Sat','Jan 9'],['Sun','Jan 10'],['Sat','Jan 16'],['Sun','Jan 17']],last:[2027,0,17]},
+    janfeb:{t:'Weekends only, Jan to Feb',d:[['Sat','Jan 9'],['Sun','Jan 10'],['Sat','Jan 16'],['Sun','Jan 17'],['Sat','Feb 27'],['Sun','Feb 28']],last:[2027,1,28]},
+    febmar:{t:'Feb to Mar, straight through',d:[['Tue','Feb 23'],['Thu','Feb 25'],['Sat','Feb 27'],['Sun','Feb 28'],['Tue','Mar 2'],['Thu','Mar 4']],last:[2027,2,4]}
+  };
+  const notes={"nov": "All six days inside November: two weekends plus a Tuesday and Thursday.", "novdec": "Weekends only. Days 1, 2, 5 and 6 in the November class, then days 3 and 4 in December.", "slow": "Slow and steady: one weekend a month, six days over three months.", "decjan": "Weekends only. Get a jump start with days 3 and 4 in December, then days 1, 2, 5 and 6 in January.", "jan": "All six days inside January: two weekends plus a Tuesday and Thursday.", "janfeb": "Weekends only. Days 1, 2, 5 and 6 in the January class, then days 3 and 4 in February.", "weekday": "Tuesdays and Thursdays only. Days 3 and 4 in January, then days 1, 2, 5 and 6 in the February to March class.", "febmar": "All six days from Feb 23 to Mar 4: Tuesdays, Thursdays and one weekend."};
+  const OFFER={"nov": "https://www.metropolitanreschool.com/resource_redirect/offers/HmgJLsVU", "novdec": "https://www.metropolitanreschool.com/resource_redirect/offers/2LFszkZf", "slow": "https://www.metropolitanreschool.com/resource_redirect/offers/cvSRoQBw", "decjan": "https://www.metropolitanreschool.com/resource_redirect/offers/z5K9S2hi", "jan": "https://www.metropolitanreschool.com/resource_redirect/offers/n2VeRyav", "janfeb": "https://www.metropolitanreschool.com/resource_redirect/offers/aEuEvexx", "weekday": "https://www.metropolitanreschool.com/resource_redirect/offers/K6DEydMU", "febmar": "https://www.metropolitanreschool.com/resource_redirect/offers/8PgCQj7o"};
+  const fmt=(dt)=>dt.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}).replace(',', ',');
+  const $=(id)=>document.getElementById(id);
+  function show(k){
+    const p=plans[k];$('t-title').textContent=p.t;if($('t-note'))$('t-note').textContent=notes[k];$('t-book').href=OFFER[k];
+    $('t-days').innerHTML=p.d.map((x,i)=>`<li><span>Session ${i+1}</span><b>${x[0]}, ${x[1]}</b></li>`).join('');
+    const last=new Date(p.last[0],p.last[1],p.last[2]);const cert=new Date(last);cert.setDate(cert.getDate()+1);
+    $('t-last').textContent=fmt(last);$('t-cert').textContent=fmt(cert);
+    document.querySelectorAll('.plan').forEach(b=>b.setAttribute('aria-pressed',b.dataset.plan===k));
+    const t=document.querySelector('.ticket');t.classList.remove('printed');
+    t.querySelectorAll('li,.stub>div').forEach((node,i)=>node.style.setProperty('--print-delay',i*40+'ms'));
+    void t.offsetWidth;t.classList.add('printed');
+  }
+  document.querySelectorAll('.plan').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.plan);$('dockPlan').textContent=plans[b.dataset.plan].t;}));
+  const dock=$('dock');const dockOn=()=>{const v=scrollY>innerHeight*.6;dock.classList.toggle('on',v);dock.inert=!v};addEventListener('scroll',dockOn,{passive:true});dockOn();
+  show('nov');
+
+  // ---- seasonal deals: they switch on and off by themselves on these dates.
+  // Michael (or Dawit) edits this list once a year. Nothing shows when no deal is running.
+  // Preview any day by adding ?date=2026-11-27 to the page address.
+  const DEALS=[ // from Astra's 12-month plan: short windows, real deadlines, regular price $350
+    {start:'2026-11-27',end:'2026-11-30',title:'Black Friday: $50 off',text:'$300 instead of $350 for any class that starts before March. Ends Monday 11:59 pm. New students only. State fees separate.',off:50},
+    {start:'2027-01-01',end:'2027-01-08',title:'New year early bird: $25 off',text:'$325 for the Jan 9 class. Enroll by Jan 8. Cannot combine with other offers.',off:25},
+    {start:'2027-04-12',end:'2027-04-18',title:'Seven days only: $25 off',text:'$325 for any spring class. Ends Sunday night. State fees separate.',off:25},
+    {start:'2027-06-01',end:'2027-06-20',title:'Summer early bird: $25 off',text:'$325 for the July class. Enroll by June 20.',off:25},
+    {start:'2027-08-16',end:'2027-08-31',title:'Back to school: $25 off',text:'$325 for the September class. Ends Aug 31.',off:25},
+  ];
+  const q=new URLSearchParams(location.search).get('date');
+  const today=/^\d{4}-\d\d-\d\d$/.test(q||'')?q:new Date().toLocaleDateString('en-CA');
+  // Sales stay off until Michael approves them. Add ?date=2026-11-28 to the address to preview one.
+  const deal=q&&DEALS.find(p=>today>=p.start&&today<=p.end);
+  if(deal)document.querySelector('.promo-tag').textContent='Preview, not a live offer';
+  if(deal){
+    $('promoTitle').textContent=deal.title;$('promoText').textContent=deal.text;$('promo').classList.add('on');
+    const l=document.createElement('label');l.className='addon deal';l.hidden=true;
+    l.innerHTML=`<input type="checkbox" checked data-name="${deal.title.replace(/"/g,'&quot;')}" data-cost="-${deal.off}"><span>Apply ${deal.title.split(':')[0]}</span><em>&minus;$${deal.off}</em>`;
+    document.querySelector('.addons').appendChild(l);
+  }
+  // returning students: log in, then the half-price repeat goes on the receipt
+  const ret=$('ret');
+  $('retOpen').addEventListener('click',()=>{const o=ret.classList.toggle('open');$('retOpen').setAttribute('aria-expanded',o);if(o)$('retEmail').focus();});
+  $('retForm').addEventListener('submit',e=>{e.preventDefault();ret.classList.add('done');$('retOpen').hidden=true;
+    document.querySelectorAll('.addon.deal input').forEach(x=>{x.checked=false;x.disabled=true});
+    const x=document.createElement('input');x.type='checkbox';x.checked=true;x.hidden=true;x.dataset.name='Returning student, half price';x.dataset.cost='-175';
+    const holder=document.createElement('label');holder.className='addon';holder.hidden=true;holder.appendChild(x);document.querySelector('.addons').appendChild(holder);
+    recount();});
+  // receipt add-ons
+  const items=$('r-items');
+  const recount=()=>{
+    items.querySelectorAll('.added').forEach(n=>n.remove());let total=350;
+    document.querySelectorAll('.addon input:checked').forEach(x=>{const c=+x.dataset.cost;total+=c;const li=document.createElement('li');li.className='added'+(c<0?' minus':'');li.innerHTML=`<span>${x.dataset.name}</span><span>${c<0?'&minus;$'+(-c):'$'+c}</span>`;items.appendChild(li);});
+    setNumber($('r-total'),'$'+total);$('dockTotal').textContent='$'+total;
+  };
+  document.querySelector('.addons').addEventListener('change',recount);recount();
+
+  // forty hours: the six day bars fill in order, then the certificate
+  // journey: vertical scroll drives the horizontal track
+  const J=$('journey'),track=$('jTrack'),steps=[...track.children],fill=$('jFill'),dot=$('jDot'),now=$('jNow');
+  const wide=matchMedia('(min-width:821px)');
+  const moveJ=()=>{ if(!wide.matches||motionPreference.matches)return;
+    const r=J.getBoundingClientRect(),max=J.offsetHeight-innerHeight,p=Math.min(1,Math.max(0,-r.top/max));
+    track.style.transform=`translateX(${-p*(track.scrollWidth-innerWidth)}px)`;
+    fill.style.transform=`scaleX(${p})`;dot.style.left=(p*100)+'%';
+    const k=Math.min(steps.length-1,Math.round(p*(steps.length-1)));
+    steps.forEach((st,i)=>st.classList.toggle('on',i<=k));now.textContent=String(k+1).padStart(2,'0'); };
+  const sizeJ=()=>{ if(!wide.matches||motionPreference.matches){J.style.height='';track.style.transform='';steps.forEach(st=>st.classList.add('on'));return}
+    J.style.height=(track.scrollWidth-innerWidth+innerHeight*1.15)+'px';moveJ(); };
+  addEventListener('scroll',()=>requestAnimationFrame(moveJ),{passive:true});
+  addEventListener('resize',sizeJ);addEventListener('load',sizeJ);sizeJ();
+  // video
+  const vid=$('vid');vid.querySelector('.play').addEventListener('click',()=>{vid.innerHTML='<iframe src="https://fast.wistia.net/embed/iframe/1gm1yvrutm?autoPlay=true" title="Michael Albano intro video" allow="autoplay; fullscreen" allowfullscreen></iframe>';});
+  // student hub
+  const boxes=[...document.querySelectorAll('#board input')];let saved={};
+  try{saved=JSON.parse(localStorage.getItem('metro.hub')||'{}')}catch(e){}
+  const count=()=>{setNumber($('hub-done'),boxes.filter(b=>b.checked).length);$('hub-all').textContent=boxes.length;};
+  boxes.forEach(b=>{b.checked=!!saved[b.dataset.k];b.addEventListener('change',()=>{saved[b.dataset.k]=b.checked;try{localStorage.setItem('metro.hub',JSON.stringify(saved))}catch(e){}count();});});count();
+
+  // Arm entrances only after setup succeeds. Without JS every element stays visible.
+  let observer,frame=0;
+  const root=document.documentElement;
+  const pictures=[...document.querySelectorAll('.intro-photos img,.faq-pics .tall')];
+  const reveal=(node)=>node.classList.add('is-revealed');
+  const prepare=(node,index,distance=24,step=70)=>{
+    node.style.setProperty('--motion-delay',index*step+'ms');
+    node.style.setProperty('--motion-y',distance+'px');
+    node.classList.add('will-reveal');
+  };
+  const showAll=()=>{
+    root.classList.remove('js');
+    if(observer)observer.disconnect();
+    cancelAnimationFrame(frame);frame=0;
+    document.querySelectorAll('.will-reveal').forEach(node=>node.classList.remove('will-reveal','is-revealed'));
+    pictures.forEach(node=>node.style.removeProperty('--parallax-y'));
+  };
+  const parallax=()=>{
+    frame=0;
+    if(motionPreference.matches||!root.classList.contains('js'))return;
+    // Read geometry first; subtract our own offset so it cannot feed back.
+    const positions=pictures.map(node=>{
+      const rect=node.getBoundingClientRect();
+      const previous=parseFloat(node.style.getPropertyValue('--parallax-y'))||0;
+      return Math.max(-15,Math.min(15,((innerHeight/2-(rect.top-previous+rect.height/2))/innerHeight)*30));
+    });
+    pictures.forEach((node,i)=>node.style.setProperty('--parallax-y',positions[i].toFixed(2)+'px'));
+  };
+  const queueParallax=()=>{
+    if(!frame&&!motionPreference.matches&&root.classList.contains('js'))frame=requestAnimationFrame(parallax);
+  };
+  try{
+    if(!motionPreference.matches&&'IntersectionObserver' in window){
+      observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+        if(entry.isIntersecting){reveal(entry.target);observer.unobserve(entry.target);}
+      }),{threshold:.2});
+      const groups=[
+        ['.intro','h2,.note,.mini li,.also-card'],
+        ['.days','h2,.lede,.plan'],
+        ['.journey','.j-top h2,.j-top p'],
+        ['.reviews','h2,.score'],
+        ['.price-sec','h2,.price-copy p,.addon,.receipt h3,.r-sub,.receipt li,.total,.fine'],
+        ['.letter-sec','.letter,.tear'],
+        ['.faq','h2,.facts-list,details,.faq-pics img'],
+        ['.hub','h2,.lede,.meter,.board h3,.board label,.board .note'],
+        ['.ce','h2,p,.link'],
+        ['footer','.foot-name']
+      ];
+      groups.forEach(([section,selector])=>{
+        document.querySelector(section).querySelectorAll(selector).forEach((node,i)=>{
+          prepare(node,i,24);
+          observer.observe(node);
+        });
+      });
+      // Inline spans keep the original headline's line boxes and line break.
+      const heading=document.querySelector('.hero h1');
+      [...heading.childNodes].filter(node=>node.nodeType===Node.TEXT_NODE).forEach((text,i)=>{
+        const line=document.createElement('span');line.className='hero-line';
+        text.replaceWith(line);line.appendChild(text);prepare(line,i,24,90);reveal(line);
+      });
+      document.querySelectorAll('.folder,.front').forEach((node,i)=>{
+        prepare(node,0,60);node.style.setProperty('--motion-delay',260+i*80+'ms');reveal(node);
+      });
+      const sub=document.querySelector('.hero .sub');
+      prepare(sub,0,0);sub.style.setProperty('--motion-delay','820ms');reveal(sub);
+      pictures.forEach(node=>node.classList.add('motion-parallax'));
+      document.addEventListener('animationend',event=>{
+        if(event.animationName==='motion-rise')event.target.classList.remove('will-reveal','is-revealed');
+        if(event.animationName==='number-pop')event.target.classList.remove('number-pop');
+      });
+      // Keyboard navigation must never land on an invisible pending entrance.
+      document.addEventListener('focusin',event=>{
+        const pending=event.target.closest('.will-reveal');
+        if(pending){observer.unobserve(pending);pending.classList.remove('will-reveal','is-revealed');}
+      });
+      const slips=$('slips');new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){slips.classList.add('dealt');o.disconnect()}}),{threshold:.25}).observe(slips);
+      root.classList.add('js');
+      window.addEventListener('scroll',queueParallax,{passive:true});
+      window.addEventListener('resize',queueParallax,{passive:true});
+      window.addEventListener('load',queueParallax,{once:true});
+      queueParallax();
+    }
+  }catch(error){showAll();}
+  motionPreference.addEventListener('change',event=>{if(event.matches)showAll();});
+})();
+</script>
+</body>
+</html>

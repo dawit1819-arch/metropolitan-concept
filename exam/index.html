@@ -1,0 +1,1294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Exam Conditioning</title>
+<meta name="description" content="Build up to the full 4-hour real estate exam, one level at a time.">
+<style>
+:root{
+  --b-accent:#14C3E8; --b-accent-light:#42D0F8; --b-accent-text:#0B7C95;
+  --b-primary:#383D45; --b-on-primary:#ffffff; --b-slate:#4C5A65;
+  --b-ink:#202A30; --b-paper:#FAF9F6; --b-muted:#59636A; --b-line:#D9DEDC; --b-tint:#EDF9FD;
+  --font-head: Newsreader, "Iowan Old Style", "Palatino Linotype", Charter, "Bitstream Charter", Georgia, serif;
+  --font-body: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-num: ui-monospace, "Cascadia Mono", "SF Mono", Consolas, Menlo, monospace;
+  --radius:18px; --radius-sm:12px;
+}
+:root, :root[data-theme="light"]{
+  --paper:var(--b-paper); --card:#ffffff; --ink:var(--b-ink); --muted:var(--b-muted); --line:var(--b-line);
+  --tint:var(--b-tint); --accent:var(--b-accent); --accent-text:var(--b-accent-text);
+  --primary:var(--b-primary); --on-primary:var(--b-on-primary); --slate:var(--b-slate);
+  --good:#1D7348; --good-bg:#E5F3EA; --bad:#B0382B; --bad-bg:#FBE9E6; --warn:#875700; --warn-bg:#FFF3D9;
+  --shadow:0 1px 2px rgba(32,42,48,.05), 0 6px 20px rgba(32,42,48,.06);
+  color-scheme: light;
+}
+:root[data-theme="dark"]{
+  --paper:#14181B; --card:#1C2226; --ink:#E9EEF0; --muted:#A5B0B7; --line:#2F383E;
+  --tint:#11303A; --accent:var(--b-accent-light); --accent-text:var(--b-accent-light);
+  --primary:var(--b-accent-light); --on-primary:#0A1A20; --slate:#93A6B2;
+  --good:#71D39E; --good-bg:#15302A; --bad:#FF8E80; --bad-bg:#3B201D; --warn:#F2C46B; --warn-bg:#3A3018;
+  --shadow:none;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:18px;line-height:1.55}
+h1,h2,h3{font-family:var(--font-head);font-weight:600;line-height:1.2;margin:0 0 .4em;letter-spacing:-.01em}
+h1{font-size:2.1rem} h2{font-size:1.55rem} h3{font-size:1.22rem}
+p{margin:0 0 .8em}
+a{color:var(--accent-text)}
+button,select,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:8px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+.num{font-family:var(--font-num);font-variant-numeric:tabular-nums}
+.hidden{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* header */
+.top{display:flex;align-items:center;gap:12px;padding:16px 0}
+.mark{width:44px;height:44px;border-radius:12px;background:var(--primary);color:var(--on-primary);display:grid;place-items:center;font-family:var(--font-head);font-weight:700;font-size:1.05rem;flex:none;overflow:hidden}
+.mark img{width:100%;height:100%;object-fit:cover}
+.brand{flex:1;min-width:0}
+.brand b{display:block;font-family:var(--font-head);font-size:1.2rem;line-height:1.15}
+.brand span{font-size:.85rem;color:var(--muted)}
+.wordmark img{display:block;height:46px;width:auto;max-width:100%;margin-bottom:2px}
+.wordmark .wm-dark,:root[data-theme="dark"] .wordmark .wm-light{display:none}
+:root[data-theme="dark"] .wordmark .wm-dark{display:block}
+.iconbtn{min-width:48px;height:48px;border-radius:12px;border:1px solid var(--line);background:var(--card);display:inline-grid;place-items:center;padding:0 12px;font-size:.95rem}
+.iconbtn:hover{border-color:var(--slate)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:0 24px;border-radius:14px;border:1px solid var(--line);background:var(--card);font-weight:600;font-size:1.05rem;text-decoration:none;color:var(--ink)}
+.btn:hover{border-color:var(--slate)}
+.btn.primary{background:var(--primary);color:var(--on-primary);border-color:transparent}
+.btn.primary:hover{filter:brightness(1.12)}
+.btn.big{min-height:64px;font-size:1.2rem;padding:0 32px}
+.btn.block{width:100%}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.ghost{background:transparent}
+.btn.danger{color:var(--bad)}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.section{margin:32px 0}
+.section > h2{margin-bottom:6px}
+.section > .lead{color:var(--muted);margin-bottom:18px}
+
+/* hero */
+.hero{display:flex;gap:28px;align-items:center;flex-wrap:wrap;padding:28px;background:linear-gradient(135deg,var(--card),var(--tint));}
+.hero .info{flex:1 1 320px;min-width:0}
+.hero .eyebrow{font-size:.9rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-text)}
+.hero h1{margin:.15em 0 .2em}
+.hero .detail{font-size:1.15rem;color:var(--muted);margin-bottom:18px}
+.hero-img{flex:0 1 260px;max-width:260px;border-radius:var(--radius);display:block}
+.ring{flex:none;position:relative;width:148px;height:148px}
+.ring svg{width:148px;height:148px;transform:rotate(-90deg)}
+.ring .lbl{position:absolute;inset:0;display:grid;place-items:center;text-align:center;line-height:1.1}
+.ring .lbl b{font-family:var(--font-head);font-size:2.2rem;display:block}
+.ring .lbl span{font-size:.85rem;color:var(--muted)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:.9rem}
+.chip.accent{background:var(--tint);border-color:transparent;color:var(--ink)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--accent);display:inline-block}
+
+/* trail */
+.trail{list-style:none;margin:0;padding:0;position:relative}
+.trail li{position:relative;display:flex;gap:18px;align-items:center;padding:12px 0}
+.trail li:not(:last-child)::after{content:"";position:absolute;left:31px;top:64px;bottom:-12px;width:3px;background:var(--line);border-radius:2px}
+.trail li.done:not(:last-child)::after{background:var(--slate)}
+.node{width:64px;height:64px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--font-head);font-size:1.4rem;font-weight:700;border:3px solid var(--line);background:var(--card);color:var(--muted);position:relative;z-index:1;overflow:hidden}
+.node img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--card)}
+.node:has(img){color:transparent}
+.locked .node img{filter:grayscale(1);opacity:.45}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero-img{filter:brightness(.88)}}
+:root[data-theme="dark"] .hero-img{filter:brightness(.88)}
+.done .node::after{content:"¹3";position:absolute;right:2px;bottom:2px;width:22px;height:22px;border-radius:50%;background:var(--good);color:#fff;font:700 13px/22px var(--font-body);text-align:center;z-index:2}
+.win-art{position:absolute;right:24px;top:20px;width:150px;height:150px;border-radius:50%;object-fit:cover;animation:winpop .6s ease-out}
+@keyframes winpop{from{transform:scale(.7);opacity:0}to{transform:none;opacity:1}}
+@media (max-width:640px){.win-art{position:static;display:block;width:120px;height:120px;margin:0 auto 12px}}
+.done .node{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+.current .node{border-color:var(--accent);color:var(--ink);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 22%,transparent)}
+.locked .node{border-style:dashed}
+.trail .body{flex:1;min-width:0;padding:14px 18px;border-radius:var(--radius-sm);border:1px solid transparent}
+.current .body{background:var(--card);border-color:var(--line);box-shadow:var(--shadow)}
+.trail .name{font-family:var(--font-head);font-size:1.2rem;font-weight:600}
+.trail .meta{color:var(--muted);font-size:.95rem}
+.locked .name,.locked .meta{opacity:.7}
+.trail .side{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:8px}
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.82rem;font-weight:600;background:var(--tint);color:var(--ink)}
+.badge.good{background:var(--good-bg);color:var(--good)}
+.badge.bad{background:var(--bad-bg);color:var(--bad)}
+.badge.warn{background:var(--warn-bg);color:var(--warn)}
+.badge.plain{background:transparent;border:1px solid var(--line);color:var(--muted)}
+
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.tile{display:block;text-align:left;width:100%;padding:22px;border-radius:var(--radius);border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}
+.tile:hover{border-color:var(--slate)}
+.tile b{display:block;font-family:var(--font-head);font-size:1.2rem;margin-bottom:4px}
+.tile span{color:var(--muted);font-size:.95rem}
+.list{margin:0;padding-left:1.2em}
+.list li{margin:.35em 0}
+.footer{margin:48px 0 32px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+
+/* test */
+.testbar{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.testbar .wrap{display:flex;align-items:center;gap:10px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.testbar .where{flex:1;min-width:150px}
+.testbar .where b{display:block;font-size:1.05rem}
+.testbar .where span{font-size:.88rem;color:var(--muted)}
+.clock{font-family:var(--font-num);font-size:1.6rem;font-weight:600;padding:4px 14px;border-radius:12px;background:var(--card);border:1px solid var(--line);font-variant-numeric:tabular-nums}
+.clock.low{color:var(--bad);border-color:var(--bad)}
+.pace{display:flex;gap:8px;flex-wrap:wrap;padding:10px 0 2px;font-size:.92rem}
+.pace .chip{background:var(--card)}
+.pace .chip.ok{color:var(--good)}
+.pace .chip.slow{color:var(--warn)}
+.tools{display:flex;gap:10px;align-items:center}
+.testgrid{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:28px;padding-top:22px;padding-bottom:120px}
+.qhead{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px;color:var(--muted);font-size:.95rem}
+.stem{font-family:var(--font-head);font-size:1.45rem;line-height:1.5;margin:0 0 22px;font-weight:500}
+.opts{display:grid;gap:12px}
+.opt{display:flex;gap:16px;align-items:flex-start;text-align:left;width:100%;min-height:64px;padding:16px 18px;border-radius:var(--radius-sm);border:2px solid var(--line);background:var(--card);font-size:1.15rem;line-height:1.45}
+.opt:hover{border-color:var(--slate)}
+.opt .L{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:700;border:2px solid var(--line);font-size:1rem}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:var(--tint)}
+.opt[aria-pressed="true"] .L{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+.actions{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--paper);border-top:1px solid var(--line);padding:12px 0 calc(12px + env(safe-area-inset-bottom))}
+.actions .wrap{display:flex;gap:10px}
+.actions .btn{flex:1;min-width:0;padding:0 12px}
+.actions .btn.flagged{background:var(--warn-bg);color:var(--warn);border-color:var(--warn)}
+.navgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(44px,1fr));gap:6px}
+.navgrid button{height:44px;border-radius:10px;border:1px solid var(--line);background:var(--card);font-size:.9rem;font-family:var(--font-num);position:relative;padding:0}
+.navgrid button.ans{background:var(--tint);border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+.navgrid button.flag::after{content:"";position:absolute;top:4px;right:4px;width:8px;height:8px;border-radius:50%;background:var(--warn)}
+.navgrid button.cur{outline:3px solid var(--primary);outline-offset:1px}
+.side h3{font-size:1.05rem;margin-bottom:10px}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:.82rem;color:var(--muted);margin-top:10px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:4px;border:1px solid var(--line);vertical-align:-1px;margin-right:4px}
+.coach{margin-top:20px;padding:16px;border-radius:var(--radius-sm);background:var(--tint);font-size:.95rem}
+.coach b{display:block;margin-bottom:4px}
+
+/* results */
+.verdict{padding:28px;border-radius:var(--radius);position:relative;overflow:hidden}
+.verdict.pass{background:var(--good-bg)}
+.verdict.fail{background:var(--warn-bg)}
+.verdict h1{margin:0 0 .25em}
+.parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.bigpct{font-family:var(--font-head);font-size:2.6rem;font-weight:700;line-height:1}
+.bar{height:12px;border-radius:6px;background:var(--line);overflow:hidden;position:relative}
+.bar i{display:block;height:100%;background:var(--slate);border-radius:6px}
+.bar i.ok{background:var(--good)} .bar i.no{background:var(--bad)}
+.bar .mark70{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink)}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.chart svg{width:100%;height:auto;display:block}
+.chart text{fill:var(--muted);font-family:var(--font-body)}
+.chart .v{fill:var(--ink);font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:.98rem}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+th{font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+td.r,th.r{text-align:right}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tabs button{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+.tabs button[aria-pressed="true"]{background:var(--primary);color:var(--on-primary);border-color:transparent}
+.rq{padding:20px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--card);margin-bottom:12px}
+.rq .stem{font-size:1.15rem;margin-bottom:12px}
+.rq ol{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:6px}
+.rq li{padding:8px 12px;border-radius:10px;border:1px solid var(--line)}
+.rq li.right{border-color:var(--good);background:var(--good-bg)}
+.rq li.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.why{padding:12px 14px;border-left:4px solid var(--accent);background:var(--tint);border-radius:0 10px 10px 0}
+
+/* celebration */
+.burst{position:absolute;right:36px;top:30px;width:90px;height:90px;pointer-events:none}
+.burst span{position:absolute;left:50%;top:50%;width:8px;height:8px;border-radius:50%;background:var(--accent);opacity:0;animation:burst 1.6s ease-out .2s forwards}
+.burst .ringc{position:absolute;inset:0;border-radius:50%;border:3px solid var(--good);opacity:0;animation:ringc 1.4s ease-out forwards}
+@keyframes burst{0%{transform:translate(-50%,-50%) rotate(var(--a)) translateY(0);opacity:1}100%{transform:translate(-50%,-50%) rotate(var(--a)) translateY(-58px);opacity:0}}
+@keyframes ringc{0%{transform:scale(.4);opacity:.9}100%{transform:scale(1.15);opacity:0}}
+@media (prefers-reduced-motion: reduce){.burst{display:none}.win-art{animation:none}}
+
+/* forms */
+.field{margin-bottom:22px}
+.field > label,.field > .lbl{display:block;font-weight:600;margin-bottom:8px}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg button{min-height:52px;padding:0 18px;border-radius:12px;border:2px solid var(--line);background:var(--card);font-weight:600}
+.seg button[aria-pressed="true"]{border-color:var(--accent);background:var(--tint)}
+select{width:100%;min-height:56px;border-radius:12px;border:2px solid var(--line);background:var(--card);padding:0 14px;font-size:1.05rem}
+.help{font-size:.9rem;color:var(--muted);margin-top:6px}
+
+/* modal */
+.scrim{position:fixed;inset:0;background:rgba(15,20,24,.5);z-index:50;display:grid;place-items:center;padding:16px}
+.modal{background:var(--card);color:var(--ink);border-radius:var(--radius);padding:28px;width:min(520px,100%);max-height:calc(100vh - 32px);overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.steps{display:flex;gap:6px;margin-bottom:18px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--accent)}
+.calc{width:min(340px,100%)}
+.calc .disp{font-family:var(--font-num);font-size:2rem;text-align:right;padding:12px 14px;border-radius:12px;background:var(--paper);border:1px solid var(--line);margin-bottom:12px;overflow:hidden;text-overflow:ellipsis}
+.calc .keys{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.calc .keys button{height:56px;border-radius:12px;border:1px solid var(--line);background:var(--paper);font-size:1.25rem;font-weight:600}
+.calc .keys button.op{background:var(--tint)}
+.calc .keys button.eq{background:var(--primary);color:var(--on-primary);border-color:transparent}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:var(--primary);color:var(--on-primary);padding:14px 20px;border-radius:14px;z-index:60;max-width:calc(100% - 32px);font-weight:600;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+
+@media (max-width: 899px){
+  .testgrid{grid-template-columns:1fr;gap:16px}
+  .testgrid .side{order:-1}
+  .testgrid .side.closed .navwrap{display:none}
+}
+@media (min-width: 900px){ .gridtoggle{display:none} }
+@media (max-width: 640px){
+  body{font-size:17px}
+  .wrap{padding:0 16px}
+  h1{font-size:1.75rem} h2{font-size:1.35rem}
+  .hero{padding:22px;gap:18px}
+  .ring,.ring svg{width:116px;height:116px}
+  .ring .lbl b{font-size:1.8rem}
+  .hero-img{max-width:100%;flex-basis:100%}
+  .stem{font-size:1.25rem}
+  .opt{font-size:1.08rem;padding:14px}
+  .clock{font-size:1.3rem;padding:4px 10px}
+  .card{padding:18px}
+  .node{width:52px;height:52px;font-size:1.15rem}
+  .trail li{gap:12px}
+  .trail li:not(:last-child)::after{left:25px;top:52px}
+  .trail .body{padding:10px 12px}
+  .bigpct{font-size:2.1rem}
+  .actions .btn{font-size:1rem}
+  .testbar .where{min-width:0}
+  .testbar .where span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px}
+  .testbar .wrap{gap:8px;padding-top:8px;padding-bottom:8px}
+  .tools{width:100%;gap:8px}
+  .tools .btn{flex:1;padding:0 12px}
+  .pace{flex-wrap:nowrap;overflow-x:auto;padding-top:0;padding-bottom:8px;scrollbar-width:none}
+  .pace .chip{white-space:nowrap}
+  .pace .chip.extra{display:none}
+  .testgrid{padding-top:14px}
+  .testgrid .side.closed{display:none}
+  .burst{right:12px;top:12px;width:70px;height:70px}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="modalroot"></div>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+<input type="file" id="importfile" accept=".json,application/json" class="hidden">
+<noscript><p style="padding:20px">This app needs JavaScript turned on.</p></noscript>
+
+<script src="data.js"></script>
+
+<!-- ===== CORE: pure functions (no DOM). Unit-tested by test_scoring.js ===== -->
+<script id="core">
+const PASS_PCT_DEFAULT = 70;
+const PRETEST_FRACTION = 0.1;
+
+// The conditioning ladder. min = minutes. Two parts = graded separately, own timers.
+const LEVELS = [
+  {id:'L1',  name:'Warm-up',          parts:[{key:'mixed',   n:10, min:12}]},
+  {id:'L2',  name:'First mile',       parts:[{key:'mixed',   n:15, min:20}]},
+  {id:'L3',  name:'Steady 25',        parts:[{key:'mixed',   n:25, min:35}]},
+  {id:'L4',  name:'Forty in the bank',parts:[{key:'general', n:40, min:55}]},
+  {id:'L5',  name:'State law, full part', parts:[{key:'ma',  n:40, min:90}]},
+  {id:'L6',  name:'Sixty',            parts:[{key:'general', n:60, min:80}]},
+  {id:'L7',  name:'General, full part', parts:[{key:'general', n:80, min:150}]},
+  {id:'L8',  name:'The long run',     parts:[{key:'general', n:80, min:150},{key:'ma', n:20, min:45}]},
+  {id:'L9',  name:'Full simulation',  parts:[{key:'general', n:80, min:150},{key:'ma', n:40, min:90}], pretest:true},
+  {id:'L10', name:'Dress rehearsal',  parts:[{key:'general', n:80, min:150},{key:'ma', n:40, min:90}], pretest:true, passPct:75}
+];
+
+function levelTotals(lv){
+  return {n: lv.parts.reduce((a,p)=>a+p.n,0), min: lv.parts.reduce((a,p)=>a+p.min,0)};
+}
+
+function mulberry32(seed){
+  let a = seed >>> 0;
+  return function(){
+    a = (a + 0x6D2B79F5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function shuffle(arr, rng){
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(rng() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// n questions from pool; if the pool is too small, questions repeat (reshuffled each round).
+function pickQuestions(pool, n, rng){
+  if (!pool.length || n <= 0) return [];
+  let out = [];
+  while (out.length < n) out = out.concat(shuffle(pool, rng));
+  return out.slice(0, n);
+}
+
+// spec: {mode, levelId, title, passPct, pretest, parts:[{key, n, min|null, label?, pool?}]}
+function buildSession(spec, questions, opts){
+  opts = opts || {};
+  const rng = opts.rng || Math.random;
+  const gen = questions.filter(q => q.part === 'general');
+  const ma  = questions.filter(q => q.part === 'ma');
+  const items = [], parts = [];
+  let repeats = false;
+  spec.parts.forEach((p, pi) => {
+    let picked;
+    if (p.pool) picked = pickQuestions(p.pool, p.n, rng);
+    else if (p.key === 'mixed'){
+      const nM = (gen.length && ma.length) ? Math.round(p.n / 3) : (gen.length ? 0 : p.n);
+      picked = shuffle(pickQuestions(gen, p.n - nM, rng).concat(pickQuestions(ma, nM, rng)), rng);
+    } else {
+      const pool = p.key === 'ma' ? ma : gen;
+      picked = pickQuestions(pool.length ? pool : questions, p.n, rng);
+    }
+    if (new Set(picked.map(q => q.id)).size < picked.length) repeats = true;
+    const start = items.length;
+    picked.forEach(q => items.push({qid:q.id, part:pi, pretest:false, choice:null, flagged:false, guessed:false, timeSec:0, visits:0}));
+    if (spec.pretest && picked.length >= 10){
+      const k = Math.round(picked.length * PRETEST_FRACTION);
+      const idx = shuffle(items.slice(start).map((_, i) => start + i), rng).slice(0, k);
+      idx.forEach(i => { items[i].pretest = true; });
+    }
+    parts.push({key:p.key, label:p.label || null, limitSec: p.min ? Math.round(p.min * 60) : null,
+      elapsedSec:0, timedOut:false, submitted:false, start, end:items.length, pass:1});
+  });
+  return {id:'s' + Date.now().toString(36) + Math.floor(rng()*1e6).toString(36),
+    mode:spec.mode || 'practice', levelId:spec.levelId || null, title:spec.title || 'Practice',
+    passPct:spec.passPct || PASS_PCT_DEFAULT, createdAt:Date.now(), parts, items,
+    cur:0, partIdx:0, started:false, repeats};
+}
+
+function round1(x){ return Math.round(x * 10) / 10; }
+
+function isRight(item, qmap){
+  const q = qmap[item.qid];
+  return !!q && item.choice !== null && item.choice === q.c;
+}
+
+function bucketStats(list, qmap){
+  const scored = list.filter(it => !it.pretest);
+  const correct = scored.filter(it => isRight(it, qmap)).length;
+  const t = list.reduce((a, it) => a + it.timeSec, 0);
+  return {n:list.length, scored:scored.length, correct,
+    acc: scored.length ? round1(correct / scored.length * 100) : null,
+    avgSec: list.length ? round1(t / list.length) : null};
+}
+
+// Everything the results screen needs. Pretest items never count toward scores or stamina accuracy.
+function scoreSession(s, qmap){
+  const pp = s.passPct || PASS_PCT_DEFAULT;
+  const parts = s.parts.map(p => {
+    const its = s.items.slice(p.start, p.end);
+    const sc = its.filter(it => !it.pretest);
+    const correct = sc.filter(it => isRight(it, qmap)).length;
+    const pct = sc.length ? round1(correct / sc.length * 100) : 0;
+    return {key:p.key, label:p.label, scored:sc.length, correct, pct, pass: sc.length > 0 && pct >= pp,
+      needed: Math.ceil(sc.length * pp / 100), timeUsed: Math.round(p.elapsedSec), limitSec:p.limitSec,
+      timedOut:p.timedOut, unanswered: its.filter(it => it.choice === null).length, total: its.length};
+  });
+  const scoredAll = s.items.filter(it => !it.pretest);
+  const correctAll = scoredAll.filter(it => isRight(it, qmap)).length;
+  const timeOk = s.parts.every(p => !p.timedOut);
+  const allPartsPass = parts.every(p => p.pass);
+
+  // Stamina: split by position in the test (question 1..N across all parts).
+  const N = s.items.length;
+  const quarters = [0,1,2,3].map(b => bucketStats(s.items.filter((_, i) => Math.min(3, Math.floor(i * 4 / N)) === b), qmap));
+  const halves = [0,1].map(b => bucketStats(s.items.filter((_, i) => (i < N / 2 ? 0 : 1) === b), qmap));
+  const fade = (halves[0].acc !== null && halves[1].acc !== null) ? round1(halves[0].acc - halves[1].acc) : null;
+  const paceChange = (halves[0].avgSec !== null && halves[1].avgSec !== null) ? round1(halves[1].avgSec - halves[0].avgSec) : null;
+
+  const topicMap = {};
+  scoredAll.forEach(it => {
+    const q = qmap[it.qid]; if (!q) return;
+    const k = q.part + '|' + q.topic;
+    const t = topicMap[k] || (topicMap[k] = {topic:q.topic, part:q.part, n:0, correct:0});
+    t.n++; if (isRight(it, qmap)) t.correct++;
+  });
+  const topics = Object.values(topicMap).map(t => Object.assign(t, {pct: round1(t.correct / t.n * 100)}))
+    .sort((a, b) => a.pct - b.pct || b.n - a.n);
+
+  // Traps: "fooled" = picked a wrong answer (blanks are not counted as fooled).
+  const trapMap = {};
+  scoredAll.forEach(it => {
+    const q = qmap[it.qid]; if (!q) return;
+    const k = q.trap || 'none';
+    const t = trapMap[k] || (trapMap[k] = {trap:k, seen:0, fooled:0});
+    t.seen++;
+    if (it.choice !== null && !isRight(it, qmap)) t.fooled++;
+  });
+  const traps = Object.values(trapMap).map(t => Object.assign(t, {rate: round1(t.fooled / t.seen * 100)}))
+    .sort((a, b) => b.fooled - a.fooled || b.rate - a.rate);
+
+  const guessed = s.items.filter(it => it.guessed && !it.pretest);
+  return {
+    parts, scored:scoredAll.length, correct:correctAll,
+    pct: scoredAll.length ? round1(correctAll / scoredAll.length * 100) : 0,
+    timeOk, allPartsPass, passed: allPartsPass && timeOk, passPct:pp,
+    quarters, halves, fade, paceChange, topics, traps,
+    flagged: s.items.filter(it => it.flagged).length,
+    blanks: s.items.filter(it => it.choice === null).length,
+    guessed: guessed.length, guessedRight: guessed.filter(it => isRight(it, qmap)).length,
+    pretestCount: s.items.filter(it => it.pretest).length,
+    totalSec: Math.round(s.parts.reduce((a, p) => a + p.elapsedSec, 0))
+  };
+}
+
+function fadeLabel(f){
+  if (f === null) return 'Not enough data';
+  if (f <= 0) return 'No fade';
+  if (f <= 5) return 'Slight fade';
+  if (f <= 10) return 'Moderate fade';
+  return 'Big fade';
+}
+
+// Consecutive days (YYYY-MM-DD) ending today, or yesterday if nothing yet today.
+function dayShift(day, delta){
+  const [y, m, d] = day.split('-').map(Number);
+  return new Date(Date.UTC(y, m - 1, d + delta)).toISOString().slice(0, 10);
+}
+function streakFrom(days, today){
+  const set = new Set(days);
+  let d = set.has(today) ? today : dayShift(today, -1);
+  let n = 0;
+  while (set.has(d)){ n++; d = dayShift(d, -1); }
+  return n;
+}
+
+function isUnlocked(idx, levelProgress, unlockAll){
+  if (unlockAll || idx === 0) return true;
+  const prev = levelProgress[LEVELS[idx - 1].id];
+  return !!(prev && prev.passed);
+}
+function nextLevelIndex(levelProgress){
+  const i = LEVELS.findIndex(l => !(levelProgress[l.id] && levelProgress[l.id].passed));
+  return i === -1 ? LEVELS.length - 1 : i;
+}
+</script>
+
+<!-- ===== UI ===== -->
+<script>
+const HAS_DATA = typeof QUESTIONS !== 'undefined' && Array.isArray(QUESTIONS) && QUESTIONS.length > 0;
+const QS = HAS_DATA ? QUESTIONS : [];
+const SC = Object.assign({name:'Your School', shortName:'', stateCode:'MA', state:'Massachusetts', colors:{}, tips:[],
+  classSchedule:[], readingList:[], guessLetter:'C', passPercent:70, heroImage:'img/hero.png'},
+  typeof SCHOOL !== 'undefined' ? SCHOOL : {});
+const INFO = typeof BUILD_INFO !== 'undefined' ? BUILD_INFO : {sample:false};
+const QMAP = Object.fromEntries(QS.map(q => [q.id, q]));
+const LETTERS = ['A','B','C','D'];
+const PART_NAME = {general:'General (national)', ma:(SC.stateCode || 'State') + ' law', mixed:'Mixed practice'};
+const TRAP_INFO = {
+  'familiar-term': ['Familiar term', 'A word you know, used for the wrong idea.'],
+  'opposite': ['Opposite', 'The reverse of the right rule.'],
+  'wrong-context': ['Wrong situation', 'A real rule, but it belongs to a different case.'],
+  'too-simple': ['Too simple', 'Partly true; misses a condition or exception.'],
+  'math-step': ['Math step', 'Stopped a step early or used the wrong number.'],
+  'none': ['No trap', 'Straight recall.']
+};
+const PASS_COACH = SC.passCoach || [
+  'Pass 1: answer only the ones you are sure of. Flag the rest and keep moving.',
+  'Pass 2: back to the flagged ones. Pick up what you can now.',
+  'Pass 3: the 50/50s. Cross out two, choose the better one.',
+  'Last pass: still unsure? Use your guess letter. No blanks.'
+];
+if (LEVELS.length && SC.passPercent) LEVELS.forEach(l => { if (!l.passPct) l.passPct = SC.passPercent; });
+const partName = p => p.label || PART_NAME[p.key] || p.key;
+
+/* ---------- storage ---------- */
+const KEY = 'examConditioning.v1';
+function blankState(){
+  return {version:1, levels:{}, history:[], qstats:{}, saved:[], active:null,
+    settings:{theme:null, unlockAll:false, guessLetter:null, seenIntro:false}};
+}
+function load(){
+  try {
+    const raw = localStorage.getItem(KEY);
+    if (raw){
+      const o = JSON.parse(raw);
+      return Object.assign(blankState(), o, {settings:Object.assign(blankState().settings, o.settings || {})});
+    }
+  } catch (e) {}
+  return blankState();
+}
+let ST = load();
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(ST)); } catch (e) {} }
+const guessLetter = () => ST.settings.guessLetter || SC.guessLetter || 'C';
+
+/* ---------- color + theme ---------- */
+function hexToRgb(h){ h = String(h).replace('#',''); if (h.length === 3) h = h.split('').map(c => c + c).join(''); const n = parseInt(h, 16); return [n >> 16 & 255, n >> 8 & 255, n & 255]; }
+function rgbToHex(r){ return '#' + r.map(v => Math.round(v).toString(16).padStart(2,'0')).join(''); }
+function lum(h){ const a = hexToRgb(h).map(v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }); return 0.2126*a[0] + 0.7152*a[1] + 0.0722*a[2]; }
+function contrast(a, b){ const x = lum(a), y = lum(b); return (Math.max(x,y) + 0.05) / (Math.min(x,y) + 0.05); }
+function mix(a, b, t){ const x = hexToRgb(a), y = hexToRgb(b); return rgbToHex(x.map((v,i) => v + (y[i] - v) * t)); }
+function readable(fg, bg){ let c = fg; for (let t = 0.05; contrast(c, bg) < 4.5 && t <= 1; t += 0.05) c = mix(fg, '#000000', t); return c; }
+function applyBrand(){
+  const c = SC.colors || {}, r = document.documentElement.style;
+  const set = (k, v) => { if (v) r.setProperty(k, v); };
+  set('--b-accent', c.accent); set('--b-accent-light', c.accentLight || c.accent);
+  set('--b-primary', c.primary || c.slate); set('--b-slate', c.slate || c.primary);
+  set('--b-ink', c.ink); set('--b-paper', c.paper); set('--b-muted', c.muted); set('--b-line', c.line); set('--b-tint', c.tint);
+  const paper = c.paper || '#FAF9F6';
+  if (c.accent) set('--b-accent-text', readable(c.accent, paper));
+  const prim = c.primary || c.slate;
+  if (prim) set('--b-on-primary', contrast(prim, '#ffffff') >= 4.5 ? '#ffffff' : (c.ink || '#202A30'));
+}
+function applyTheme(){
+  let t = ST.settings.theme;
+  if (!t){ try { t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { t = 'light'; } }
+  document.documentElement.dataset.theme = t;
+}
+
+/* ---------- helpers ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function fmtClock(sec){ sec = Math.max(0, Math.round(sec)); const h = Math.floor(sec/3600), m = Math.floor(sec%3600/60), s = sec%60; return (h ? h + ':' + String(m).padStart(2,'0') : m) + ':' + String(s).padStart(2,'0'); }
+function fmtMin(min){ return min >= 60 ? (Math.floor(min/60) + ' h' + (min % 60 ? ' ' + (min % 60) + ' min' : '')) : min + ' min'; }
+function today(){ const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+let toastT;
+function toast(msg, ms){ const t = $('#toast'); t.textContent = msg; t.classList.remove('hidden'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.add('hidden'), ms || 3200); }
+function brandMark(){
+  if (SC.logo) return `<div class="mark"><img src="${esc(SC.logo)}" alt=""></div>`;
+  const s = SC.shortName || (SC.name || 'EC').split(/\s+/).map(w => w[0]).join('').slice(0, 2);
+  return `<div class="mark" aria-hidden="true">${esc(s)}</div>`;
+}
+function header(extra){
+  return `<header class="wrap top">
+    ${SC.wordmark ? `<div class="brand wordmark"><img class="wm-light" src="${esc(SC.wordmark.light)}" alt="${esc(SC.name)}"><img class="wm-dark" src="${esc(SC.wordmark.dark || SC.wordmark.light)}" alt=""><span>Exam Conditioning · ${esc(SC.state || '')} salesperson exam</span></div>` : `${brandMark()}
+    <div class="brand"><b>${esc(SC.name)}</b><span>Exam Conditioning · ${esc(SC.state || '')} salesperson exam</span></div>`}
+    ${extra || ''}
+    <button class="iconbtn" data-act="help" aria-label="How this works" title="How this works">?</button>
+    <button class="iconbtn" data-act="theme" aria-label="Switch light or dark mode" title="Light / dark">${document.documentElement.dataset.theme === 'dark' ? 'Light' : 'Dark'}</button>
+  </header>`;
+}
+
+/* ---------- views ---------- */
+let view = 'home', resultSession = null, reviewFilter = 'all', practiceForm = {part:'all', topic:'', n:20, pace:'exam'}, gridOpen = false, celebrate = false;
+
+function render(){
+  stopTimerIfIdle();
+  const app = $('#app');
+  if (!HAS_DATA){ app.innerHTML = header() + `<main class="wrap"><div class="card"><h2>No questions yet</h2><p>Run <code>python app/build.py</code> to create <code>data.js</code>, then reload this page.</p></div></main>`; return; }
+  const fn = {home:viewHome, brief:viewBrief, test:viewTest, review:viewReview, between:viewBetween, results:viewResults, practice:viewPractice, history:viewHistory}[view] || viewHome;
+  app.innerHTML = fn();
+  if (view !== 'test' && view !== 'review') window.scrollTo(0, 0);
+}
+
+function levelState(lv){ return ST.levels[lv.id] || {attempts:0, best:null, passed:false}; }
+function missedIds(){ return Object.keys(ST.qstats).filter(id => QMAP[id] && ST.qstats[id].last === false); }
+function streakInfo(){
+  const days = [...new Set(ST.history.map(h => h.day))];
+  return {cur: streakFrom(days, today()), total: days.length};
+}
+
+function viewHome(){
+  const done = LEVELS.filter(l => levelState(l).passed).length;
+  const ni = nextLevelIndex(ST.levels), nl = LEVELS[ni], tot = levelTotals(nl);
+  const allDone = done === LEVELS.length;
+  const st = streakInfo();
+  const C = 2 * Math.PI * 64, frac = done / LEVELS.length;
+  const active = ST.active;
+  const missed = missedIds().length;
+  const tips = (SC.tips || []);
+  const tip = tips.length ? tips[new Date().getDate() % tips.length] : '';
+  const sampleNote = INFO.sample ? `<div class="card" style="margin-top:16px;background:var(--warn-bg);border-color:transparent"><b>Sample questions only.</b> The real question bank isn't built in yet, so questions will repeat. Add question files and run <code>build.py</code>.</div>` : '';
+
+  const trail = LEVELS.map((lv, i) => {
+    const ls = levelState(lv), t = levelTotals(lv), open = isUnlocked(i, ST.levels, ST.settings.unlockAll);
+    const cls = ls.passed ? 'done' : (i === ni ? 'current' : (open ? 'open' : 'locked'));
+    const parts = lv.parts.map(p => `${p.n} ${p.key === 'mixed' ? '' : (p.key === 'ma' ? PART_NAME.ma + ' ' : 'General ')}q · ${fmtMin(p.min)}`).join(' + ');
+    const badges = [];
+    if (ls.passed) badges.push(`<span class="badge good">Passed</span>`);
+    if (ls.best !== null && ls.best !== undefined) badges.push(`<span class="badge plain">Best ${Math.round(ls.best)}%</span>`);
+    if (lv.pretest) badges.push(`<span class="badge plain" title="About 10% of questions are unscored, like the real exam">Has pretest items</span>`);
+    if (lv.passPct > 70) badges.push(`<span class="badge plain">Pass at ${lv.passPct}%</span>`);
+    const btn = open ? `<button class="btn ${i === ni ? 'primary' : ''}" data-act="startLevel" data-i="${i}">${ls.passed ? 'Run it again' : 'Start'}</button>` : `<span class="small muted">Pass level ${i} first</span>`;
+    return `<li class="${cls}">
+      <div class="node" aria-hidden="true">${ls.passed ? '&#10003;' : i + 1}<img src="img/level-${i+1}.png" alt="" onerror="this.remove()"></div>
+      <div class="body"><div class="name">Level ${i + 1} · ${esc(lv.name)}</div>
+        <div class="meta">${esc(parts)}${lv.parts.length > 1 ? ' · ' + t.n + ' questions, ' + fmtMin(t.min) : ''}</div>
+        <div class="side">${badges.join('')}${btn}</div></div></li>`;
+  }).join('');
+
+  const extraCards = [];
+  if ((SC.classSchedule || []).length) extraCards.push(`<div class="card"><h3>Class schedule</h3><ol class="list">${SC.classSchedule.map(c => `<li><b>${esc(c.day || c.date || '')}</b> ${esc(c.topic || c.title || '')}</li>`).join('')}</ol></div>`);
+  if ((SC.readingList || []).length) extraCards.push(`<div class="card"><h3>Reading list</h3><ul class="list">${SC.readingList.map(r => `<li><b>${esc(r.title || r)}</b>${r.chapters ? ' · ' + esc(r.chapters) : ''}${r.note ? ' <span class="muted">' + esc(r.note) + '</span>' : ''}</li>`).join('')}</ul></div>`);
+  if (SC.instructor && SC.instructor.name) extraCards.push(`<div class="card"><h3>From your instructor</h3><p><b>${esc(SC.instructor.name)}</b></p>${(SC.instructor.quotes || []).map(q => `<p class="muted">&ldquo;${esc(q)}&rdquo;</p>`).join('')}</div>`);
+
+  return header() + `<main class="wrap">
+    ${active ? `<div class="card" style="margin-bottom:16px;border-color:var(--accent)"><div class="row"><div style="flex:1;min-width:220px"><b>You have a workout in progress.</b><div class="muted small">${esc(active.title)} · part ${active.partIdx + 1} of ${active.parts.length}. The clock paused while you were away.</div></div><button class="btn primary" data-act="resume">Continue it</button><button class="btn ghost" data-act="abandon">Quit it</button></div></div>` : ''}
+    <section class="card hero" aria-label="Today's workout">
+      <div class="ring" role="img" aria-label="${done} of ${LEVELS.length} levels passed">
+        <svg viewBox="0 0 148 148"><circle cx="74" cy="74" r="64" fill="none" stroke="var(--line)" stroke-width="12"/><circle cx="74" cy="74" r="64" fill="none" stroke="var(--accent)" stroke-width="12" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C * (1 - frac)}"/></svg>
+        <div class="lbl"><div><b>${done}/${LEVELS.length}</b><span>levels passed</span></div></div>
+      </div>
+      <div class="info">
+        <div class="eyebrow">${allDone ? 'Plan complete' : "Today's workout"}</div>
+        <h1>${allDone ? 'You are ready for exam day' : 'Level ' + (ni + 1) + ': ' + esc(nl.name)}</h1>
+        <div class="detail">${allDone ? 'Keep sharp with a full simulation or topic practice.' : tot.n + ' questions in ' + fmtMin(tot.min) + '. Pass with ' + nl.passPct + '% or more, inside the time.'}</div>
+        <button class="btn primary big" data-act="startLevel" data-i="${ni}">${allDone ? 'Run the full simulation' : "Start today's workout"}</button>
+        <div class="chips">
+          <span class="chip accent"><span class="dot"></span>${st.cur ? st.cur + '-day streak' : 'Start a streak today'}</span>
+          <span class="chip">${st.total} training day${st.total === 1 ? '' : 's'}</span>
+          <span class="chip">${QS.length} questions in the bank</span>
+        </div>
+      </div>
+      ${SC.heroImage ? `<img class="hero-img" src="${esc(SC.heroImage)}" alt="" onerror="this.remove()">` : ''}
+    </section>
+    ${sampleNote}
+
+    <section class="section">
+      <h2>Your training plan</h2>
+      <p class="lead">Like training for a marathon: you don't run 26 miles on day one. Each level is a little longer. Pass one (${SC.passPercent || 70}% and inside the time) to unlock the next. The last levels are the real thing: 120 questions in 4 hours.</p>
+      <ol class="trail">${trail}</ol>
+    </section>
+
+    <section class="section">
+      <h2>More ways to practice</h2>
+      <div class="grid2">
+        <button class="tile" data-act="practice"><b>Practice a topic</b><span>Pick a subject like Agency or Math. Timed or relaxed.</span></button>
+        <button class="tile" data-act="drill"><b>Missed questions${missed ? ' (' + missed + ')' : ''}</b><span>${missed ? 'Retry the ones you got wrong last time.' : 'Questions you miss will collect here.'}</span></button>
+        <button class="tile" data-act="history"><b>How did I do?</b><span>${ST.history.length ? ST.history.length + ' past workouts, scores and stamina.' : 'Your past workouts will show here.'}</span></button>
+        <button class="tile" data-act="help"><b>How the exam works</b><span>The timing, the 70% rule, and the pass-by-pass strategy.</span></button>
+      </div>
+    </section>
+
+    ${tip ? `<section class="section"><div class="card" style="background:var(--tint);border-color:transparent"><div class="eyebrow small muted" style="font-weight:600;text-transform:uppercase;letter-spacing:.06em">Tip of the day</div><p style="font-size:1.15rem;margin:.3em 0 0">${esc(tip)}</p></div></section>` : ''}
+    ${extraCards.length ? `<section class="section"><div class="grid2">${extraCards.join('')}</div></section>` : ''}
+    ${SC.examSite ? `<section class="section"><h2>Exam day</h2><p>${esc(SC.examSite)}</p>${SC.contact ? `<p class="muted">${esc(typeof SC.contact === 'string' ? SC.contact : [SC.contact.name, SC.contact.phone, SC.contact.email].filter(Boolean).join(' · '))}</p>` : ''}</section>` : ''}
+
+    <footer class="footer">
+      <div class="row">
+        <button class="btn" data-act="export">Save a backup</button>
+        <button class="btn" data-act="import">Load a backup</button>
+        <button class="btn ghost" data-act="settings">Settings</button>
+      </div>
+      <p style="margin-top:16px">Your progress stays on this device. Save a backup to move it to another one.</p>
+    </footer>
+  </main>`;
+}
+
+/* ---------- starting sessions ---------- */
+function startLevel(i){
+  const lv = LEVELS[i];
+  if (!isUnlocked(i, ST.levels, ST.settings.unlockAll)) return toast('Pass level ' + i + ' first.');
+  const s = buildSession({mode:'level', levelId:lv.id, title:'Level ' + (i+1) + ': ' + lv.name, passPct:lv.passPct, pretest:lv.pretest,
+    parts:lv.parts.map(p => ({key:p.key, n:p.n, min:p.min}))}, QS, {rng:mulberry32(Date.now() & 0x7fffffff)});
+  ST.active = s; save(); view = 'brief'; render();
+}
+function paceSec(key){ return key === 'ma' ? 135 : 112; } // real exam: 150 min/80 q, 90 min/40 q
+function startPractice(){
+  const f = practiceForm;
+  let pool = QS.filter(q => (f.part === 'all' || q.part === f.part) && (!f.topic || q.topic === f.topic));
+  if (!pool.length) return toast('No questions match that choice yet.');
+  const n = f.n;
+  const min = f.pace === 'none' ? null : Math.ceil(n * (f.pace === 'relaxed' ? 150 : paceSec(f.part)) / 60);
+  const s = buildSession({mode:'practice', title:'Practice: ' + (f.topic || (f.part === 'all' ? 'All topics' : PART_NAME[f.part])),
+    parts:[{key:f.part === 'all' ? 'mixed' : f.part, n, min, pool, label:f.topic || null}]}, QS, {rng:mulberry32(Date.now() & 0x7fffffff)});
+  ST.active = s; save(); view = 'brief'; render();
+}
+function startDrill(){
+  const ids = missedIds();
+  if (!ids.length) return toast('No missed questions yet. Nice.');
+  const pool = ids.map(id => QMAP[id]);
+  const n = Math.min(25, pool.length);
+  const s = buildSession({mode:'drill', title:'Missed-question drill',
+    parts:[{key:'mixed', n, min:Math.ceil(n * 120 / 60), pool, label:'Missed questions'}]}, QS, {rng:mulberry32(Date.now() & 0x7fffffff)});
+  ST.active = s; save(); view = 'brief'; render();
+}
+
+function viewBrief(){
+  const s = ST.active, p = s.parts[s.partIdx], n = p.end - p.start;
+  const pace = p.limitSec ? Math.round(p.limitSec / n) : null;
+  const multi = s.parts.length > 1;
+  return header() + `<main class="wrap" style="max-width:760px">
+    <div class="section">
+      <div class="eyebrow small muted" style="font-weight:600;text-transform:uppercase;letter-spacing:.06em">${multi ? 'Part ' + (s.partIdx + 1) + ' of ' + s.parts.length : 'Ready?'}</div>
+      <h1>${esc(s.title)}</h1>
+      <p style="font-size:1.2rem">${multi ? esc(partName(p)) + ': ' : ''}<b>${n} questions</b>${p.limitSec ? ' in <b>' + fmtMin(Math.round(p.limitSec/60)) + '</b>' : ', no timer'}.${pace ? ' That is about <b>' + pace + ' seconds</b> a question.' : ''}</p>
+      ${multi ? `<p class="muted">Each part is graded on its own. You need ${s.passPct}% in each. Once you submit a part you can't go back to it, just like the real exam.</p>` : ''}
+      ${s.repeats ? `<p class="badge warn" style="display:inline-block">The question bank is small, so some questions repeat.</p>` : ''}
+    </div>
+    <div class="card">
+      <h2>The plan for this workout</h2>
+      <ol class="list" style="font-size:1.08rem">${PASS_COACH.map(t => `<li>${esc(t)}</li>`).join('')}</ol>
+      <p class="muted" style="margin-top:12px">Your guess letter is <b>${guessLetter()}</b>. Pick one letter and use it every time you have to guess.</p>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h3>Keyboard shortcuts</h3>
+      <p class="muted small" style="margin:0">1-4 or A-D answer · F flag · N or &rarr; next · P or &larr; back · R review · K calculator</p>
+    </div>
+    <div class="row" style="margin:28px 0 40px">
+      <button class="btn primary big" data-act="begin">Start the clock</button>
+      <button class="btn ghost" data-act="abandon">Not now</button>
+    </div>
+  </main>`;
+}
+
+/* ---------- test ---------- */
+function curPart(){ return ST.active.parts[ST.active.partIdx]; }
+function partItems(){ const p = curPart(); return ST.active.items.slice(p.start, p.end); }
+function begin(){
+  const s = ST.active, p = curPart();
+  s.started = true; if (s.cur < p.start || s.cur >= p.end) s.cur = p.start;
+  s.items[s.cur].visits++;
+  view = 'test'; save(); render(); startTimer();
+}
+
+function paceInfo(){
+  const s = ST.active, p = curPart(), its = partItems(), n = its.length;
+  const answered = its.filter(it => it.choice !== null).length;
+  const flagged = its.filter(it => it.flagged).length;
+  const target = p.limitSec ? p.limitSec / n : null;
+  const avg = answered ? p.elapsedSec / answered : null;
+  const open = n - answered;
+  const left = p.limitSec ? Math.max(0, p.limitSec - p.elapsedSec) : null;
+  return {n, answered, flagged, target, avg, open, left, perOpen: (left !== null && open) ? left / open : null};
+}
+function paceHtml(){
+  const pi = paceInfo();
+  const out = [`<span class="chip">Answered <b class="num">&nbsp;${pi.answered}/${pi.n}</b></span>`, `<span class="chip">Flagged <b class="num">&nbsp;${pi.flagged}</b></span>`];
+  if (pi.target){
+    if (pi.avg !== null){
+      const ok = pi.avg <= pi.target;
+      out.push(`<span class="chip ${ok ? 'ok' : 'slow'}" title="Average time per answered question, compared with the time you have per question">${ok ? 'On pace' : 'Behind pace'}: <b class="num">&nbsp;${Math.round(pi.avg)}s</b>&nbsp;/ q (goal ${Math.round(pi.target)}s)</span>`);
+    } else out.push(`<span class="chip">Goal: about ${Math.round(pi.target)}s a question</span>`);
+    if (pi.perOpen !== null) out.push(`<span class="chip extra">${Math.round(pi.perOpen)}s left for each open question</span>`);
+  }
+  return out.join('');
+}
+function clockText(){
+  const p = curPart();
+  return p.limitSec ? fmtClock(p.limitSec - p.elapsedSec) : fmtClock(p.elapsedSec);
+}
+
+function viewTest(){
+  const s = ST.active, p = curPart(), it = s.items[s.cur], q = QMAP[it.qid];
+  const idx = s.cur - p.start + 1, n = p.end - p.start;
+  const low = p.limitSec && p.limitSec - p.elapsedSec < 300;
+  const grid = partItems().map((x, i) => {
+    const gi = p.start + i;
+    const cls = [x.choice !== null ? 'ans' : '', x.flagged ? 'flag' : '', gi === s.cur ? 'cur' : ''].join(' ');
+    return `<button class="${cls}" data-act="go" data-i="${gi}" aria-label="Question ${i+1}${x.choice !== null ? ', answered' : ''}${x.flagged ? ', flagged' : ''}">${i+1}</button>`;
+  }).join('');
+  const passNo = Math.min(p.pass || 1, PASS_COACH.length);
+  return `<div class="testbar"><div class="wrap">
+      <div class="where"><b>Question ${idx} of ${n}</b><span>${esc(s.title)}${s.parts.length > 1 ? ' · ' + esc(partName(p)) : ''}</span></div>
+      <div class="clock ${low ? 'low' : ''}" id="clock" role="timer" aria-label="Time ${p.limitSec ? 'left' : 'used'}">${clockText()}</div>
+      <div class="tools"><button class="iconbtn" data-act="calc" title="Calculator (K)">Calc</button>
+      <button class="iconbtn gridtoggle" data-act="grid" aria-expanded="${gridOpen}">${gridOpen ? 'Hide list' : 'All questions'}</button>
+      <button class="btn primary" style="min-height:48px" data-act="review">Review &amp; submit</button></div>
+    </div>
+    <div class="wrap"><div class="pace" id="pace">${paceHtml()}</div></div>
+  </div>
+  <main class="wrap testgrid">
+    <section aria-live="polite">
+      <div class="qhead"><span class="badge">${esc(q.topic)}</span>${it.flagged ? '<span class="badge warn">Flagged</span>' : ''}</div>
+      <p class="stem">${esc(q.q)}</p>
+      <div class="opts" role="group" aria-label="Answers">
+        ${q.a.map((a, k) => `<button class="opt" data-act="pick" data-k="${k}" aria-pressed="${it.choice === k}"><span class="L">${LETTERS[k]}</span><span>${esc(a)}</span></button>`).join('')}
+      </div>
+    </section>
+    <aside class="side ${gridOpen ? '' : 'closed'}">
+      <div class="navwrap">
+        <h3>All questions</h3>
+        <div class="navgrid">${grid}</div>
+        <div class="legend"><span><i style="background:var(--tint)"></i>answered</span><span><i style="background:var(--warn);border-radius:50%"></i>flagged</span></div>
+      </div>
+      <div class="coach"><b>Strategy right now</b>${esc(PASS_COACH[passNo - 1])}</div>
+    </aside>
+  </main>
+  <nav class="actions" aria-label="Question actions"><div class="wrap" style="max-width:820px">
+    <button class="btn" data-act="prev" ${s.cur <= p.start ? 'disabled' : ''}>Back</button>
+    <button class="btn ${it.flagged ? 'flagged' : ''}" data-act="flag" aria-pressed="${it.flagged}">${it.flagged ? 'Flagged' : 'Flag'}</button>
+    <button class="btn primary" data-act="next">${it.choice === null ? 'Skip' : 'Next'}</button>
+  </div></nav>`;
+}
+
+function go(i){
+  const s = ST.active, p = curPart();
+  if (i < p.start || i >= p.end) return;
+  s.cur = i; s.items[i].visits++; view = 'test'; render();
+}
+function next(){
+  const s = ST.active, p = curPart();
+  if (s.cur < p.end - 1) return go(s.cur + 1);
+  const open = s.items.findIndex((it, i) => i >= p.start && i < p.end && (it.choice === null || it.flagged));
+  if (open === -1) return showReview();
+  p.pass = Math.min(PASS_COACH.length, (p.pass || 1) + 1);
+  go(open);
+  toast(PASS_COACH[p.pass - 1], 4500);
+}
+function prev(){ const s = ST.active; if (s.cur > curPart().start) go(s.cur - 1); }
+function pick(k){ const it = ST.active.items[ST.active.cur]; it.choice = k; it.guessed = false; save(); render(); }
+function flag(){ const it = ST.active.items[ST.active.cur]; it.flagged = !it.flagged; save(); render(); }
+function showReview(){ view = 'review'; render(); }
+
+function viewReview(){
+  const s = ST.active, p = curPart(), its = partItems(), pi = paceInfo();
+  const blanks = its.filter(it => it.choice === null).length;
+  const grid = its.map((x, i) => `<button class="${[x.choice !== null ? 'ans' : '', x.flagged ? 'flag' : ''].join(' ')}" data-act="go" data-i="${p.start + i}" aria-label="Question ${i+1}">${i+1}</button>`).join('');
+  const last = s.partIdx === s.parts.length - 1;
+  return `<div class="testbar"><div class="wrap">
+      <div class="where"><b>Review before you submit</b><span>${esc(s.title)}${s.parts.length > 1 ? ' · ' + esc(partName(p)) : ''}</span></div>
+      <div class="clock" id="clock" role="timer">${clockText()}</div>
+    </div><div class="wrap"><div class="pace" id="pace">${paceHtml()}</div></div></div>
+  <main class="wrap" style="padding-top:24px;padding-bottom:60px;max-width:820px">
+    <div class="parts" style="margin-bottom:20px">
+      <div class="card"><div class="bigpct">${blanks}</div><div class="muted">unanswered</div></div>
+      <div class="card"><div class="bigpct">${pi.flagged}</div><div class="muted">flagged</div></div>
+      <div class="card"><div class="bigpct">${pi.answered}</div><div class="muted">answered</div></div>
+    </div>
+    ${blanks ? `<div class="card" style="margin-bottom:20px;background:var(--warn-bg);border-color:transparent"><p><b>Don't leave blanks.</b> A blank is always wrong. A guess might be right.</p><button class="btn" data-act="fillGuess">Answer all ${blanks} blank${blanks === 1 ? '' : 's'} with ${guessLetter()}</button></div>` : ''}
+    <h2>Tap a number to go back to it</h2>
+    <div class="navgrid" style="margin-bottom:28px">${grid}</div>
+    <div class="row">
+      <button class="btn big" data-act="backToTest">Back to questions</button>
+      <button class="btn primary big" data-act="submitPart">${last ? 'Submit and see my results' : 'Submit part ' + (s.partIdx + 1)}</button>
+    </div>
+    <p class="muted small" style="margin-top:12px">${last ? '' : "After you submit this part you can't come back to it."}</p>
+  </main>`;
+}
+function fillGuess(){
+  const k = LETTERS.indexOf(guessLetter());
+  partItems().forEach(it => { if (it.choice === null){ it.choice = k; it.guessed = true; } });
+  save(); render(); toast('Blanks filled with ' + guessLetter() + '.');
+}
+
+function submitPart(timedOut){
+  const s = ST.active, p = curPart();
+  if (timedOut){ p.timedOut = true; p.elapsedSec = p.limitSec; }
+  p.submitted = true;
+  stopTimer();
+  if (s.partIdx < s.parts.length - 1){
+    s.partIdx++; s.cur = curPart().start; save();
+    view = 'between'; render();
+    if (timedOut) toast("Time's up for that part.");
+  } else finish(timedOut);
+}
+function viewBetween(){
+  const s = ST.active, p = curPart(), n = p.end - p.start;
+  return header() + `<main class="wrap" style="max-width:720px">
+    <div class="section card" style="text-align:center;padding:40px 24px">
+      <div class="eyebrow small muted" style="font-weight:600;text-transform:uppercase;letter-spacing:.06em">Part ${s.partIdx} done</div>
+      <h1>Take a breath.</h1>
+      <p style="font-size:1.15rem">Stand up, stretch, drink some water. Scores come at the very end.</p>
+      <p style="font-size:1.15rem">Next: <b>${esc(partName(p))}</b> · ${n} questions${p.limitSec ? ' · ' + fmtMin(Math.round(p.limitSec / 60)) : ''}</p>
+      <button class="btn primary big" data-act="begin">Start part ${s.partIdx + 1}</button>
+    </div>
+  </main>`;
+}
+
+function finish(timedOut){
+  const s = ST.active, r = scoreSession(s, QMAP);
+  celebrate = false;
+  if (s.mode === 'level'){
+    const lv = LEVELS.find(l => l.id === s.levelId);
+    const ls = ST.levels[s.levelId] || {attempts:0, best:null, passed:false};
+    ls.attempts++;
+    ls.best = ls.best === null ? r.pct : Math.max(ls.best, r.pct);
+    if (r.passed && !ls.passed){ ls.passed = true; celebrate = true; }
+    ST.levels[s.levelId] = ls;
+  }
+  s.items.forEach(it => {
+    const q = QMAP[it.qid]; if (!q) return;
+    const st = ST.qstats[it.qid] || {seen:0, right:0, last:null};
+    const ok = isRight(it, QMAP);
+    st.seen++; if (ok) st.right++; st.last = ok;
+    ST.qstats[it.qid] = st;
+  });
+  ST.history.unshift({id:s.id, at:Date.now(), day:today(), mode:s.mode, levelId:s.levelId, title:s.title, pct:r.pct, passed:r.passed,
+    timeOk:r.timeOk, fade:r.fade, n:s.items.length, parts:r.parts.map(p => ({label:partName(p), pct:p.pct, pass:p.pass}))});
+  ST.history = ST.history.slice(0, 200);
+  ST.saved = [s].concat(ST.saved.filter(x => x.id !== s.id)).slice(0, 8);
+  ST.active = null; save();
+  resultSession = s; reviewFilter = 'all'; view = 'results'; render();
+  if (timedOut) toast("Time's up. Here is how it went.");
+}
+
+/* ---------- timer ---------- */
+let timer = null, lastTick = 0, lastSave = 0;
+function startTimer(){ stopTimer(); lastTick = performance.now(); timer = setInterval(tick, 250); }
+function stopTimer(){ if (timer){ clearInterval(timer); timer = null; } }
+function stopTimerIfIdle(){ if (view !== 'test' && view !== 'review') stopTimer(); }
+function tick(){
+  const s = ST.active; if (!s){ stopTimer(); return; }
+  const now = performance.now(), dt = Math.min(5, (now - lastTick) / 1000); lastTick = now;
+  const p = curPart();
+  p.elapsedSec += dt;
+  if (view === 'test') s.items[s.cur].timeSec += dt;
+  if (p.limitSec && p.elapsedSec >= p.limitSec){ submitPart(true); return; }
+  const c = $('#clock');
+  if (c){ c.textContent = clockText(); c.classList.toggle('low', !!(p.limitSec && p.limitSec - p.elapsedSec < 300)); }
+  const pc = $('#pace'); if (pc && Math.floor(p.elapsedSec) !== Math.floor(p.elapsedSec - dt)) pc.innerHTML = paceHtml();
+  if (now - lastSave > 5000){ lastSave = now; save(); }
+}
+
+/* ---------- results ---------- */
+function barChart(vals, o){
+  const W = 320, H = 190, padL = 8, padB = 30, padT = 26, bw = 52, gap = (W - padL * 2 - bw * vals.length) / (vals.length - 1 || 1);
+  const max = o.max || Math.max(1, ...vals.map(v => v.value || 0), o.ref || 0) * 1.15;
+  const y = v => padT + (H - padT - padB) * (1 - v / max);
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(o.aria)}">`;
+  svg += `<line x1="${padL}" x2="${W - padL}" y1="${H - padB}" y2="${H - padB}" stroke="var(--line)" stroke-width="1.5"/>`;
+  vals.forEach((v, i) => {
+    const x = padL + i * (bw + gap);
+    if (v.value === null || v.value === undefined){
+      svg += `<text x="${x + bw/2}" y="${H - padB - 8}" text-anchor="middle" font-size="12">n/a</text>`;
+    } else {
+      const top = y(v.value), color = o.color ? o.color(v.value) : 'var(--slate)';
+      svg += `<rect x="${x}" y="${top}" width="${bw}" height="${Math.max(2, H - padB - top)}" rx="6" fill="${color}"/>`;
+      svg += `<text class="v" x="${x + bw/2}" y="${top - 7}" text-anchor="middle" font-size="13">${esc(o.fmt(v.value))}</text>`;
+    }
+    svg += `<text x="${x + bw/2}" y="${H - 10}" text-anchor="middle" font-size="12">${esc(v.label)}</text>`;
+  });
+  if (o.ref){
+    const ry = y(o.ref);
+    svg += `<line x1="${padL}" x2="${W - padL}" y1="${ry}" y2="${ry}" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="5 4"/>`;
+    svg += `<text x="${W - padL}" y="${ry - 6}" text-anchor="end" font-size="11" font-weight="600" fill="var(--ink)" stroke="var(--card)" stroke-width="4" stroke-linejoin="round" paint-order="stroke">${esc(o.refLabel)}</text>`;
+  }
+  return svg + '</svg>';
+}
+
+function staminaAdvice(r){
+  if (r.fade === null) return 'Run a longer level to see your stamina.';
+  const small = r.halves[0].scored < 10;
+  let t;
+  if (r.fade > 10) t = `You lost ${r.fade} points in the second half. That is the fade instructors warn about. Keep climbing the levels, and at the halfway mark take 20 seconds: sit back, breathe slowly, then continue.`;
+  else if (r.fade > 5) t = `A small drop of ${r.fade} points in the second half. Watch for it as the levels get longer.`;
+  else if (r.fade <= 0) t = `No fade: your second half was as good or better than your first. That is the goal.`;
+  else t = `Very steady: only ${r.fade} points lower in the second half.`;
+  if (r.paceChange !== null && r.paceChange < -15 && r.fade > 5) t += ` You also sped up by ${Math.abs(Math.round(r.paceChange))}s a question near the end. Rushing usually costs points.`;
+  else if (r.paceChange !== null && r.paceChange > 20) t += ` You slowed down by ${Math.round(r.paceChange)}s a question in the second half; that is a sign of tiredness.`;
+  if (small) t += ' (Short workout, so treat this as a rough read.)';
+  return t;
+}
+
+function viewResults(){
+  const s = resultSession, r = scoreSession(s, QMAP);
+  const lvIdx = s.levelId ? LEVELS.findIndex(l => l.id === s.levelId) : -1;
+  const nextIdx = lvIdx >= 0 && r.passed && lvIdx < LEVELS.length - 1 ? lvIdx + 1 : -1;
+  let reason = '';
+  if (!r.passed){
+    const why = [];
+    r.parts.forEach(p => { if (!p.pass) why.push(`${esc(partName(p))} was ${p.pct}% (need ${r.passPct}%)`); });
+    s.parts.forEach(p => { if (p.timedOut) why.push(`time ran out in ${esc(partName(p))}`); });
+    reason = why.join('; ') + '.';
+  }
+  const head = s.mode === 'level'
+    ? (r.passed ? (nextIdx >= 0 ? `Level ${lvIdx + 1} passed. Level ${nextIdx + 1} is open.` : `Level ${lvIdx + 1} passed. Plan complete.`) : 'Not yet. Good training though.')
+    : (r.passed ? 'Passed.' : 'Below the line this time.');
+  const sub = r.passed ? `You scored ${r.pct}% and finished inside the time.` : `What held you back: ${reason} Run it again when you are ready.`;
+  const burst = celebrate ? `<div class="burst" aria-hidden="true"><div class="ringc"></div>${Array.from({length:10}, (_, i) => `<span style="--a:${i*36}deg;${i % 2 ? 'background:var(--good)' : ''}"></span>`).join('')}</div>` : '';
+
+  const partCards = r.parts.map((p, i) => `<div class="card">
+    <div class="muted">${esc(partName(s.parts[i]))}</div>
+    <div class="row" style="justify-content:space-between;margin:6px 0 10px"><span class="bigpct">${p.pct}%</span><span class="badge ${p.pass ? 'good' : 'bad'}">${p.pass ? 'Pass' : 'Below ' + r.passPct + '%'}</span></div>
+    <div class="bar" aria-hidden="true"><i class="${p.pass ? 'ok' : 'no'}" style="width:${p.pct}%"></i><span class="mark70" style="left:${r.passPct}%"></span></div>
+    <p class="small muted" style="margin:10px 0 0">${p.correct} of ${p.scored} scored right (need ${p.needed})${p.unanswered ? ' · ' + p.unanswered + ' blank' : ''}<br>
+    Time ${fmtClock(p.timeUsed)}${p.limitSec ? ' of ' + fmtClock(p.limitSec) : ''}${p.timedOut ? ' · <b style="color:var(--bad)">ran out</b>' : ''}</p></div>`).join('');
+
+  const target = s.parts[0].limitSec ? Math.round(s.parts.reduce((a, p) => a + (p.limitSec || 0), 0) / s.items.length) : null;
+  const accChart = barChart(r.quarters.map((q, i) => ({label:'Q' + (i+1), value:q.acc})), {max:100, ref:r.passPct, refLabel:r.passPct + '% line', fmt:v => Math.round(v) + '%', aria:'Accuracy by quarter of the test', color:v => v >= r.passPct ? 'var(--slate)' : 'var(--bad)'});
+  const secChart = barChart(r.quarters.map((q, i) => ({label:'Q' + (i+1), value:q.avgSec})), {ref:target, refLabel:target ? 'goal ' + target + 's' : '', fmt:v => Math.round(v) + 's', aria:'Seconds per question by quarter of the test'});
+  const fadeTxt = r.fade === null ? 'n/a' : (r.fade > 0 ? '-' + r.fade : '+' + Math.abs(r.fade));
+
+  const topicRows = r.topics.map(t => `<tr><td>${esc(t.topic)}<div class="small muted">${esc(PART_NAME[t.part] || t.part)}</div></td><td class="r num">${t.correct}/${t.n}</td>
+    <td style="width:40%"><div class="bar"><i class="${t.pct >= r.passPct ? 'ok' : 'no'}" style="width:${t.pct}%"></i><span class="mark70" style="left:${r.passPct}%"></span></div></td><td class="r num">${Math.round(t.pct)}%</td></tr>`).join('');
+  const trapRows = r.traps.filter(t => t.trap !== 'none').map(t => `<tr><td><b>${esc((TRAP_INFO[t.trap] || [t.trap])[0])}</b><div class="small muted">${esc((TRAP_INFO[t.trap] || ['',''])[1])}</div></td><td class="r num">${t.fooled} of ${t.seen}</td><td class="r num">${Math.round(t.rate)}%</td></tr>`).join('');
+  const topTrap = r.traps.find(t => t.trap !== 'none' && t.fooled > 0);
+
+  const pretestNums = s.items.map((it, i) => it.pretest ? i + 1 : 0).filter(Boolean);
+
+  return header() + `<main class="wrap">
+    <section class="verdict ${r.passed ? 'pass' : 'fail'}" style="margin-top:8px">
+      ${celebrate ? `<img class="win-art" src="img/done.jpg" alt="" onerror="this.remove()">` : burst}
+      <div class="eyebrow small" style="font-weight:600;text-transform:uppercase;letter-spacing:.06em">How did I do? · ${esc(s.title)}</div>
+      <h1 style="max-width:80%">${head}</h1>
+      <p style="font-size:1.15rem;margin:0 0 18px;max-width:640px">${sub}</p>
+      <div class="row">
+        ${nextIdx >= 0 ? `<button class="btn primary big" data-act="startLevel" data-i="${nextIdx}">Next level</button>` : (s.mode === 'level' ? `<button class="btn primary big" data-act="startLevel" data-i="${lvIdx}">${r.passed ? 'Run it again' : 'Try again'}</button>` : '')}
+        <button class="btn ${s.mode === 'level' ? '' : 'primary'} big" data-act="home">Back to my plan</button>
+      </div>
+    </section>
+
+    <section class="section"><h2>Score by part</h2><p class="lead">Each part is graded on its own. You need ${r.passPct}% in every part.${r.pretestCount ? ' ' + r.pretestCount + ' unscored pretest questions are left out.' : ''}</p>
+      <div class="parts">${partCards}</div></section>
+
+    <section class="section"><h2>Stamina</h2><p class="lead">Did you fade? Your test split into four quarters, from the first question to the last.</p>
+      <div class="charts">
+        <div class="card chart"><h3>Accuracy</h3>${accChart}</div>
+        <div class="card chart"><h3>Seconds per question</h3>${secChart}</div>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <div class="row" style="gap:28px;align-items:flex-start">
+          <div><div class="muted small">Fade score</div><div class="bigpct">${fadeTxt}</div><div class="badge ${r.fade === null || r.fade <= 5 ? 'good' : (r.fade <= 10 ? 'warn' : 'bad')}" style="margin-top:6px">${fadeLabel(r.fade)}</div></div>
+          <div style="flex:1;min-width:240px">
+            <p class="small muted" style="margin-bottom:6px">First half ${r.halves[0].acc ?? 'n/a'}% at ${r.halves[0].avgSec ?? '-'}s a question · Second half ${r.halves[1].acc ?? 'n/a'}% at ${r.halves[1].avgSec ?? '-'}s a question</p>
+            <p style="margin:0">${esc(staminaAdvice(r))}</p>
+          </div>
+        </div>
+      </div></section>
+
+    <section class="section"><h2>Topics</h2><p class="lead">Weakest first. Practice the red ones from the home screen.</p>
+      <div class="card" style="overflow-x:auto"><table><thead><tr><th>Topic</th><th class="r">Right</th><th></th><th class="r">%</th></tr></thead><tbody>${topicRows}</tbody></table></div></section>
+
+    <section class="section"><h2>Which traps fooled you</h2><p class="lead">Wrong answers are written to look right. Knowing your weak trap helps you slow down at the right moment.</p>
+      <div class="card" style="overflow-x:auto">${trapRows ? `<table><thead><tr><th>Trap</th><th class="r">Fooled</th><th class="r">Rate</th></tr></thead><tbody>${trapRows}</tbody></table>` : '<p class="muted" style="margin:0">No trap data for this set.</p>'}
+      ${topTrap ? `<p style="margin:14px 0 0"><b>Watch for:</b> ${esc(TRAP_INFO[topTrap.trap][1])}</p>` : ''}</div></section>
+
+    <section class="section"><h2>Strategy check</h2>
+      <div class="parts">
+        <div class="card"><div class="bigpct">${r.flagged}</div><div class="muted">still flagged at the end</div></div>
+        <div class="card"><div class="bigpct">${r.blanks}</div><div class="muted">left blank${r.blanks ? ' (always wrong)' : ''}</div></div>
+        <div class="card"><div class="bigpct">${r.guessed ? r.guessedRight + '/' + r.guessed : '0'}</div><div class="muted">guess-letter answers right</div></div>
+      </div>
+      ${pretestNums.length ? `<div class="card" style="margin-top:16px"><b>Pretest reveal.</b> Questions ${pretestNums.join(', ')} were unscored pretest items, like the ~10% on the real exam. You couldn't tell which ones while you worked, and neither can anyone on test day, so treat every question as if it counts.</div>` : ''}
+    </section>
+
+    <section class="section"><h2>Every question, with the why</h2>
+      <div class="tabs" role="group" aria-label="Filter">${[['all','All'],['wrong','Missed'],['flag','Flagged'],['pre','Pretest']].map(([k, l]) => `<button data-act="filter" data-f="${k}" aria-pressed="${reviewFilter === k}">${l}</button>`).join('')}</div>
+      <div id="rqlist">${reviewList(s)}</div>
+    </section>
+  </main>`;
+}
+
+function reviewList(s){
+  const rows = s.items.map((it, i) => ({it, i, q:QMAP[it.qid]})).filter(x => x.q).filter(({it}) =>
+    reviewFilter === 'all' || (reviewFilter === 'wrong' && !it.pretest && !isRight(it, QMAP)) || (reviewFilter === 'flag' && it.flagged) || (reviewFilter === 'pre' && it.pretest));
+  if (!rows.length) return '<p class="muted">Nothing here.</p>';
+  return rows.map(({it, i, q}) => {
+    const ok = isRight(it, QMAP);
+    const tags = [`<span class="badge ${it.pretest ? 'plain' : (ok ? 'good' : 'bad')}">${it.pretest ? 'Pretest (unscored)' : (ok ? 'Right' : (it.choice === null ? 'Blank' : 'Missed'))}</span>`,
+      `<span class="badge plain">${esc(q.topic)}</span>`, `<span class="badge plain">${Math.round(it.timeSec)}s</span>`];
+    if (it.flagged) tags.push('<span class="badge warn">Flagged</span>');
+    if (it.guessed) tags.push('<span class="badge plain">Guess letter</span>');
+    if (q.trap && q.trap !== 'none' && !ok) tags.push(`<span class="badge plain">Trap: ${esc((TRAP_INFO[q.trap] || [q.trap])[0])}</span>`);
+    return `<article class="rq"><div class="qhead"><b>Q${i + 1}</b>${tags.join('')}</div>
+      <p class="stem">${esc(q.q)}</p>
+      <ol>${q.a.map((a, k) => `<li class="${k === q.c ? 'right' : (k === it.choice ? 'wrong' : '')}"><b>${LETTERS[k]}.</b> ${esc(a)}${k === q.c ? ' <span class="small">(correct)</span>' : ''}${k === it.choice && k !== q.c ? ' <span class="small">(your answer)</span>' : ''}</li>`).join('')}</ol>
+      ${q.why ? `<div class="why">${esc(q.why)}</div>` : ''}</article>`;
+  }).join('');
+}
+
+/* ---------- practice + history ---------- */
+function viewPractice(){
+  const f = practiceForm;
+  const topics = [...new Set(QS.filter(q => f.part === 'all' || q.part === f.part).map(q => q.topic))].sort();
+  if (f.topic && !topics.includes(f.topic)) f.topic = '';
+  const seg = (name, opts, cur) => `<div class="seg" role="group">${opts.map(([v, l]) => `<button data-act="pf" data-k="${name}" data-v="${v}" aria-pressed="${String(cur) === String(v)}">${l}</button>`).join('')}</div>`;
+  const avail = QS.filter(q => (f.part === 'all' || q.part === f.part) && (!f.topic || q.topic === f.topic)).length;
+  return header() + `<main class="wrap" style="max-width:760px">
+    <div class="section"><h1>Practice a topic</h1><p class="muted">Short sets don't count toward your levels. Use them to fix weak topics.</p></div>
+    <div class="card">
+      <div class="field"><span class="lbl">Which part?</span>${seg('part', [['all','Both'],['general','General'],['ma', PART_NAME.ma]], f.part)}</div>
+      <div class="field"><label for="topicSel">Topic</label><select id="topicSel" data-change="topic"><option value="">All topics</option>${topics.map(t => `<option ${t === f.topic ? 'selected' : ''}>${esc(t)}</option>`).join('')}</select>
+        <div class="help">${avail} question${avail === 1 ? '' : 's'} available${avail < f.n ? '; some will repeat' : ''}.</div></div>
+      <div class="field"><span class="lbl">How many questions?</span>${seg('n', [[10,'10'],[20,'20'],[40,'40']], f.n)}</div>
+      <div class="field"><span class="lbl">Timer</span>${seg('pace', [['exam','Exam pace'],['relaxed','Relaxed'],['none','No timer']], f.pace)}
+        <div class="help">Exam pace is about ${paceSec(f.part === 'ma' ? 'ma' : 'general')} seconds a question, the same as the real test.</div></div>
+      <button class="btn primary big block" data-act="startPractice">Start practice</button>
+    </div>
+    <p style="margin:20px 0 40px"><button class="btn ghost" data-act="home">Back to my plan</button></p>
+  </main>`;
+}
+
+function viewHistory(){
+  const rows = ST.history.map(h => {
+    const saved = ST.saved.some(x => x.id === h.id);
+    return `<tr><td>${esc(new Date(h.at).toLocaleDateString())}</td><td>${esc(h.title)}<div class="small muted">${h.parts.map(p => esc(p.label) + ' ' + p.pct + '%').join(' · ')}</div></td>
+      <td class="r num">${h.pct}%</td><td><span class="badge ${h.passed ? 'good' : 'bad'}">${h.passed ? 'Pass' : (h.timeOk ? 'Below' : 'Out of time')}</span></td>
+      <td class="r num">${h.fade === null ? '-' : (h.fade > 0 ? '-' + h.fade : '+' + Math.abs(h.fade))}</td>
+      <td>${saved ? `<button class="btn" style="min-height:44px;padding:0 14px" data-act="openSaved" data-id="${esc(h.id)}">Review</button>` : ''}</td></tr>`;
+  }).join('');
+  return header() + `<main class="wrap">
+    <div class="section"><h1>How did I do?</h1><p class="muted">Every workout you have finished. Fade = how many points you dropped in the second half (lower is better). The last 8 can be opened again.</p></div>
+    <div class="card" style="overflow-x:auto">${rows ? `<table><thead><tr><th>Date</th><th>Workout</th><th class="r">Score</th><th>Result</th><th class="r">Fade</th><th></th></tr></thead><tbody>${rows}</tbody></table>` : '<p class="muted" style="margin:0">Nothing yet. Finish a workout and it shows up here.</p>'}</div>
+    <p style="margin:20px 0 40px"><button class="btn ghost" data-act="home">Back to my plan</button></p>
+  </main>`;
+}
+
+/* ---------- modals ---------- */
+let modal = null, introStep = 0;
+function closeModal(){ modal = null; $('#modalroot').innerHTML = ''; }
+function openModal(html, kind){
+  modal = kind;
+  $('#modalroot').innerHTML = `<div class="scrim" data-act="scrim"><div class="modal ${kind === 'calc' ? 'calc' : ''}" role="dialog" aria-modal="true">${html}</div></div>`;
+  const f = $('#modalroot .modal button, #modalroot .modal select'); if (f) f.focus();
+}
+const INTRO = [
+  ['Train like a runner', 'The real exam is 120 questions in 4 hours. Nobody starts there. Level 1 is 10 questions. Each level adds a little. Pass a level with 70% inside the time and the next one opens.'],
+  ['Flag it and keep moving', 'Answer the questions you are sure of first. Tap <b>Flag</b> on the hard ones and come back. When you reach the end, the app takes you back to what is left. Never leave a blank: use your guess letter.'],
+  ['Watch your second half', 'Many people slow down or get sloppy late in the test. After each workout, <b>How did I do?</b> shows your stamina: your first half against your second half. Your goal is no fade.']
+];
+function showIntro(i){
+  introStep = i;
+  const [t, b] = INTRO[i];
+  openModal(`<div class="steps">${INTRO.map((_, k) => `<i class="${k <= i ? 'on' : ''}"></i>`).join('')}</div>
+    <div class="small muted">Step ${i + 1} of ${INTRO.length}</div><h2>${t}</h2><p style="font-size:1.1rem">${b}</p>
+    <div class="row" style="margin-top:20px">${i < INTRO.length - 1 ? `<button class="btn primary big" data-act="introNext">Next</button><button class="btn ghost" data-act="introDone">Skip</button>` : `<button class="btn primary big" data-act="introDone">Got it, let's train</button>`}</div>`, 'intro');
+}
+function showHelp(){
+  openModal(`<h2>How the exam works</h2>
+    <ul class="list">
+      <li><b>Two parts, graded on their own.</b> General: 80 questions in 2.5 hours. ${esc(SC.state || 'State')} law: 40 questions in 1.5 hours.</li>
+      <li><b>You need 70% in each part</b> (56 of 80 and 28 of 40). A great score in one part doesn't make up for the other.</li>
+      <li><b>About 10% are unscored "pretest" questions.</b> You can't tell which, so give every question your best.</li>
+      <li><b>You can skip, flag and come back</b> inside a part. There is an on-screen calculator.</li>
+    </ul>
+    <h3 style="margin-top:18px">The pass-by-pass strategy</h3>
+    <ol class="list">${PASS_COACH.map(t => `<li>${esc(t)}</li>`).join('')}</ol>
+    <div class="row" style="margin-top:20px"><button class="btn primary" data-act="close">Close</button><button class="btn ghost" data-act="introAgain">Show the 3-step tour</button></div>`, 'help');
+}
+function showSettings(){
+  const g = guessLetter(), th = ST.settings.theme || 'auto';
+  openModal(`<h2>Settings</h2>
+    <div class="field"><span class="lbl">Look</span><div class="seg">${[['auto','Match device'],['light','Light'],['dark','Dark']].map(([v,l]) => `<button data-act="setTheme" data-v="${v}" aria-pressed="${th === v}">${l}</button>`).join('')}</div></div>
+    <div class="field"><span class="lbl">Guess letter</span><div class="seg">${LETTERS.map(l => `<button data-act="setGuess" data-v="${l}" aria-pressed="${g === l}">${l}</button>`).join('')}</div><div class="help">The letter you pick when you truly don't know.</div></div>
+    <div class="field"><span class="lbl">Unlock every level</span><div class="seg"><button data-act="setUnlock" data-v="1" aria-pressed="${!!ST.settings.unlockAll}">On</button><button data-act="setUnlock" data-v="0" aria-pressed="${!ST.settings.unlockAll}">Off</button></div><div class="help">For instructors, or if you already know you are ready.</div></div>
+    <div class="field"><span class="lbl">Start over</span><button class="btn danger" data-act="reset">Erase all my progress</button></div>
+    <button class="btn primary" data-act="close">Done</button>`, 'settings');
+}
+
+/* calculator */
+const calc = {disp:'0', acc:null, op:null, fresh:true};
+function calcHtml(){
+  const keys = [['C','C'],['back','&#9003;'],['%','%'],['/','&divide;'],['7','7'],['8','8'],['9','9'],['*','&times;'],['4','4'],['5','5'],['6','6'],['-','&minus;'],['1','1'],['2','2'],['3','3'],['+','+'],['neg','&plusmn;'],['0','0'],['.','.'],['=','=']];
+  return `<div class="row" style="justify-content:space-between;margin-bottom:10px"><b>Calculator</b><button class="iconbtn" data-act="close" aria-label="Close calculator">Close</button></div>
+    <div class="disp num" id="calcdisp" aria-live="polite">${esc(calc.disp)}</div>
+    <div class="keys">${keys.map(([k, l]) => `<button data-act="ck" data-k="${k}" class="${'+-*/%'.includes(k) && k.length === 1 ? 'op' : (k === '=' ? 'eq' : '')}" aria-label="${k}">${l}</button>`).join('')}</div>`;
+}
+function calcEval(){
+  const a = calc.acc, b = parseFloat(calc.disp);
+  let r = calc.op === '+' ? a + b : calc.op === '-' ? a - b : calc.op === '*' ? a * b : calc.op === '/' ? (b === 0 ? NaN : a / b) : b;
+  r = Math.round(r * 1e10) / 1e10;
+  calc.disp = isFinite(r) ? String(r) : 'Error'; calc.acc = isFinite(r) ? r : null;
+}
+function calcPress(k){
+  if (calc.disp === 'Error' && k !== 'C'){ calc.disp = '0'; calc.fresh = true; }
+  if (/^[0-9]$/.test(k)){ calc.disp = (calc.fresh || calc.disp === '0') ? k : calc.disp + k; calc.fresh = false; }
+  else if (k === '.'){ if (calc.fresh){ calc.disp = '0.'; calc.fresh = false; } else if (!calc.disp.includes('.')) calc.disp += '.'; }
+  else if (k === 'C'){ calc.disp = '0'; calc.acc = null; calc.op = null; calc.fresh = true; }
+  else if (k === 'back'){ if (!calc.fresh) calc.disp = calc.disp.length > 1 ? calc.disp.slice(0, -1) : '0'; }
+  else if (k === 'neg'){ calc.disp = String(-parseFloat(calc.disp) || 0); }
+  else if (k === '%'){ calc.disp = String(Math.round(parseFloat(calc.disp) / 100 * 1e10) / 1e10); calc.fresh = false; }
+  else if ('+-*/'.includes(k)){ if (calc.op && !calc.fresh) calcEval(); else if (!calc.op) calc.acc = parseFloat(calc.disp); calc.op = k; calc.fresh = true; }
+  else if (k === '='){ if (calc.op && calc.acc !== null){ calcEval(); } calc.op = null; calc.fresh = true; }
+  const d = $('#calcdisp'); if (d) d.textContent = calc.disp;
+}
+
+/* ---------- export / import ---------- */
+function exportProgress(){
+  const data = JSON.stringify(Object.assign({app:'exam-conditioning', exportedAt:new Date().toISOString()}, ST), null, 1);
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([data], {type:'application/json'}));
+  a.download = 'exam-conditioning-progress-' + today() + '.json';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  toast('Backup saved to your downloads.');
+}
+$('#importfile').addEventListener('change', e => {
+  const file = e.target.files[0]; if (!file) return;
+  const rd = new FileReader();
+  rd.onload = () => {
+    try {
+      const o = JSON.parse(rd.result);
+      if (!o || o.version !== 1 || typeof o.levels !== 'object') throw new Error('bad');
+      delete o.app; delete o.exportedAt;
+      ST = Object.assign(blankState(), o, {settings:Object.assign(blankState().settings, o.settings || {})});
+      save(); applyTheme(); view = 'home'; render(); toast('Backup loaded.');
+    } catch (err) { toast("That file doesn't look like a backup from this app."); }
+    e.target.value = '';
+  };
+  rd.readAsText(file);
+});
+
+/* ---------- events ---------- */
+let resetArmed = false;
+const ACT = {
+  home(){ view = 'home'; render(); },
+  help(){ showHelp(); },
+  theme(){ ST.settings.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; save(); applyTheme(); render(); },
+  startLevel(el){ closeModal(); startLevel(+el.dataset.i); },
+  resume(){ const s = ST.active; if (!s.started){ view = 'brief'; render(); } else if (s.parts[s.partIdx].elapsedSec === 0 && s.partIdx > 0 && !s.items.slice(curPart().start, curPart().end).some(i => i.visits)){ view = 'between'; render(); } else { view = 'test'; render(); startTimer(); } },
+  abandon(){ ST.active = null; save(); view = 'home'; render(); },
+  begin(){ begin(); },
+  pick(el){ pick(+el.dataset.k); },
+  flag(){ flag(); },
+  next(){ next(); },
+  prev(){ prev(); },
+  go(el){ go(+el.dataset.i); },
+  grid(){ gridOpen = !gridOpen; render(); },
+  review(){ showReview(); },
+  backToTest(){ view = 'test'; render(); },
+  fillGuess(){ fillGuess(); },
+  submitPart(){ submitPart(false); },
+  calc(){ openModal(calcHtml(), 'calc'); },
+  ck(el){ calcPress(el.dataset.k); },
+  close(){ closeModal(); },
+  scrim(el, e){ if (e.target === el) closeModal(); },
+  filter(el){ reviewFilter = el.dataset.f; document.querySelectorAll('[data-act=filter]').forEach(b => b.setAttribute('aria-pressed', b.dataset.f === reviewFilter)); $('#rqlist').innerHTML = reviewList(resultSession); },
+  practice(){ view = 'practice'; render(); },
+  pf(el){ const k = el.dataset.k; practiceForm[k] = k === 'n' ? +el.dataset.v : el.dataset.v; if (k === 'part') practiceForm.topic = ''; render(); },
+  startPractice(){ startPractice(); },
+  drill(){ startDrill(); },
+  history(){ view = 'history'; render(); },
+  openSaved(el){ const s = ST.saved.find(x => x.id === el.dataset.id); if (s){ resultSession = s; celebrate = false; reviewFilter = 'all'; view = 'results'; render(); } },
+  export(){ exportProgress(); },
+  import(){ $('#importfile').click(); },
+  settings(){ resetArmed = false; showSettings(); },
+  setTheme(el){ ST.settings.theme = el.dataset.v === 'auto' ? null : el.dataset.v; save(); applyTheme(); render(); showSettings(); },
+  setGuess(el){ ST.settings.guessLetter = el.dataset.v; save(); showSettings(); },
+  setUnlock(el){ ST.settings.unlockAll = el.dataset.v === '1'; save(); render(); showSettings(); },
+  reset(el){ if (!resetArmed){ resetArmed = true; el.textContent = 'Tap again to erase everything'; return; } const th = ST.settings.theme; ST = blankState(); ST.settings.theme = th; ST.settings.seenIntro = true; save(); closeModal(); view = 'home'; render(); toast('Progress erased.'); },
+  introNext(){ showIntro(introStep + 1); },
+  introDone(){ ST.settings.seenIntro = true; save(); closeModal(); },
+  introAgain(){ showIntro(0); }
+};
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-act]'); if (!el || el.disabled) return;
+  const f = ACT[el.dataset.act]; if (f) f(el, e);
+});
+document.addEventListener('change', e => {
+  if (e.target.dataset.change === 'topic'){ practiceForm.topic = e.target.value; render(); }
+});
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  if (modal === 'calc'){
+    const map = {Enter:'=', '=':'=', Backspace:'back', Escape:null, Delete:'C', c:'C', C:'C'};
+    if (e.key === 'Escape'){ closeModal(); e.preventDefault(); return; }
+    const k = e.key in map ? map[e.key] : e.key;
+    if (k && /^([0-9]|[.+\-*/%=]|C|back)$/.test(k)){ calcPress(k); e.preventDefault(); }
+    return;
+  }
+  if (modal){ if (e.key === 'Escape'){ closeModal(); if (modal === null && ST.settings.seenIntro === false){ ST.settings.seenIntro = true; save(); } } return; }
+  if (view !== 'test' || (e.target.matches && e.target.matches('input,select,textarea'))) return;
+  const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+  if ('1234'.includes(k) && k.length === 1) pick(+k - 1);
+  else if ('abcd'.includes(k) && k.length === 1) pick(k.charCodeAt(0) - 97);
+  else if (k === 'f') flag();
+  else if (k === 'n' || k === 'ArrowRight') next();
+  else if (k === 'p' || k === 'ArrowLeft') prev();
+  else if (k === 'r') showReview();
+  else if (k === 'k') openModal(calcHtml(), 'calc');
+  else return;
+  e.preventDefault();
+});
+window.addEventListener('beforeunload', () => { if (ST.active) save(); });
+
+/* ---------- boot ---------- */
+applyBrand(); applyTheme();
+if (SC.icon) [['icon', SC.icon.svg, 'image/svg+xml'], ['apple-touch-icon', SC.icon.png, 'image/png']].forEach(([rel, href, type]) => { if (!href) return; const l = document.createElement('link'); l.rel = rel; l.href = href; l.type = type; document.head.appendChild(l); });
+document.title = (SC.shortName && SC.name !== 'Your School' ? SC.shortName + ' ' : '') + 'Exam Conditioning';
+render();
+if (HAS_DATA && !ST.settings.seenIntro) showIntro(0);
+</script>
+</body>
+</html>
